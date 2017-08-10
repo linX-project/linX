@@ -66,7 +66,17 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     prevBlocks(0)
 {
     restoreWindowGeometry();
-    setWindowTitle(tr("linX") + " - " + tr("Wallet"));
+	
+#ifdef Q_OS_MAC
+    resize(960, 610);
+    setWindowTitle(tr("LinX wallet - Mac"));
+#elif _WIN32
+    resize(900, 600);
+    setWindowTitle(tr("LinX wallet - Windows"));
+#else
+    resize(1000, 620);
+    setWindowTitle(tr("LinX wallet - Linux"));
+#endif
 #ifndef Q_OS_MAC
     QApplication::setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
