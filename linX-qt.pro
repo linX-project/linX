@@ -1,13 +1,87 @@
 TEMPLATE = app
-TARGET = linX-qt
+DEFINES += fName1 fName2
+fName1 = "linX"
 macx:TARGET = "linX-Qt"
 VERSION = 0.9.0.2
-INCLUDEPATH += src src/json src/qt
-QT += core gui network
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+contains(QT_ARCH, i386) {
+    fName2 = "-qt-x86-v"
+} else {
+    fName2 = "-qt-x64-v"
+}
+TARGET = $$fName1$$fName2$$VERSION
+INCLUDEPATH += src src/json \
+    src/qt \
+QT += core gui
+QT += network
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
-CONFIG += thread
+CONFIG += thread warn_off
+
+lessThan(QT_MAJOR_VERSION, 5) {
+    CONFIG += static
+}
+QMAKE_CXXFLAGS = -fpermissive
+
+greaterThan(QT_MAJOR_VERSION, 4) {
+    QT += widgets
+    DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0
+}
+
+win32 {
+
+    ## Windows common build here
+
+    contains(QT_ARCH, i386) {
+        message("32-Bit build")
+        message("Target build name:" $$TARGET)
+
+        LIBS += -lshlwapi
+        LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,)
+        LIBS += -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX -lcrypt32
+        LIBS += -lws2_32 -lole32 -loleaut32 -luuid -lgdi32
+        LIBS += -lboost_system-mgw49-mt-s-1_57 -lboost_filesystem-mgw49-mt-s-1_57 -lboost_program_options-mgw49-mt-s-1_57 -lboost_thread-mgw49-mt-s-1_57
+        LIBS += -L"C:/deps/MinGW/msys/1.0/local/lib"
+
+        INCLUDEPATH += "C:/deps/MinGW/msys/1.0/local/include"
+
+        BOOST_LIB_SUFFIX=-mgw49-mt-s-1_57
+        BOOST_INCLUDE_PATH=C:/deps/boost_1_57_0
+        BOOST_LIB_PATH=C:/deps/boost_1_57_0/stage/lib
+        BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
+        BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
+        OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1l/include
+        OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1l
+        MINIUPNPC_INCLUDE_PATH=C:/deps/
+        MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+        QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.4
+        QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.4/.libs
+        LEVELDB_INCLUDE_PATH+="C:/tools/leveldb/leveldb/include" "C:/tools/leveldb/leveldb/helpers"
+        LEVELDB_LIB_PATH=C:/tools/leveldb/x86
+        LIBS += "C:/tools/leveldb/x86/libleveldb.a" "C:/tools/leveldb/x86/libmemenv.a"
+
+
+    } else {
+        message("64-Bit build")
+        message("Target build name:" $$TARGET)
+        BOOST_LIB_SUFFIX=-mgw63-mt-d-1_63
+        BOOST_INCLUDE_PATH=C:\tools\boost\x64\include\boost-1_63
+        BOOST_LIB_PATH=C:\tools\boost\boost_1_63_0\stage\lib
+        BDB_INCLUDE_PATH=C:\tools\berkeley-db\db4\x64\include
+        BDB_LIB_PATH=C:\tools\berkeley-db\db4\x64\lib
+        OPENSSL_INCLUDE_PATH=C:\tools\openssl\x64\include
+        OPENSSL_LIB_PATH=C:\tools\openssl\x64\lib
+        MINIUPNPC_INCLUDE_PATH=C:\tools\miniupnpc
+        MINIUPNPC_LIB_PATH=C:\tools\miniupnpc\miniupnpc
+        QRENCODE_INCLUDE_PATH=C:\tools\qrencode\x64\include
+        QRENCODE_LIB_PATH=C:\tools\qrencode\x64\lib
+        LIBEVENT_INCLUDE_PATH=C:\tools\libevent\x64\include
+        LIBEVENT_LIB_PATH=C:\tools\libevent\x64\lib
+        LEVELDB_INCLUDE_PATH+="C:/tools/leveldb/leveldb/include" "C:/tools/leveldb/leveldb/helpers"
+        LEVELDB_LIB_PATH=C:/tools/leveldb/x64
+        LIBS += "C:/tools/leveldb/x64/libleveldb.a" "C:/tools/leveldb/x64/libmemenv.a"
+
+    }
+}
 
 # for boost 1.37, add -mt to the boost libraries
 # use: qmake BOOST_LIB_SUFFIX=-mt
@@ -38,20 +112,16 @@ contains(RELEASE, 1) {
 }
 
 !win32 {
-    # for extra security against potential buffer overflows: enable GCCs Stack Smashing Protection
-    QMAKE_CXXFLAGS *= -fstack-protector-all
-    QMAKE_LFLAGS *= -fstack-protector-all
-    # Exclude on Windows cross compile with MinGW 4.2.x, as it will result in a non-working executable!
-    # This can be enabled for Windows, when we switch to MinGW >= 4.4.x.
+# for extra security against potential buffer overflows: enable GCCs Stack Smashing Protection
+QMAKE_CXXFLAGS *= -fstack-protector-all --param ssp-buffer-size=1
+QMAKE_LFLAGS *= -fstack-protector-all --param ssp-buffer-size=1
+# We need to exclude this for Windows cross compile with MinGW 4.2.x, as it will result in a non-working executable!
+# This can be enabled for Windows, when we switch to MinGW >= 4.4.x.
 }
-# for extra security (see: https://wiki.debian.org/Hardening): this flag is GCC compiler-specific
-QMAKE_CXXFLAGS += -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
 # for extra security on Windows: enable ASLR and DEP via GCC linker flags
-win32:QMAKE_LFLAGS *= -Wl,--dynamicbase -Wl,--nxcompat
-# on Windows: enable GCC large address aware linker flag
-win32:QMAKE_LFLAGS *= -Wl,--large-address-aware
-# i686-w64-mingw32
-win32:QMAKE_LFLAGS *= -static-libgcc -static-libstdc++
+win32:QMAKE_LFLAGS *= -Wl,--dynamicbase -Wl,--nxcompat, -static
+win32:QMAKE_LFLAGS += -static-libgcc -static-libstdc++
+lessThan(QT_MAJOR_VERSION, 5): win32: QMAKE_LFLAGS *= -static
 
 USE_QRCODE=1
 # use: qmake "USE_QRCODE=1"
@@ -108,8 +178,8 @@ contains(BITCOIN_NEED_QT_PLUGINS, 1) {
     QTPLUGIN += qcncodecs qjpcodecs qtwcodecs qkrcodecs qtaccessiblewidgets
 }
 
-INCLUDEPATH += src/leveldb/include src/leveldb/helpers
-LIBS += $$PWD/src/leveldb/libleveldb.a $$PWD/src/leveldb/libmemenv.a
+
+
 #NO_LEVELDB=1
 #!contains(NO_LEVELDB, 1) {
 #    !win32 {
@@ -131,13 +201,28 @@ LIBS += $$PWD/src/leveldb/libleveldb.a $$PWD/src/leveldb/libmemenv.a
 #    QMAKE_CLEAN += $$PWD/src/leveldb/libleveldb.a; cd $$PWD/src/leveldb ; $(MAKE) clean
 #}
 # regenerate src/build.h
-!win32|contains(USE_BUILD_INFO, 1) {
+!windows|contains(USE_BUILD_INFO, 1) {
     genbuild.depends = FORCE
     genbuild.commands = cd $$PWD; /bin/sh share/genbuild.sh $$OUT_PWD/build/build.h
     genbuild.target = $$OUT_PWD/build/build.h
     PRE_TARGETDEPS += $$OUT_PWD/build/build.h
     QMAKE_EXTRA_TARGETS += genbuild
     DEFINES += HAVE_BUILD_INFO
+}
+USE_O3=1
+contains(USE_O3, 1) {
+    message(Building O3 optimization flag)
+    QMAKE_CXXFLAGS_RELEASE -= -O2
+    QMAKE_CFLAGS_RELEASE -= -O2
+    QMAKE_CXXFLAGS += -O3
+    QMAKE_CFLAGS += -O3
+}
+
+*-g++-32 {
+    message("32 platform, adding -msse2 flag")
+
+    QMAKE_CXXFLAGS += -msse2
+    QMAKE_CFLAGS += -msse2
 }
 
 greaterThan(QT_MAJOR_VERSION, 4) {
@@ -307,7 +392,8 @@ SOURCES += src/qt/bitcoin.cpp \
     src/txdb.cpp \
     src/qt/splashscreen.cpp
 
-RESOURCES += src/qt/bitcoin.qrc
+RESOURCES += \
+    src/qt/bitcoin.qrc
 
 FORMS += src/qt/forms/sendcoinsdialog.ui \
     src/qt/forms/coincontroldialog.ui \
@@ -328,27 +414,6 @@ SOURCES += src/qt/qrcodedialog.cpp
 FORMS += src/qt/forms/qrcodedialog.ui
 }
 
-contains(BITCOIN_QT_TEST, 1) {
-SOURCES += src/qt/test/test_main.cpp \
-    src/qt/test/uritests.cpp
-HEADERS += src/qt/test/uritests.h
-DEPENDPATH += src/qt/test
-QT += testlib
-TARGET = linX-qt_test
-DEFINES += BITCOIN_QT_TEST
-  macx: CONFIG -= app_bundle
-}
-
-contains(USE_SSE2, 1) {
-DEFINES += USE_SSE2
-gccsse2.input  = SOURCES_SSE2
-gccsse2.output = $$PWD/build/${QMAKE_FILE_BASE}.o
-gccsse2.commands = $(CXX) -c $(CXXFLAGS) $(INCPATH) -o ${QMAKE_FILE_OUT} ${QMAKE_FILE_NAME} -msse2 -mstackrealign
-QMAKE_EXTRA_COMPILERS += gccsse2
-SOURCES_SSE2 += src/scrypt-sse2.cpp
-}
-
-# Todo: Remove this line when switching to Qt5, as that option was removed
 CODECFORTR = UTF-8
 
 # for lrelease/lupdate
@@ -428,33 +493,31 @@ isEmpty(OPENSSL_INCLUDE_PATH) {
 windows:DEFINES += WIN32
 windows:RC_FILE = src/qt/res/bitcoin-qt.rc
 
-win32:!contains(MINGW_THREAD_BUGFIX, 0) {
+windows:!contains(MINGW_THREAD_BUGFIX, 0) {
     # At least qmake's win32-g++-cross profile is missing the -lmingwthrd
     # thread-safety flag. GCC has -mthreads to enable this, but it doesn't
     # work with static linking. -lmingwthrd must come BEFORE -lmingw, so
     # it is prepended to QMAKE_LIBS_QT_ENTRY.
     # It can be turned off with MINGW_THREAD_BUGFIX=0, just in case it causes
     # any problems on some untested qmake profile now or in the future.
-    DEFINES += _MT
+    DEFINES += _MT BOOST_THREAD_PROVIDES_GENERIC_SHARED_MUTEX_ON_WIN
     QMAKE_LIBS_QT_ENTRY = -lmingwthrd $$QMAKE_LIBS_QT_ENTRY
 }
 
-!win32:!macx {
+!windows:!macx {
     DEFINES += LINUX
     LIBS += -lrt
-    # _FILE_OFFSET_BITS=64 lets 32-bit fopen transparently support large files.
-    DEFINES += _FILE_OFFSET_BITS=64
 }
 
 macx: {
-	HEADERS += src/qt/macdockiconhandler.h src/qt/macnotificationhandler.h
-	OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm src/qt/macnotificationhandler.mm
-	LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
+    HEADERS += src/qt/macdockiconhandler.h src/qt/macnotificationhandler.h
+    OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm src/qt/macnotificationhandler.mm
+    LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
     DEFINES += MAC_OSX MSG_NOSIGNAL=0 IS_ARCH_64
-	ICON = src/qt/res/icons/linX.icns
-	QMAKE_CFLAGS_THREAD += -pthread
-	QMAKE_LFLAGS_THREAD += -pthread
-	QMAKE_CXXFLAGS_THREAD += -pthread
+    ICON = src/qt/res/icons/linX.icns
+    QMAKE_CFLAGS_THREAD += -pthread
+    QMAKE_LFLAGS_THREAD += -pthread
+    QMAKE_CXXFLAGS_THREAD += -pthread
     QMAKE_CXXFLAGS += -arch x86_64 -stdlib=libc++
     QMAKE_CFLAGS += -arch x86_64
     QMAKE_LFLAGS += -arch x86_64 -stdlib=libc++
@@ -463,20 +526,22 @@ macx: {
 }
 
 # Set libraries and includes at end, to use platform-defined defaults if not overridden
-INCLUDEPATH += $$BOOST_INCLUDE_PATH $$BDB_INCLUDE_PATH $$OPENSSL_INCLUDE_PATH $$QRENCODE_INCLUDE_PATH
+INCLUDEPATH += $$BOOST_INCLUDE_PATH $$BDB_INCLUDE_PATH $$OPENSSL_INCLUDE_PATH $$QRENCODE_INCLUDE_PATH $$LEVELDB_INCLUDE_PATH
 LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,)
 LIBS += -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX
 # -lgdi32 has to happen after -lcrypto (see  #681)
-win32:LIBS += -lws2_32 -lshlwapi -lmswsock -lole32 -loleaut32 -luuid -lgdi32
-LIBS += -lboost_system$$BOOST_LIB_SUFFIX -lboost_filesystem$$BOOST_LIB_SUFFIX -lboost_program_options$$BOOST_LIB_SUFFIX -lboost_thread$$BOOST_THREAD_LIB_SUFFIX
-win32:LIBS += -lboost_chrono$$BOOST_LIB_SUFFIX
-macx:LIBS += -lboost_chrono$$BOOST_LIB_SUFFIX
+windows:LIBS += -lws2_32 -lshlwapi -lmswsock -lole32 -loleaut32 -luuid -lgdi32
+LIBS += -lboost_system$$BOOST_LIB_SUFFIX \
+    -lboost_filesystem$$BOOST_LIB_SUFFIX \
+    -lboost_program_options$$BOOST_LIB_SUFFIX \
+    -lboost_thread$$BOOST_THREAD_LIB_SUFFIX \
+    -lboost_chrono$$BOOST_LIB_SUFFIX
 
 contains(RELEASE, 1) {
-    !win32:!macx {
+    !windows:!macx {
         # Linux: turn dynamic linking back on for c/c++ runtime libraries
         LIBS += -Wl,-Bdynamic
     }
 }
 
-system($$QMAKE_LRELEASE -silent $$TRANSLATIONS)
+system($$QMAKE_LRELEASE -silent $$_PRO_FILE_)
