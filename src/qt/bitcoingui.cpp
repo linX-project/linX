@@ -66,7 +66,17 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     prevBlocks(0)
 {
     restoreWindowGeometry();
-    setWindowTitle(tr("linX") + " - " + tr("Wallet"));
+	
+#ifdef Q_OS_MAC
+    resize(960, 610);
+    setWindowTitle(tr("LinX wallet - Mac"));
+#elif _WIN32
+    resize(900, 600);
+    setWindowTitle(tr("LinX wallet - Windows"));
+#else
+    resize(1000, 620);
+    setWindowTitle(tr("LinX wallet - Linux"));
+#endif
 #ifndef Q_OS_MAC
     QApplication::setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
@@ -218,7 +228,11 @@ void BitcoinGUI::createActions()
     aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About linX"), this);
     aboutAction->setStatusTip(tr("Show information about linX"));
     aboutAction->setMenuRole(QAction::AboutRole);
+#if QT_VERSION < 0x050000
     aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
+#else
+    aboutQtAction = new QAction(QIcon(":/qt-project.org/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
+#endif
     aboutQtAction->setStatusTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
