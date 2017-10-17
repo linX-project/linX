@@ -27,9 +27,9 @@ use the Qt unit-testing framework.
 
 To compile and run the tests:
 
-	qmake bitcoin-qt.pro BITCOIN_QT_TEST=1
+	qmake linX-qt.pro BITCOIN_QT_TEST=1
 	make
 	./linX-qt_test
 
 To add more tests, add them to the `src/qt/test/` directory,
-the `src/qt/test/test_main.cpp` file, and bitcoin-qt.pro.
+the `src/qt/test/test_main.cpp` file, and linX-qt.pro.

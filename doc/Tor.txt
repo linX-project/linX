@@ -1,7 +1,7 @@
-TOR SUPPORT IN BITCOIN
-======================
+TOR SUPPORT IN LINX
+===================
 
-It is possible to run linX as a Tor hidden service, and connect to such services.
+It is possible to run Linx as a Tor hidden service, and connect to such services.
 
 The following directions assume you have a Tor proxy running on port 9050. Many distributions
 default to having a SOCKS proxy listening on port 9050, but others may not.
@@ -10,10 +10,10 @@ https://www.torproject.org/docs/faq.html.en#TBBSocksPort for how to properly
 configure Tor.
 
 
-1. Run linX behind a Tor proxy
+1. Run Linx behind a Tor proxy
 ---------------------------------
 
-The first step is running linX behind a Tor proxy. This will already make all
+The first step is running Linx behind a Tor proxy. This will already make all
 outgoing connections be anonimized, but more is possible.
 
 -socks=5        SOCKS5 supports connecting-to-hostname, which can be used instead
@@ -42,7 +42,7 @@ In a typical situation, this suffices to run behind a Tor proxy:
   ./linXd -proxy=127.0.0.1:9050
 
 
-2. Run a linX hidden server
+2. Run a Linx hidden server
 ------------------------------
 
 If you configure your Tor system accordingly, it is possible to make your node also
@@ -55,7 +55,7 @@ config file):
 The directory can be different of course, but (both) port numbers should be equal to
 your linXd's P2P listen port (13925 by default).
 
--externalip=X   You can tell linX about its publicly reachable address using
+-externalip=X   You can tell Linx about its publicly reachable address using
                 this option, and this can be a .onion address. Given the above
                 configuration, you can find your onion address in
                 /var/lib/tor/linX-service/hostname. Onion addresses are given
@@ -89,4 +89,3 @@ If you only want to use Tor to reach onion addresses, but not use it as a proxy
 for normal IPv4/IPv6 communication, use:
 
   ./linXd -tor=127.0.0.1:9050 -externalip=57qr3yd1nyntf5k.onion -discover
-

@@ -24,8 +24,8 @@ Release Process
 
 ##perform gitian builds
 
- From a directory containing the linX source, gitian-builder and gitian.sigs
-  
+ From a directory containing the Linx source, gitian-builder and gitian.sigs
+
 	export SIGNER=(your gitian key, ie bluematt, sipa, etc)
 	export VERSION=0.8.7
 	cd ./gitian-builder
@@ -50,7 +50,7 @@ Release Process
 	mv build/out/qt*.zip inputs/
 
  Build linXd and linX-qt on Linux32, Linux64, and Win32:
-  
+
 	./bin/gbuild --commit linX=v${VERSION} ../linX/contrib/gitian-descriptors/gitian.yml
 	./bin/gsign --signer $SIGNER --release ${VERSION} --destination ../gitian.sigs/ ../linX/contrib/gitian-descriptors/gitian.yml
 	pushd build/out
@@ -87,8 +87,8 @@ repackage gitian builds for release as stand-alone zip/tar/installer exe
 
 **Perform Mac build:**
 
-  OSX binaries are created on a dedicated 32-bit, OSX 10.6.8 machine.
-  linX 0.8.x is built with MacPorts.  0.9.x will be Homebrew only.
+  OSX binaries are created on a dedicated 64-bit, OSX 10.11+ machine.
+  Linx 0.9.x is built with Homebrew.
 
 	qmake RELEASE=1 USE_UPNP=1 USE_QRCODE=1
 	make
@@ -119,4 +119,3 @@ Commit your signature to gitian.sigs:
 	git commit -a
 	git push  # Assuming you can push to the gitian.sigs tree
 	popd
-
