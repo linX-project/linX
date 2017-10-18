@@ -4,6 +4,7 @@ Linx v0.9.0.2
 https://www.mylinx.io
 
 Copyright (c) 2009-2014 Bitcoin Developers
+
 Copyright (c) 2017 The Linx Partnership
 
 What is Linx?
