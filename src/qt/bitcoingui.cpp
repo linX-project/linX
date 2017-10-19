@@ -303,11 +303,25 @@ void BitcoinGUI::createToolBars()
 {
     QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
     toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+        QLabel* header = new QLabel();
+        header->setMinimumSize(150, 150);
+        header->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        header->setPixmap(QPixmap(":/images/spacer"));
+        header->setStyleSheet("QLabel {background-color: #ffffff;}");
+        header->setMaximumSize(150,150);
+        header->setScaledContents(true);
+	toolbar->addWidget(header);
     toolbar->addAction(overviewAction);
     toolbar->addAction(sendCoinsAction);
     toolbar->addAction(receiveCoinsAction);
     toolbar->addAction(historyAction);
     toolbar->addAction(addressBookAction);
+    toolbar->setOrientation(Qt::Vertical);
+    toolbar->setMovable(false);
+    addToolBar(Qt::LeftToolBarArea, toolbar);
+    foreach(QAction *action, toolbar->actions()) {
+        toolbar->widgetForAction(action)->setFixedWidth(150);
+    }
 }
 
 void BitcoinGUI::setClientModel(ClientModel *clientModel)

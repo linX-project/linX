@@ -226,6 +226,9 @@ int main(int argc, char *argv[])
 
     try
     {
+	
+	GUIUtil::SetThemeQSS(app);
+
 #ifndef Q_OS_MAC
         // Regenerate startup link, to fix links to old versions
         // OSX: makes no sense on mac and might also scan/mount external (and sleeping) volumes (can take up some secs)
