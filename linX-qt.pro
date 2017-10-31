@@ -482,11 +482,11 @@ isEmpty(QRENCODE_INCLUDE_PATH) {
 }
 
 isEmpty(OPENSSL_LIB_PATH) {
-    macx:OPENSSL_LIB_PATH = /usr/local/Cellar/openssl/1.0.2l/lib
+    macx:OPENSSL_LIB_PATH = /Users/mammix2/Desktop/deps/openssl-1.0.1u
 }
 
 isEmpty(OPENSSL_INCLUDE_PATH) {
-    macx:OPENSSL_INCLUDE_PATH = /usr/local/Cellar/openssl/1.0.2l/include
+    macx:OPENSSL_INCLUDE_PATH = /Users/mammix2/Desktop/deps/openssl-1.0.1u/include
 }
 
 
@@ -523,6 +523,7 @@ macx: {
     QMAKE_LFLAGS += -arch x86_64 -stdlib=libc++
     INCLUDEPATH += src/leveldb/include src/leveldb/helpers
     LIBS += $$PWD/src/leveldb/libleveldb.a $$PWD/src/leveldb/libmemenv.a
+
 }
 
 # Set libraries and includes at end, to use platform-defined defaults if not overridden
