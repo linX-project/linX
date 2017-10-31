@@ -201,14 +201,14 @@ contains(BITCOIN_NEED_QT_PLUGINS, 1) {
 #    QMAKE_CLEAN += $$PWD/src/leveldb/libleveldb.a; cd $$PWD/src/leveldb ; $(MAKE) clean
 #}
 # regenerate src/build.h
-!windows|contains(USE_BUILD_INFO, 1) {
-    genbuild.depends = FORCE
-    genbuild.commands = cd $$PWD; /bin/sh share/genbuild.sh $$OUT_PWD/build/build.h
-    genbuild.target = $$OUT_PWD/build/build.h
-    PRE_TARGETDEPS += $$OUT_PWD/build/build.h
-    QMAKE_EXTRA_TARGETS += genbuild
-    DEFINES += HAVE_BUILD_INFO
-}
+#!windows|contains(USE_BUILD_INFO, 1) {
+#    genbuild.depends = FORCE
+#    genbuild.commands = cd $$PWD; /bin/sh share/genbuild.sh $$OUT_PWD/build/build.h
+#    genbuild.target = $$OUT_PWD/build/build.h
+#    PRE_TARGETDEPS += $$OUT_PWD/build/build.h
+#    QMAKE_EXTRA_TARGETS += genbuild
+#    DEFINES += HAVE_BUILD_INFO
+#}
 USE_O3=1
 contains(USE_O3, 1) {
     message(Building O3 optimization flag)
