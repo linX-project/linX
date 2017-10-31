@@ -388,8 +388,14 @@ void BitcoinGUI::createToolBars()
     toolbar->setOrientation(Qt::Vertical);
     toolbar->setMovable(false);
     addToolBar(Qt::LeftToolBarArea, toolbar);
+
     foreach(QAction *action, toolbar->actions()) {
-        toolbar->widgetForAction(action)->setFixedWidth(240);
+#ifndef Q_OS_MAC
+            toolbar->widgetForAction(action)->setFixedWidth(240);
+#else
+            toolbar->widgetForAction(action)->setFixedWidth(240);
+#endif
+
     }
 }
 
