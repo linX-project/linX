@@ -16,6 +16,8 @@ EditAddressDialog::EditAddressDialog(Mode mode, QWidget *parent) :
     ui(new Ui::EditAddressDialog), mapper(0), mode(mode), model(0)
 {
     ui->setupUi(this);
+    this->setStyleSheet("QWidget#OverviewPage {background-image:url(:/images/wallet_bg); background-repeat: repeat-xy; border: none;}");
+
 
     GUIUtil::setupAddressWidget(ui->addressEdit, this);
 

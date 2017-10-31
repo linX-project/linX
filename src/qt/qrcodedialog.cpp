@@ -20,6 +20,8 @@ QRCodeDialog::QRCodeDialog(const QString &addr, const QString &label, bool enabl
     address(addr)
 {
     ui->setupUi(this);
+    this->setStyleSheet("QWidget#OverviewPage {background-image:url(:/images/wallet_bg); background-repeat: repeat-xy; border: none;}");
+
 
     setWindowTitle(QString("%1").arg(address));
 

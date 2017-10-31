@@ -16,9 +16,10 @@
 
 #include <QAbstractItemDelegate>
 #include <QPainter>
+#include <QPaintEvent>
 
 #define DECORATION_SIZE 64
-#define NUM_ITEMS 3
+#define NUM_ITEMS 6
 
 class TxViewDelegate : public QAbstractItemDelegate
 {
@@ -107,6 +108,8 @@ OverviewPage::OverviewPage(QWidget *parent) :
     filter(0)
 {
     ui->setupUi(this);
+    this->setStyleSheet("QWidget#OverviewPage {background-image:url(:/images/wallet_bg); background-repeat: repeat-xy; border: none;}");
+
 
     // Recent transactions
     ui->listTransactions->setItemDelegate(txdelegate);
@@ -122,7 +125,17 @@ OverviewPage::OverviewPage(QWidget *parent) :
 
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
+
 }
+
+void OverviewPage::paintEvent(QPaintEvent *)
+{
+    QStyleOption opt;
+    opt.init(this);
+    QPainter p(this);
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+}
+
 
 void OverviewPage::handleTransactionClicked(const QModelIndex &index)
 {
@@ -142,6 +155,7 @@ void OverviewPage::setBalance(qint64 balance, qint64 unconfirmedBalance, qint64 
     currentUnconfirmedBalance = unconfirmedBalance;
     currentImmatureBalance = immatureBalance;
     ui->labelBalance->setText(BitcoinUnits::formatWithUnit(unit, balance));
+    ui->labelBalance2->setText(BitcoinUnits::formatWithUnit(unit, balance));
     ui->labelUnconfirmed->setText(BitcoinUnits::formatWithUnit(unit, unconfirmedBalance));
     ui->labelImmature->setText(BitcoinUnits::formatWithUnit(unit, immatureBalance));
 
@@ -151,6 +165,7 @@ void OverviewPage::setBalance(qint64 balance, qint64 unconfirmedBalance, qint64 
     ui->labelImmature->setVisible(showImmature);
     ui->labelImmatureText->setVisible(showImmature);
 }
+
 
 void OverviewPage::setClientModel(ClientModel *model)
 {

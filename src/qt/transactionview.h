@@ -62,6 +62,9 @@ private:
 
     QWidget *createDateRangeWidget();
 
+protected:
+void paintEvent(QPaintEvent* );
+
 private slots:
     void contextualMenu(const QPoint &);
     void dateRangeChanged();

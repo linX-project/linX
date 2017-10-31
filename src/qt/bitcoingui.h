@@ -78,6 +78,7 @@ protected:
     void dragEnterEvent(QDragEnterEvent *event);
     void dropEvent(QDropEvent *event);
     bool eventFilter(QObject *object, QEvent *event);
+    void paintEvent(QPaintEvent* );
 
 private:
     ClientModel *clientModel;
@@ -95,6 +96,8 @@ private:
     QAction *quitAction;
     QAction *sendCoinsAction;
     QAction *addressBookAction;
+    QAction *openExplorerAction;
+    QAction *openWebsiteAction;
     QAction *signMessageAction;
     QAction *verifyMessageAction;
     QAction *aboutAction;
@@ -173,6 +176,10 @@ private slots:
     void gotoHistoryPage();
     /** Switch to address book page */
     void gotoAddressBookPage();
+    /** Switch to External Explorer page */
+    void gotoExplorerPage();
+    /** Switch to External Webpage */
+    void gotoWebsite();
     /** Switch to receive coins page */
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */

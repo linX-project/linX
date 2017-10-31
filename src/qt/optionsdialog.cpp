@@ -25,6 +25,8 @@ OptionsDialog::OptionsDialog(QWidget *parent) :
     fProxyIpValid(true)
 {
     ui->setupUi(this);
+    this->setStyleSheet("QWidget#OverviewPage {background-image:url(:/images/wallet_bg); background-repeat: repeat-xy; border: none;}");
+
 
     /* Network elements init */
 #ifndef USE_UPNP

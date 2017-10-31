@@ -32,6 +32,8 @@ CoinControlDialog::CoinControlDialog(QWidget *parent) :
     model(0)
 {
     ui->setupUi(this);
+    this->setStyleSheet("QWidget#OverviewPage {background-image:url(:/images/wallet_bg); background-repeat: repeat-xy; border: none;}");
+
     
     // context menu actions
     QAction *copyAddressAction = new QAction(tr("Copy address"), this);

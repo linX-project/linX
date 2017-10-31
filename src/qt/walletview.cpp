@@ -15,6 +15,7 @@
 #include "overviewpage.h"
 #include "askpassphrasedialog.h"
 #include "ui_interface.h"
+#include "guiutil.h"
 
 #include <QHBoxLayout>
 #include <QVBoxLayout>
@@ -35,7 +36,6 @@ WalletView::WalletView(QWidget *parent, BitcoinGUI *_gui):
 {
     // Create tabs
     overviewPage = new OverviewPage();
-
     transactionsPage = new QWidget(this);
     QVBoxLayout *vbox = new QVBoxLayout();
     QHBoxLayout *hbox_buttons = new QHBoxLayout();

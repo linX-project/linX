@@ -38,6 +38,9 @@ public slots:
 signals:
     void transactionClicked(const QModelIndex &index);
 
+protected:
+void paintEvent(QPaintEvent* );
+
 private:
     Ui::OverviewPage *ui;
     ClientModel *clientModel;

@@ -49,8 +49,10 @@
 #include <QSettings>
 #include <QDesktopWidget>
 #include <QListWidget>
-
+#include <QPainter>
+#include <QPaintEvent>
 #include <iostream>
+#include <QDesktopServices>
 
 const QString BitcoinGUI::DEFAULT_WALLET = "~Default";
 
@@ -68,13 +70,13 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     restoreWindowGeometry();
 	
 #ifdef Q_OS_MAC
-    resize(960, 610);
+    resize(960, 700);
     setWindowTitle(tr("LinX wallet - Mac"));
 #elif _WIN32
-    resize(900, 600);
+    resize(900, 690);
     setWindowTitle(tr("LinX wallet - Windows"));
 #else
-    resize(1000, 620);
+    resize(1000, 710);
     setWindowTitle(tr("LinX wallet - Linux"));
 #endif
 #ifndef Q_OS_MAC
@@ -145,6 +147,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     statusBar()->addWidget(progressBarLabel);
     statusBar()->addWidget(progressBar);
     statusBar()->addPermanentWidget(frameBlocks);
+    statusBar()->setStyleSheet("background: rgb(24,24,24); color: rgb(255,255,255);");
 
     syncIconMovie = new QMovie(":/movies/update_spinner", "mng", this);
 
@@ -175,40 +178,54 @@ void BitcoinGUI::createActions()
 {
     QActionGroup *tabGroup = new QActionGroup(this);
 
-    overviewAction = new QAction(QIcon(":/icons/overview"), tr("&Overview"), this);
+    overviewAction = new QAction(this);
     overviewAction->setStatusTip(tr("Show general overview of wallet"));
     overviewAction->setToolTip(overviewAction->statusTip());
     overviewAction->setCheckable(true);
     overviewAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_1));
     tabGroup->addAction(overviewAction);
 
-    sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
+    sendCoinsAction = new QAction(this);
     sendCoinsAction->setStatusTip(tr("Send coins to a linX address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
     tabGroup->addAction(sendCoinsAction);
 
-    receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Receive"), this);
+    receiveCoinsAction = new QAction(this);
     receiveCoinsAction->setStatusTip(tr("Show the list of addresses for receiving payments"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
     tabGroup->addAction(receiveCoinsAction);
 
-    historyAction = new QAction(QIcon(":/icons/history"), tr("&Transactions"), this);
+    historyAction = new QAction(this);;
     historyAction->setStatusTip(tr("Browse transaction history"));
     historyAction->setToolTip(historyAction->statusTip());
     historyAction->setCheckable(true);
     historyAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_4));
     tabGroup->addAction(historyAction);
 
-    addressBookAction = new QAction(QIcon(":/icons/address-book"), tr("&Addresses"), this);
+    addressBookAction = new QAction(this);
     addressBookAction->setStatusTip(tr("Edit the list of stored addresses and labels"));
     addressBookAction->setToolTip(addressBookAction->statusTip());
     addressBookAction->setCheckable(true);
     addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
     tabGroup->addAction(addressBookAction);
+
+    openExplorerAction = new QAction(this);
+    openExplorerAction->setStatusTip(tr("Open the LinX block explorer in your web browser"));
+    openExplorerAction->setToolTip(openExplorerAction->statusTip());
+    openExplorerAction->setCheckable(true);
+    openExplorerAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
+    tabGroup->addAction(openExplorerAction);
+
+    openWebsiteAction = new QAction(this);
+    openWebsiteAction->setStatusTip(tr("Open the LinX WebSite in your web browser"));
+    openWebsiteAction->setToolTip(openWebsiteAction->statusTip());
+    openWebsiteAction->setCheckable(true);
+    openWebsiteAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_7));
+    tabGroup->addAction(openWebsiteAction);
 
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(gotoOverviewPage()));
@@ -220,6 +237,10 @@ void BitcoinGUI::createActions()
     connect(historyAction, SIGNAL(triggered()), this, SLOT(gotoHistoryPage()));
     connect(addressBookAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(addressBookAction, SIGNAL(triggered()), this, SLOT(gotoAddressBookPage()));
+    connect(openExplorerAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
+    connect(openExplorerAction, SIGNAL(triggered()), this, SLOT(gotoExplorerPage()));
+    connect(openWebsiteAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
+    connect(openWebsiteAction, SIGNAL(triggered()), this, SLOT(gotoWebsite()));
 
     quitAction = new QAction(QIcon(":/icons/quit"), tr("E&xit"), this);
     quitAction->setStatusTip(tr("Quit application"));
@@ -302,25 +323,73 @@ void BitcoinGUI::createMenuBar()
 void BitcoinGUI::createToolBars()
 {
     QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
-    toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-        QLabel* header = new QLabel();
-        header->setMinimumSize(150, 150);
-        header->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        header->setPixmap(QPixmap(":/images/spacer"));
-        header->setStyleSheet("QLabel {background-color: #ffffff;}");
-        header->setMaximumSize(150,150);
-        header->setScaledContents(true);
-	toolbar->addWidget(header);
+    QLabel* header = new QLabel();
+    header->setMinimumSize(200,200);
+    header->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    header->setPixmap(QPixmap(":/images/logo2"));
+    header->setAlignment(Qt::AlignHCenter);
+    header->setMaximumSize(240,200);
+    header->setScaledContents(false);
+    toolbar->addWidget(header);
     toolbar->addAction(overviewAction);
+    toolbar->widgetForAction(overviewAction)->setStyleSheet(
+                "QToolButton { border-image:url(:/images/overview_off) no-repeat center center fixed; background-size:cover; border: 4px; border-radius: 6px; padding: 5px; margin: 7px;}"
+                "QToolButton:hover { border-image:url(:/images/overview_on) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:checked { border-image:url(:/images/overview_on) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:pressed { border-image:url(:/images/overview_off) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:selected { border-image:url(:/images/overview_on) no-repeat center center fixed; background-size:cover; }"
+                );
     toolbar->addAction(sendCoinsAction);
+    toolbar->widgetForAction(sendCoinsAction)->setStyleSheet(
+                "QToolButton { border-image:url(:/images/send_off) no-repeat center center fixed; background-size:cover; border: 4px; border-radius: 6px; padding: 5px; margin: 7px;}"
+                "QToolButton:hover { border-image:url(:/images/send_on) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:checked { border-image:url(:/images/send_on) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:pressed { border-image:url(:/images/send_off) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:selected { border-image:url(:/images/send_on) no-repeat center center fixed; background-size:cover; }"
+                );
     toolbar->addAction(receiveCoinsAction);
+    toolbar->widgetForAction(receiveCoinsAction)->setStyleSheet(
+                "QToolButton { border-image:url(:/images/deposit_off) no-repeat center center fixed; background-size:cover; border: 4px; border-radius: 6px; padding: 5px; margin: 7px;}"
+                "QToolButton:hover { border-image:url(:/images/deposit_on) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:checked { border-image:url(:/images/deposit_on) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:pressed { border-image:url(:/images/deposit_off) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:selected { border-image:url(:/images/deposit_on) no-repeat center center fixed; background-size:cover; }"
+                );
     toolbar->addAction(historyAction);
+    toolbar->widgetForAction(historyAction)->setStyleSheet(
+                "QToolButton { border-image:url(:/images/transactions_off) no-repeat center center fixed; background-size:cover; border: 4px; border-radius: 6px; padding: 5px; margin: 7px;}"
+                "QToolButton:hover { border-image:url(:/images/transactions_on) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:checked { border-image:url(:/images/transactions_on) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:pressed { border-image:url(:/images/transactions_off) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:selected { border-image:url(:/images/transactions_on) no-repeat center center fixed; background-size:cover; }"
+                );
     toolbar->addAction(addressBookAction);
+    toolbar->widgetForAction(addressBookAction)->setStyleSheet(
+                "QToolButton { border-image:url(:/images/addresses_off) no-repeat center center fixed; background-size:cover; border: 4px; border-radius: 6px; padding: 5px; margin: 7px;}"
+                "QToolButton:hover { border-image:url(:/images/addresses_on) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:checked { border-image:url(:/images/addresses_on) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:pressed { border-image:url(:/images/addresses_off) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:selected { border-image:url(:/images/addresses_on) no-repeat center center fixed; background-size:cover; }"
+                );
+    toolbar->addAction(openExplorerAction);
+    toolbar->widgetForAction(openExplorerAction)->setStyleSheet(
+                "QToolButton { border-image:url(:/images/explorer_off) no-repeat center center fixed; background-size:cover; border: 4px; border-radius: 6px; padding: 5px; margin: 7px;}"
+                "QToolButton:hover { border-image:url(:/images/explorer_on) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:pressed { border-image:url(:/images/explorer_off) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:selected { border-image:url(:/images/explorer_on) no-repeat center center fixed; background-size:cover; }"
+                );
+    toolbar->addAction(openWebsiteAction);
+    toolbar->widgetForAction(openWebsiteAction)->setStyleSheet(
+                "QToolButton { border-image:url(:/images/website_off) no-repeat center center fixed; background-size:cover; border: 4px; border-radius: 6px; padding: 5px; margin: 7px;}"
+                "QToolButton:hover { border-image:url(:/images/website_on) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:pressed { border-image:url(:/images/website_off) no-repeat center center fixed; background-size:cover; }"
+                "QToolButton:selected { border-image:url(:/images/website_on) no-repeat center center fixed; background-size:cover; }"
+                );
     toolbar->setOrientation(Qt::Vertical);
     toolbar->setMovable(false);
     addToolBar(Qt::LeftToolBarArea, toolbar);
     foreach(QAction *action, toolbar->actions()) {
-        toolbar->widgetForAction(action)->setFixedWidth(150);
+        toolbar->widgetForAction(action)->setFixedWidth(240);
     }
 }
 
@@ -398,6 +467,7 @@ void BitcoinGUI::setWalletActionsEnabled(bool enabled)
     signMessageAction->setEnabled(enabled);
     verifyMessageAction->setEnabled(enabled);
     addressBookAction->setEnabled(enabled);
+    openExplorerAction->setEnabled(enabled);
 }
 
 void BitcoinGUI::createTrayIcon()
@@ -513,6 +583,17 @@ void BitcoinGUI::gotoAddressBookPage()
 {
     if (walletFrame) walletFrame->gotoAddressBookPage();
 }
+
+void BitcoinGUI::gotoExplorerPage()
+{
+    QDesktopServices::openUrl(QUrl("http://explorer.mylinx.io/", QUrl::TolerantMode));
+}
+
+void BitcoinGUI::gotoWebsite()
+{
+    QDesktopServices::openUrl(QUrl("https://mylinx.io/", QUrl::TolerantMode));
+}
+
 
 void BitcoinGUI::gotoReceiveCoinsPage()
 {
@@ -871,4 +952,12 @@ void BitcoinGUI::detectShutdown()
 {
     if (ShutdownRequested())
         QMetaObject::invokeMethod(QCoreApplication::instance(), "quit", Qt::QueuedConnection);
+}
+
+void BitcoinGUI::paintEvent(QPaintEvent *)
+{
+    QStyleOption opt;
+    opt.init(this);
+    QPainter p(this);
+    style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
 }

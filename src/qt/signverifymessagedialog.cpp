@@ -25,6 +25,7 @@ SignVerifyMessageDialog::SignVerifyMessageDialog(QWidget *parent) :
     model(0)
 {
     ui->setupUi(this);
+    this->setStyleSheet("QWidget#OverviewPage {background-image:url(:/images/wallet_bg); background-repeat: repeat-xy; border: none;}");
 
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */

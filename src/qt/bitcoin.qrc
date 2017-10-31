@@ -1,4 +1,4 @@
-<!DOCTYPE RCC><RCC version="1.0">
+<RCC>
     <qresource prefix="/icons">
         <file alias="bitcoin">res/icons/bitcoin.png</file>
         <file alias="address-book">res/icons/address-book.png</file>
@@ -46,7 +46,30 @@
         <file alias="splash">res/images/splash.png</file>
         <file alias="splash_testnet">res/images/splash_testnet.png</file>
         <file alias="linx-logo-word">res/images/linx-logo-word.png</file>
-        <file alias="spacer">res/images/spacer.png</file>
+        <file alias="logo2">res/images/spacer.png</file>
+        <file alias="wallet_bg">res/images/wallet_bg.png</file>
+        <file alias="wallet_bg_left">res/images/wallet_bg_left.png</file>
+        <file alias="balance_box_bg">res/images/balance_box_bg.png</file>
+        <file alias="overview_on">res/images/overview_on.png</file>
+        <file alias="overview_off">res/images/overview_off.png</file>
+        <file alias="send_on">res/images/send_on.png</file>
+        <file alias="send_off">res/images/send_off.png</file>
+        <file alias="deposit_on">res/images/deposit_on.png</file>
+        <file alias="deposit_off">res/images/deposit_off.png</file>
+        <file alias="transactions_on">res/images/transactions_on.png</file>
+        <file alias="transactions_off">res/images/transactions_off.png</file>
+        <file alias="addresses_on">res/images/addresses_on.png</file>
+        <file alias="addresses_off">res/images/addresses_off.png</file>
+        <file alias="send_linx_on">res/images/send_linx_on.png</file>
+        <file alias="send_linx_off">res/images/send_linx_off.png</file>
+        <file alias="clear_all_on">res/images/clear_all_on.png</file>
+        <file alias="clear_all_off">res/images/clear_all_off.png</file>
+        <file alias="add_recipient_on">res/images/add_recipient_on.png</file>
+        <file alias="add_recipient_off">res/images/add_recipient_off.png</file>
+        <file alias="explorer_on">res/images/explorer_on.png</file>
+        <file alias="explorer_off">res/images/explorer_off.png</file>
+        <file alias="website_on">res/images/website_on.png</file>
+        <file alias="website_off">res/images/website_off.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
