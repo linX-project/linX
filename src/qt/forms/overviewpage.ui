@@ -69,7 +69,7 @@
             <property name="font">
              <font>
               <family>Arial Black</family>
-              <pointsize>10</pointsize>
+              <pointsize>8</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
@@ -83,11 +83,11 @@
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="labelBalance2">
+           <widget class="QLabel" name="top_bar_balance">
             <property name="font">
              <font>
               <family>Arial Black</family>
-              <pointsize>12</pointsize>
+              <pointsize>14</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
@@ -130,7 +130,7 @@
               <property name="font">
                <font>
                 <family>Arial Black</family>
-                <pointsize>11</pointsize>
+                <pointsize>10</pointsize>
                 <weight>75</weight>
                 <bold>true</bold>
                 <underline>false</underline>
@@ -138,6 +138,9 @@
               </property>
               <property name="text">
                <string>WALLET</string>
+              </property>
+              <property name="indent">
+               <number>4</number>
               </property>
              </widget>
             </item>
@@ -200,6 +203,9 @@
               <property name="text">
                <string>Balance:</string>
               </property>
+              <property name="indent">
+               <number>4</number>
+              </property>
              </widget>
             </item>
             <item row="1" column="0">
@@ -212,6 +218,9 @@
               </property>
               <property name="text">
                <string>Unconfirmed:</string>
+              </property>
+              <property name="indent">
+               <number>4</number>
               </property>
              </widget>
             </item>
@@ -249,6 +258,9 @@
               </property>
               <property name="text">
                <string>Immature:</string>
+              </property>
+              <property name="indent">
+               <number>4</number>
               </property>
              </widget>
             </item>
@@ -338,7 +350,7 @@
               <property name="font">
                <font>
                 <family>Arial Black</family>
-                <pointsize>11</pointsize>
+                <pointsize>10</pointsize>
                 <underline>false</underline>
                </font>
               </property>
@@ -347,6 +359,9 @@
               </property>
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;RECENT TRANSACTIONS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="indent">
+               <number>4</number>
               </property>
              </widget>
             </item>
@@ -463,19 +478,6 @@
                <bool>false</bool>
               </property>
              </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer_3">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
             </item>
            </layout>
           </item>

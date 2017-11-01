@@ -261,7 +261,6 @@ void BitcoinGUI::createActions()
     optionsAction->setMenuRole(QAction::PreferencesRole);
     toggleHideAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
-
     encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Wallet..."), this);
     encryptWalletAction->setStatusTip(tr("Encrypt the private keys that belong to your wallet"));
     encryptWalletAction->setCheckable(true);
@@ -273,7 +272,6 @@ void BitcoinGUI::createActions()
     signMessageAction->setStatusTip(tr("Sign messages with your linX addresses to prove you own them"));
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
     verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified linX addresses"));
-
     openRPCConsoleAction = new QAction(QIcon(":/icons/debugwindow"), tr("&Debug window"), this);
     openRPCConsoleAction->setStatusTip(tr("Open debugging and diagnostic console"));
 
@@ -325,11 +323,11 @@ void BitcoinGUI::createToolBars()
     QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
     toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     QLabel* header = new QLabel();
-    header->setMinimumSize(200,200);
+    header->setMinimumSize(200,237);
     header->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     header->setPixmap(QPixmap(":/images/logo2"));
     header->setAlignment(Qt::AlignHCenter);
-    header->setMaximumSize(240,200);
+    header->setMaximumSize(240,237);
     header->setScaledContents(false);
     toolbar->addWidget(header);
     toolbar->addAction(overviewAction);

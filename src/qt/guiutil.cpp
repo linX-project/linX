@@ -545,7 +545,7 @@ void SetThemeQSS(QApplication& app)
 
         "QMenu {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold;} "
 
-        "QPushButton    { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; background: rgb(30,30,30) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton    { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; background: rgb(20,20,20) ; color: white; padding: 3px; margin: 4px; }"
         "QPushButton:hover  { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; background: rgb(70,70,70) ; color: white; padding: 3px; margin: 4px; }"
         "QPushButton:disabled { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(100,100,100);}"
 
@@ -553,11 +553,11 @@ void SetThemeQSS(QApplication& app)
         "QPushButton#sendButton:hover { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(48,142,54) ; color: white; padding: 3px; margin: 4px; }"
         "QPushButton#sendButton:pressed { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(24,108,20) ; color: white; padding: 3px; margin: 4px; }"
 
-        "QPushButton#clearButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(30,30,30) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton#clearButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb( 20,20,20) ; color: white; padding: 3px; margin: 4px; }"
         "QPushButton#clearButton:hover { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(70,70,70) ; color: white; padding: 3px; margin: 4px; }"
         "QPushButton#clearButton:pressed { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-image:url(:/images/clear_all_off) no-repeat center center fixed;   }"
 
-        "QPushButton#addButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(30,30,30) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton#addButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb( 20,20,20) ; color: white; padding: 3px; margin: 4px; }"
         "QPushButton#addButton:hover { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(70,70,70) ; color: white; padding: 3px; margin: 4px; }"
         "QPushButton#addButton:pressed { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-image:url(:/images/clear_all_off) no-repeat center center fixed;   }"
 
@@ -566,7 +566,7 @@ void SetThemeQSS(QApplication& app)
         "QTabBar::tab:selected  { background: rgb(70,70,70); }"
         "QTabBar::tab:!selected { background: rgb(24,24,24); margin-top: 2px; }"
 
-        "QToolButton    { border-radius: 2px; background: rgb(30,30,30) ; color: white; padding: 3px; margin: 4px; }"
+        "QToolButton    { border-radius: 2px; background: rgb( 20,20,20) ; color: white; padding: 3px; margin: 4px; }"
         "QToolButton:hover  { border-radius: 2px; background: rgb(70,70,70) ; color: white; padding: 3px; margin: 4px; }"
         "QToolButton:disabled { border-radius: 2px; color: rgb(100,100,100);}"
 
@@ -574,6 +574,8 @@ void SetThemeQSS(QApplication& app)
         "QLineEdit      { background: rgb(255,255,255); color: rgb(24,24,24); border-color: rgb(222,222,222); }"
         "QTextEdit      { background: rgb(255,255,255); color: rgb(24,24,24); }"
         "QPlainTextEdit { background: rgb(255,255,255); color: rgb(24,24,24); }"
+
+        "QLabel#top_bar_balance {color: rgb(196,181,148);}"
 
         "QMenuBar          { background: rgb(24,24,24); color: rgb(233,233,233); }"
 

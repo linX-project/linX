@@ -19,7 +19,7 @@
 #include <QPaintEvent>
 
 #define DECORATION_SIZE 64
-#define NUM_ITEMS 6
+#define NUM_ITEMS 5
 
 class TxViewDelegate : public QAbstractItemDelegate
 {
@@ -155,7 +155,7 @@ void OverviewPage::setBalance(qint64 balance, qint64 unconfirmedBalance, qint64 
     currentUnconfirmedBalance = unconfirmedBalance;
     currentImmatureBalance = immatureBalance;
     ui->labelBalance->setText(BitcoinUnits::formatWithUnit(unit, balance));
-    ui->labelBalance2->setText(BitcoinUnits::formatWithUnit(unit, balance));
+    ui->top_bar_balance->setText(BitcoinUnits::formatWithUnit(unit, balance));
     ui->labelUnconfirmed->setText(BitcoinUnits::formatWithUnit(unit, unconfirmedBalance));
     ui->labelImmature->setText(BitcoinUnits::formatWithUnit(unit, immatureBalance));
 
