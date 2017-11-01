@@ -635,7 +635,7 @@
         <x>0</x>
         <y>0</y>
         <width>830</width>
-        <height>158</height>
+        <height>159</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -681,15 +681,19 @@
       <widget class="QPushButton" name="addButton">
        <property name="minimumSize">
         <size>
-         <width>130</width>
-         <height>38</height>
+         <width>146</width>
+         <height>37</height>
         </size>
        </property>
        <property name="toolTip">
         <string>Send to multiple recipients at once</string>
        </property>
        <property name="text">
-        <string/>
+        <string>Add &amp;Recipient</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../bitcoin.qrc">
+         <normaloff>:/icons/add</normaloff>:/icons/add</iconset>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -706,12 +710,19 @@
        </property>
        <property name="minimumSize">
         <size>
-         <width>130</width>
-         <height>38</height>
+         <width>107</width>
+         <height>37</height>
         </size>
        </property>
        <property name="toolTip">
         <string>Remove all transaction fields</string>
+       </property>
+       <property name="text">
+        <string>Clear &amp;All</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../bitcoin.qrc">
+         <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
        </property>
        <property name="autoRepeatDelay">
         <number>300</number>
@@ -765,12 +776,19 @@
       <widget class="QPushButton" name="sendButton">
        <property name="minimumSize">
         <size>
-         <width>130</width>
-         <height>38</height>
+         <width>140</width>
+         <height>37</height>
         </size>
        </property>
        <property name="toolTip">
         <string>Confirm the send action</string>
+       </property>
+       <property name="text">
+        <string>S&amp;END LINX</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../bitcoin.qrc">
+         <normaloff>:/icons/send</normaloff>:/icons/send</iconset>
        </property>
        <property name="default">
         <bool>true</bool>
@@ -781,6 +799,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../bitcoin.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -178,49 +178,49 @@ void BitcoinGUI::createActions()
 {
     QActionGroup *tabGroup = new QActionGroup(this);
 
-    overviewAction = new QAction(this);
+    overviewAction = new QAction(QIcon(":/icons/overview-btn"), tr("&OVERVIEW"), this);
     overviewAction->setStatusTip(tr("Show general overview of wallet"));
     overviewAction->setToolTip(overviewAction->statusTip());
     overviewAction->setCheckable(true);
     overviewAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_1));
     tabGroup->addAction(overviewAction);
 
-    sendCoinsAction = new QAction(this);
+    sendCoinsAction = new QAction(QIcon(":/icons/send-btn"), tr("&SEND"), this);
     sendCoinsAction->setStatusTip(tr("Send coins to a linX address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
     tabGroup->addAction(sendCoinsAction);
 
-    receiveCoinsAction = new QAction(this);
+    receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses-btn"), tr("&DEPOSIT"), this);
     receiveCoinsAction->setStatusTip(tr("Show the list of addresses for receiving payments"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
     tabGroup->addAction(receiveCoinsAction);
 
-    historyAction = new QAction(this);;
+    historyAction = new QAction(QIcon(":/icons/history-btn"), tr("&TRANSACTIONS"), this);
     historyAction->setStatusTip(tr("Browse transaction history"));
     historyAction->setToolTip(historyAction->statusTip());
     historyAction->setCheckable(true);
     historyAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_4));
     tabGroup->addAction(historyAction);
 
-    addressBookAction = new QAction(this);
+    addressBookAction = new QAction(QIcon(":/icons/address-book-btn"), tr("&ADDRESS BOOK"), this);
     addressBookAction->setStatusTip(tr("Edit the list of stored addresses and labels"));
     addressBookAction->setToolTip(addressBookAction->statusTip());
     addressBookAction->setCheckable(true);
     addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
     tabGroup->addAction(addressBookAction);
 
-    openExplorerAction = new QAction(this);
+    openExplorerAction = new QAction(QIcon(":/icons/explorer-btn"), tr("&EXPLORER"), this);
     openExplorerAction->setStatusTip(tr("Open the LinX block explorer in your web browser"));
     openExplorerAction->setToolTip(openExplorerAction->statusTip());
     openExplorerAction->setCheckable(true);
     openExplorerAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
     tabGroup->addAction(openExplorerAction);
 
-    openWebsiteAction = new QAction(this);
+    openWebsiteAction = new QAction(QIcon(":/icons/website-btn"), tr("&LINX WEBSITE"), this);
     openWebsiteAction->setStatusTip(tr("Open the LinX WebSite in your web browser"));
     openWebsiteAction->setToolTip(openWebsiteAction->statusTip());
     openWebsiteAction->setCheckable(true);
@@ -323,6 +323,7 @@ void BitcoinGUI::createMenuBar()
 void BitcoinGUI::createToolBars()
 {
     QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
+    toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     QLabel* header = new QLabel();
     header->setMinimumSize(200,200);
     header->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -333,57 +334,31 @@ void BitcoinGUI::createToolBars()
     toolbar->addWidget(header);
     toolbar->addAction(overviewAction);
     toolbar->widgetForAction(overviewAction)->setStyleSheet(
-                "QToolButton { border-image:url(:/images/overview_off) no-repeat center center fixed; background-size:cover; border: 4px; border-radius: 6px; padding: 5px; margin: 7px;}"
-                "QToolButton:hover { border-image:url(:/images/overview_on) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:checked { border-image:url(:/images/overview_on) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:pressed { border-image:url(:/images/overview_off) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:selected { border-image:url(:/images/overview_on) no-repeat center center fixed; background-size:cover; }"
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 4px; border-radius: 6px; padding: 5px; margin: 8px;}"
                 );
     toolbar->addAction(sendCoinsAction);
     toolbar->widgetForAction(sendCoinsAction)->setStyleSheet(
-                "QToolButton { border-image:url(:/images/send_off) no-repeat center center fixed; background-size:cover; border: 4px; border-radius: 6px; padding: 5px; margin: 7px;}"
-                "QToolButton:hover { border-image:url(:/images/send_on) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:checked { border-image:url(:/images/send_on) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:pressed { border-image:url(:/images/send_off) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:selected { border-image:url(:/images/send_on) no-repeat center center fixed; background-size:cover; }"
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 4px; border-radius: 6px; padding: 5px; margin: 8px;}"
                 );
     toolbar->addAction(receiveCoinsAction);
     toolbar->widgetForAction(receiveCoinsAction)->setStyleSheet(
-                "QToolButton { border-image:url(:/images/deposit_off) no-repeat center center fixed; background-size:cover; border: 4px; border-radius: 6px; padding: 5px; margin: 7px;}"
-                "QToolButton:hover { border-image:url(:/images/deposit_on) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:checked { border-image:url(:/images/deposit_on) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:pressed { border-image:url(:/images/deposit_off) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:selected { border-image:url(:/images/deposit_on) no-repeat center center fixed; background-size:cover; }"
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 4px; border-radius: 6px; padding: 5px; margin: 8px;}"
                 );
     toolbar->addAction(historyAction);
     toolbar->widgetForAction(historyAction)->setStyleSheet(
-                "QToolButton { border-image:url(:/images/transactions_off) no-repeat center center fixed; background-size:cover; border: 4px; border-radius: 6px; padding: 5px; margin: 7px;}"
-                "QToolButton:hover { border-image:url(:/images/transactions_on) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:checked { border-image:url(:/images/transactions_on) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:pressed { border-image:url(:/images/transactions_off) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:selected { border-image:url(:/images/transactions_on) no-repeat center center fixed; background-size:cover; }"
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 4px; border-radius: 6px; padding: 5px; margin: 8px;}"
                 );
     toolbar->addAction(addressBookAction);
     toolbar->widgetForAction(addressBookAction)->setStyleSheet(
-                "QToolButton { border-image:url(:/images/addresses_off) no-repeat center center fixed; background-size:cover; border: 4px; border-radius: 6px; padding: 5px; margin: 7px;}"
-                "QToolButton:hover { border-image:url(:/images/addresses_on) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:checked { border-image:url(:/images/addresses_on) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:pressed { border-image:url(:/images/addresses_off) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:selected { border-image:url(:/images/addresses_on) no-repeat center center fixed; background-size:cover; }"
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 4px; border-radius: 6px; padding: 5px; margin: 8px;}"
                 );
     toolbar->addAction(openExplorerAction);
     toolbar->widgetForAction(openExplorerAction)->setStyleSheet(
-                "QToolButton { border-image:url(:/images/explorer_off) no-repeat center center fixed; background-size:cover; border: 4px; border-radius: 6px; padding: 5px; margin: 7px;}"
-                "QToolButton:hover { border-image:url(:/images/explorer_on) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:pressed { border-image:url(:/images/explorer_off) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:selected { border-image:url(:/images/explorer_on) no-repeat center center fixed; background-size:cover; }"
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 4px; border-radius: 6px; padding: 5px; margin: 8px;}"
                 );
     toolbar->addAction(openWebsiteAction);
     toolbar->widgetForAction(openWebsiteAction)->setStyleSheet(
-                "QToolButton { border-image:url(:/images/website_off) no-repeat center center fixed; background-size:cover; border: 4px; border-radius: 6px; padding: 5px; margin: 7px;}"
-                "QToolButton:hover { border-image:url(:/images/website_on) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:pressed { border-image:url(:/images/website_off) no-repeat center center fixed; background-size:cover; }"
-                "QToolButton:selected { border-image:url(:/images/website_on) no-repeat center center fixed; background-size:cover; }"
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 4px; border-radius: 6px; padding: 5px; margin: 8px;}"
                 );
     toolbar->setOrientation(Qt::Vertical);
     toolbar->setMovable(false);
@@ -634,6 +609,7 @@ void BitcoinGUI::setNumConnections(int count)
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
     labelConnectionsIcon->setToolTip(tr("%n active connection(s) to linX network", "", count));
+    labelConnectionsIcon->setStyleSheet("color: black");
 }
 
 void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
@@ -679,6 +655,7 @@ void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
     {
         tooltip = tr("Up to date") + QString(".<br>") + tooltip;
         labelBlocksIcon->setPixmap(QIcon(":/icons/synced").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
+        labelBlocksIcon->setStyleSheet("color: black");
 
         walletFrame->showOutOfSyncWarning(false);
 

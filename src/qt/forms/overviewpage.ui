@@ -68,13 +68,14 @@
            <widget class="QLabel" name="label_2">
             <property name="font">
              <font>
+              <family>Arial Black</family>
               <pointsize>10</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
             <property name="text">
-             <string>Available</string>
+             <string>AVAILABLE</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -85,10 +86,14 @@
            <widget class="QLabel" name="labelBalance2">
             <property name="font">
              <font>
+              <family>Arial Black</family>
               <pointsize>12</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
+            </property>
+            <property name="toolTip">
+             <string>Your current balance</string>
             </property>
             <property name="text">
              <string>0 LINX</string>
@@ -124,18 +129,26 @@
              <widget class="QLabel" name="label_5">
               <property name="font">
                <font>
+                <family>Arial Black</family>
                 <pointsize>11</pointsize>
                 <weight>75</weight>
                 <bold>true</bold>
+                <underline>false</underline>
                </font>
               </property>
               <property name="text">
-               <string>Wallet</string>
+               <string>WALLET</string>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="labelWalletStatus">
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="toolTip">
                <string>The displayed information may be out of date. Your wallet automatically synchronizes with the LinX network after a connection is established, but this process has not completed yet.</string>
               </property>
@@ -180,6 +193,7 @@
              <widget class="QLabel" name="label">
               <property name="font">
                <font>
+                <family>Arial Black</family>
                 <pointsize>11</pointsize>
                </font>
               </property>
@@ -192,6 +206,7 @@
              <widget class="QLabel" name="label_3">
               <property name="font">
                <font>
+                <family>Arial Black</family>
                 <pointsize>11</pointsize>
                </font>
               </property>
@@ -204,6 +219,7 @@
              <widget class="QLabel" name="labelUnconfirmed">
               <property name="font">
                <font>
+                <family>Arial Black</family>
                 <pointsize>11</pointsize>
                 <weight>75</weight>
                 <bold>true</bold>
@@ -227,6 +243,7 @@
              <widget class="QLabel" name="labelImmatureText">
               <property name="font">
                <font>
+                <family>Arial Black</family>
                 <pointsize>11</pointsize>
                </font>
               </property>
@@ -239,6 +256,7 @@
              <widget class="QLabel" name="labelImmature">
               <property name="font">
                <font>
+                <family>Arial Black</family>
                 <pointsize>11</pointsize>
                 <weight>75</weight>
                 <bold>true</bold>
@@ -259,6 +277,7 @@
              <widget class="QLabel" name="labelBalance">
               <property name="font">
                <font>
+                <family>Arial Black</family>
                 <pointsize>11</pointsize>
                 <weight>75</weight>
                 <bold>true</bold>
@@ -318,16 +337,27 @@
              <widget class="QLabel" name="label_4">
               <property name="font">
                <font>
+                <family>Arial Black</family>
                 <pointsize>11</pointsize>
+                <underline>false</underline>
                </font>
               </property>
+              <property name="toolTip">
+               <string>Your recent transactions</string>
+              </property>
               <property name="text">
-               <string>&lt;b&gt;Recent transactions&lt;/b&gt;</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;RECENT TRANSACTIONS&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLabel" name="labelTransactionsStatus">
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="toolTip">
                <string>The displayed information may be out of date. Your wallet automatically synchronizes with the LinX network after a connection is established, but this process has not completed yet.</string>
               </property>
