@@ -585,11 +585,11 @@ void SetThemeQSS(QApplication& app)
 
         "QMenuBar::item:selected { background: rgb(70,70,70); }"
 
-        "QLabel         { color: rgb(255,255,255); }"
+        "QLabel         { font-family:Arial,Gadget,sans-serif; color: rgb(255,255,255); }"
         "QScrollBar     { color: rgb(255,255,255); }"
         "QCheckBox      { color: rgb(255,255,255); }"
         "QRadioButton   { color: rgb(255,255,255); }"
-        "QListView         { color: rgb(255,255,255); }"
+        "QListView      { font-family:Arial,Gadget,sans-serif; color: rgb(255,255,255); }"
 
         "QTabWidget::pane { background-image:url(:/images/wallet_bg) no-repeat center center fixed;  border: 1px solid rgb(78,79,83); }"
 
@@ -600,7 +600,7 @@ void SetThemeQSS(QApplication& app)
         "QTreeView::item { background: rgb(24,24,24); color: rgb(255,255,255); }"
         "QTreeView::item:selected { background: rgb(149,148,148); }"
 
-        "QTableView     { background-color: transparent ; color: white; selection-background-color: #aaaaaa; alternate-background-color: #222222; }"
+        "QTableView     { font-family: Arial,Gadget,sans-serif;   background-color: transparent ; color: white; selection-background-color: #aaaaaa; alternate-background-color: #222222; }"
 
         "QScrollArea#scrollArea { background: rgb(24,24,24);}"
 
@@ -611,17 +611,17 @@ void SetThemeQSS(QApplication& app)
 
         "QWidget#scrollAreaWidgetContents, QWidget#transactionsPage { background: rgb(24,24,24);}"
 
-        "QDialog#SignVerifyMessageDialog, QDialog#AskPassphraseDialog, QDialog#CoinControlDialog, QDialog#TransactionDescDialog, QDialog#AboutDialog, QDialog#OptionsDialog, QDialog#QRCodeDialog, QDialog#RPCConsole, QMessageBox  {color: rgb(255,255,255); background-image:url(:/images/wallet_bg) no-repeat center center fixed;   }"
+        "QDialog#EditAddressDialog, QDialog#SignVerifyMessageDialog, QDialog#AskPassphraseDialog, QDialog#CoinControlDialog, QDialog#TransactionDescDialog, QDialog#AboutDialog, QDialog#OptionsDialog, QDialog#QRCodeDialog, QDialog#RPCConsole, QMessageBox  {color: rgb(255,255,255); background-image:url(:/images/wallet_bg) no-repeat center center fixed;   }"
 
-        "QSpinBox {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
+        "QSpinBox {font-family: Arial Black, Arial,Gadget,sans-serif;   border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
 
-        "QComboBox {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
+        "QComboBox {font-family: Arial Black, Arial,Gadget,sans-serif;   border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
 
-        "QComboBox QAbstractItemView  {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
+        "QComboBox QAbstractItemView  {font-family: Arial Black, Arial,Gadget,sans-serif;   border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
 
         "QVBoxLayout { background: rgb(24,24,24);}"
 
-        "QLineEdit, QTextEdit {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
+        "QLineEdit, QTextEdit {font-family: Arial Black, Arial,Gadget,sans-serif;   border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
 
 
 

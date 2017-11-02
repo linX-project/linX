@@ -56,8 +56,8 @@
         <file alias="splash_testnet">res/images/splash_testnet.png</file>
         <file alias="linx-logo-word">res/images/linx-logo-word.png</file>
         <file alias="logo2">res/images/spacer.png</file>
-        <file alias="wallet_bg">res/images/wallet_bg.png</file>
-        <file alias="wallet_bg_left">res/images/wallet_bg_left.png</file>
+        <file alias="wallet_bg">res/images/wallet_bg-1.png</file>
+        <file alias="wallet_bg_left">res/images/wallet_bg_left-1.png</file>
         <file alias="balance_box_bg">res/images/balance_box_bg.png</file>
         <file alias="overview_on">res/images/overview_on.png</file>
         <file alias="overview_off">res/images/overview_off.png</file>

@@ -107,8 +107,8 @@
              <font>
               <family>Arial</family>
               <pointsize>14</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
+              <weight>75</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="toolTip">
@@ -231,8 +231,10 @@
              <widget class="QLabel" name="label">
               <property name="font">
                <font>
-                <family>Arial Black</family>
+                <family>Arial</family>
                 <pointsize>11</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
                </font>
               </property>
               <property name="text">
@@ -247,12 +249,14 @@
              <widget class="QLabel" name="label_3">
               <property name="font">
                <font>
-                <family>Arial Black</family>
+                <family>Arial</family>
                 <pointsize>11</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
                </font>
               </property>
               <property name="text">
-               <string>Unconfirmed:</string>
+               <string>Pending</string>
               </property>
               <property name="indent">
                <number>4</number>
@@ -263,10 +267,10 @@
              <widget class="QLabel" name="labelUnconfirmed">
               <property name="font">
                <font>
-                <family>Arial Black</family>
+                <family>Arial</family>
                 <pointsize>11</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
+                <weight>50</weight>
+                <bold>false</bold>
                </font>
               </property>
               <property name="cursor">
@@ -287,12 +291,14 @@
              <widget class="QLabel" name="labelImmatureText">
               <property name="font">
                <font>
-                <family>Arial Black</family>
+                <family>Arial</family>
                 <pointsize>11</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
                </font>
               </property>
               <property name="text">
-               <string>Immature:</string>
+               <string>Immature</string>
               </property>
               <property name="indent">
                <number>4</number>
@@ -303,10 +309,8 @@
              <widget class="QLabel" name="labelImmature">
               <property name="font">
                <font>
-                <family>Arial Black</family>
+                <family>Arial 12,Gadget,sans-serif</family>
                 <pointsize>11</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
                </font>
               </property>
               <property name="toolTip">
@@ -324,10 +328,10 @@
              <widget class="QLabel" name="labelBalance">
               <property name="font">
                <font>
-                <family>Arial Black</family>
+                <family>Arial</family>
                 <pointsize>11</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
+                <weight>50</weight>
+                <bold>false</bold>
                </font>
               </property>
               <property name="cursor">
