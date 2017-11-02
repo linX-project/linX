@@ -600,11 +600,11 @@ void SetThemeQSS(QApplication& app)
         "QTreeView::item { background: rgb(24,24,24); color: rgb(255,255,255); }"
         "QTreeView::item:selected { background: rgb(149,148,148); }"
 
-        "QTableView     { background: rgb(24,24,24); color: white; selection-background-color: #aaaaaa; alternate-background-color: #222222; }"
+        "QTableView     { background-color: transparent ; color: white; selection-background-color: #aaaaaa; alternate-background-color: #222222; }"
 
-        "QScrollArea#scrollArea { background: rgb(29,34,39);}"
+        "QScrollArea#scrollArea { background: rgb(24,24,24);}"
 
-        "QHeaderView::section { background: rgb(24,24,24); background: rgb(29,34,39); color: rgb(255,255,255); }"
+        "QHeaderView::section { background: rgb(24,24,24); background: rgb(24,24,24); color: rgb(255,255,255); }"
         "QHeaderView { background: rgb(24,24,24);}"
 
         "QToolBar       {background-image:url(:/images/wallet_bg_left); background-repeat: repeat-xy; border: none; }"
@@ -620,6 +620,8 @@ void SetThemeQSS(QApplication& app)
         "QComboBox QAbstractItemView  {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
 
         "QVBoxLayout { background: rgb(24,24,24);}"
+
+        "QLineEdit, QTextEdit {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
 
 
 

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>675</width>
-    <height>425</height>
+    <height>448</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -34,13 +34,29 @@
     </widget>
    </item>
    <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>25</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
     <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0">
      <item>
       <widget class="QFrame" name="balance_box">
        <property name="maximumSize">
         <size>
          <width>16777215</width>
-         <height>16777215</height>
+         <height>57</height>
         </size>
        </property>
        <property name="frameShape">
@@ -56,6 +72,9 @@
            <number>6</number>
           </property>
           <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
            <number>0</number>
           </property>
           <property name="rightMargin">
@@ -86,10 +105,10 @@
            <widget class="QLabel" name="top_bar_balance">
             <property name="font">
              <font>
-              <family>Arial Black</family>
+              <family>Arial</family>
               <pointsize>14</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <weight>50</weight>
+              <bold>false</bold>
              </font>
             </property>
             <property name="toolTip">
@@ -111,6 +130,22 @@
     </layout>
    </item>
    <item>
+    <spacer name="verticalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>10</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
     <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0">
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -129,7 +164,7 @@
              <widget class="QLabel" name="label_5">
               <property name="font">
                <font>
-                <family>Arial Black</family>
+                <family>Arial</family>
                 <pointsize>10</pointsize>
                 <weight>75</weight>
                 <bold>true</bold>
@@ -349,7 +384,7 @@
              <widget class="QLabel" name="label_4">
               <property name="font">
                <font>
-                <family>Arial Black</family>
+                <family>Arial</family>
                 <pointsize>10</pointsize>
                 <underline>false</underline>
                </font>

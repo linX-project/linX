@@ -323,11 +323,11 @@ void BitcoinGUI::createToolBars()
     QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
     toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     QLabel* header = new QLabel();
-    header->setMinimumSize(200,237);
+    header->setMinimumSize(200,260);
     header->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     header->setPixmap(QPixmap(":/images/logo2"));
     header->setAlignment(Qt::AlignHCenter);
-    header->setMaximumSize(240,237);
+    header->setMaximumSize(240,260);
     header->setScaledContents(false);
     toolbar->addWidget(header);
     toolbar->addAction(overviewAction);
