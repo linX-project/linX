@@ -35,10 +35,10 @@
 TransactionView::TransactionView(QWidget *parent) :
     QWidget(parent), model(0), transactionProxyModel(0),
     transactionView(0)
-
 {
     // Build filter row
     setContentsMargins(0,0,0,0);
+
     QHBoxLayout *hlayout = new QHBoxLayout();
     hlayout->setContentsMargins(0,0,0,0);
 #ifdef Q_OS_MAC

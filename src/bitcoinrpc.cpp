@@ -182,10 +182,10 @@ Value stop(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "Stop linX server.");
+            "Stop Linx server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
-    return "LinX server stopping";
+    return "Linx server stopping";
 }
 
 
@@ -746,13 +746,13 @@ void StartRPCThreads()
             _("%s, you must set a rpcpassword in the configuration file:\n"
               "%s\n"
               "It is recommended you use the following random password:\n"
-              "rpcuser=linXrpc\n"
+              "rpcuser=linxrpc\n"
               "rpcpassword=%s\n"
               "(you do not need to remember this password)\n"
               "The username and password MUST NOT be the same.\n"
               "If the file does not exist, create it with owner-readable-only file permissions.\n"
               "It is also recommended to set alertnotify so you are notified of problems;\n"
-              "for example: alertnotify=echo %%s | mail -s \"linX Alert\" admin@foo.com\n"),
+              "for example: alertnotify=echo %%s | mail -s \"Linx Alert\" admin@foo.com\n"),
                 strWhatAmI.c_str(),
                 GetConfigFile().string().c_str(),
                 EncodeBase58(&rand_pwd[0],&rand_pwd[0]+32).c_str()),

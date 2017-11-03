@@ -188,7 +188,7 @@
                </font>
               </property>
               <property name="toolTip">
-               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the LinX network after a connection is established, but this process has not completed yet.</string>
+               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Linx network after a connection is established, but this process has not completed yet.</string>
               </property>
               <property name="styleSheet">
                <string notr="true">QLabel { color: red; }</string>
@@ -277,7 +277,7 @@
                <cursorShape>IBeamCursor</cursorShape>
               </property>
               <property name="toolTip">
-               <string>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</string>
+               <string>Total of transactions that have yet to be confirmed, and do not yet count toward your available balance</string>
               </property>
               <property name="text">
                <string notr="true">0 LINX</string>
@@ -298,7 +298,7 @@
                </font>
               </property>
               <property name="text">
-               <string>Immature</string>
+               <string>Immature:</string>
               </property>
               <property name="indent">
                <number>4</number>
@@ -413,7 +413,7 @@
                </font>
               </property>
               <property name="toolTip">
-               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the LinX network after a connection is established, but this process has not completed yet.</string>
+               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Linx network after a connection is established, but this process has not completed yet.</string>
               </property>
               <property name="styleSheet">
                <string notr="true">QLabel { color: red; }</string>

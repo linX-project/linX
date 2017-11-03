@@ -36,6 +36,7 @@ WalletView::WalletView(QWidget *parent, BitcoinGUI *_gui):
 {
     // Create tabs
     overviewPage = new OverviewPage();
+
     transactionsPage = new QWidget(this);
     QVBoxLayout *vbox = new QVBoxLayout();
     QHBoxLayout *hbox_buttons = new QHBoxLayout();

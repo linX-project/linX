@@ -1,4 +1,5 @@
 // Copyright (c) 2011-2013 The Bitcoin developers
+// Copyright (c) 2017 The Linx Partnership
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -29,11 +30,11 @@ SignVerifyMessageDialog::SignVerifyMessageDialog(QWidget *parent) :
 
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->addressIn_SM->setPlaceholderText(tr("Enter a LinX address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)"));
+    ui->addressIn_SM->setPlaceholderText(tr("Enter a Linx address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)"));
     ui->signatureOut_SM->setPlaceholderText(tr("Click \"Sign Message\" to generate signature"));
 
-    ui->addressIn_VM->setPlaceholderText(tr("Enter a LinX address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)"));
-    ui->signatureIn_VM->setPlaceholderText(tr("Enter linX signature"));
+    ui->addressIn_VM->setPlaceholderText(tr("Enter a Linx address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)"));
+    ui->signatureIn_VM->setPlaceholderText(tr("Enter Linx signature"));
 #endif
 
     GUIUtil::setupAddressWidget(ui->addressIn_SM, this);

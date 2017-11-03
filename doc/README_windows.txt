@@ -1,7 +1,7 @@
-linX 0.9.0.2
+Linx 0.9.0.2
 
 Copyright (c) 2009-2014 Bitcoin Developers
-Copyright (c) 2017 The LinX Foundation
+Copyright (c) 2017 The Linx Partnership
 
 Distributed under the MIT/X11 software license, see the accompanying
 file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -12,7 +12,7 @@ cryptographic software written by Eric Young (eay@cryptsoft.com).
 
 Intro
 -----
-linX is a free open source peer-to-peer electronic cash system that is
+Linx is a free open source peer-to-peer electronic cash system that is
 completely decentralized, without the need for a central server or trusted
 parties.  Users hold the crypto keys to their own money and transact directly
 with each other, with the help of a P2P network to check for double-spending.
@@ -25,8 +25,8 @@ Setup
 
 - Alternatively run linX-qt.exe or linXd.exe without using the installer
 
-linX-Qt is the original linX client and it builds the backbone of the network.
+linX-Qt is the original Linx client and it builds the backbone of the network.
 
-However, it downloads and stores the entire history of linX transactions;
-depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
-
+However, it downloads and stores the entire history of Linx transactions;
+depending on the speed of your computer and network connection, the
+synchronization process can take anywhere from a few minutes to a few hours.

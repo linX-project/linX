@@ -7,7 +7,7 @@
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
         <source>About linX</source>
-        <translation>About linX</translation>
+        <translation>About Linx</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -37,7 +37,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <source>The linX developers</source>
-        <translation>The linX developers</translation>
+        <translation>The Linx Partnership</translation>
     </message>
 </context>
 <context>
@@ -70,7 +70,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
         <source>These are your linX addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>These are your linX addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</translation>
+        <translation>These are your Linx addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -85,7 +85,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+11"/>
         <source>Sign a message to prove you own a linX address</source>
-        <translation>Sign a message to prove you own a linX address</translation>
+        <translation>Sign a message to prove you own a Linx address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -110,7 +110,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-44"/>
         <source>Verify a message to ensure it was signed with a specified linX address</source>
-        <translation>Verify a message to ensure it was signed with a specified linX address</translation>
+        <translation>Verify a message to ensure it was signed with a specified Linx address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -125,7 +125,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
         <source>These are your linX addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>These are your linX addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
+        <translation>These are your Linx addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -250,8 +250,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LINXS&lt;/b&gt;!</source>
-        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LINXS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LINX&lt;/b&gt;!</source>
+        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LINX&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -278,7 +278,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-56"/>
         <source>linX will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your linXs from being stolen by malware infecting your computer.</source>
-        <translation>linX will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your linXs from being stolen by malware infecting your computer.</translation>
+        <translation>Linx will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your LINX from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -342,7 +342,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+1"/>
         <source>Show general overview of wallet</source>
-        <translation>Show general overview of wallet</translation>
+        <translation>General overview of wallet</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -362,7 +362,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-14"/>
         <source>Show the list of addresses for receiving payments</source>
-        <translation>Show the list of addresses for receiving payments</translation>
+        <translation>View or create addresses for receiving payments</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -377,7 +377,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+4"/>
         <source>Show information about linX</source>
-        <translation>Show information about linX</translation>
+        <translation>Show information about Linx</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -422,12 +422,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-347"/>
         <source>Send coins to a linX address</source>
-        <translation>Send coins to a linX address</translation>
+        <translation>Send coins to a Linx address</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Modify configuration options for linX</source>
-        <translation>Modify configuration options for linX</translation>
+        <translation>Modify configuration options for Linx</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -483,7 +483,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+22"/>
         <source>&amp;About linX</source>
-        <translation>&amp;About linX</translation>
+        <translation>&amp;About Linx</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -503,12 +503,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+7"/>
         <source>Sign messages with your linX addresses to prove you own them</source>
-        <translation>Sign messages with your linX addresses to prove you own them</translation>
+        <translation>Sign messages with your Linx addresses to prove you own them</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Verify messages to ensure they were signed with specified linX addresses</source>
-        <translation>Verify messages to ensure they were signed with specified linX addresses</translation>
+        <translation>Verify messages to ensure they were signed with specified Linx addresses</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -545,8 +545,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="+141"/>
         <source>%n active connection(s) to linX network</source>
         <translation>
-            <numerusform>%n active connection to linX network</numerusform>
-            <numerusform>%n active connections to linX network</numerusform>
+            <numerusform>%n active connection to the Linx network</numerusform>
+            <numerusform>%n active connections to the Linx network</numerusform>
         </translation>
     </message>
     <message>
@@ -671,7 +671,7 @@ Address: %4
         <location line="-23"/>
         <location line="+23"/>
         <source>URI can not be parsed! This can be caused by an invalid linX address or malformed URI parameters.</source>
-        <translation>URI can not be parsed! This can be caused by an invalid linX address or malformed URI parameters.</translation>
+        <translation>URI can not be parsed! This can be caused by an invalid Linx address or malformed URI parameters.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -686,7 +686,7 @@ Address: %4
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
         <source>A fatal error occurred. linX can no longer continue safely and will quit.</source>
-        <translation>A fatal error occurred. linX can no longer continue safely and will quit.</translation>
+        <translation>A fatal error occurred. Linx can no longer continue safely and will quit.</translation>
     </message>
 </context>
 <context>
@@ -752,7 +752,7 @@ Address: %4
     <message>
         <location line="-5"/>
         <source>The entered address &quot;%1&quot; is not a valid linX address.</source>
-        <translation>The entered address &quot;%1&quot; is not a valid linX address.</translation>
+        <translation>The entered address &quot;%1&quot; is not a valid Linx address.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -834,12 +834,12 @@ Address: %4
     <message>
         <location line="+31"/>
         <source>Automatically start linX after logging in to the system.</source>
-        <translation>Automatically start linX after logging in to the system.</translation>
+        <translation>Automatically start Linx after logging in to the system.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Start linX on system login</source>
-        <translation>&amp;Start linX on system login</translation>
+        <translation>&amp;Start Linx on system login</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -859,7 +859,7 @@ Address: %4
     <message>
         <location line="+6"/>
         <source>Automatically open the linX client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the linX client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <translation>Automatically open the Linx client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -869,7 +869,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>Connect to the linX network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Connect to the linX network through a SOCKS proxy (e.g. when connecting through Tor).</translation>
+        <translation>Connect to the Linx network through a SOCKS proxy (e.g. when connecting through Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -944,7 +944,7 @@ Address: %4
     <message>
         <location line="+13"/>
         <source>The user interface language can be set here. This setting will take effect after restarting linX.</source>
-        <translation>The user interface language can be set here. This setting will take effect after restarting linX.</translation>
+        <translation>The user interface language can be set here. This setting will take effect after restarting Linx.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -959,7 +959,7 @@ Address: %4
     <message>
         <location line="+9"/>
         <source>Whether to show linX addresses in the transaction list or not.</source>
-        <translation>Whether to show linX addresses in the transaction list or not.</translation>
+        <translation>Whether to show Linx addresses in the transaction list or not.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1011,7 +1011,7 @@ Address: %4
         <location line="-9"/>
         <location line="+9"/>
         <source>This setting will take effect after restarting linX.</source>
-        <translation>This setting will take effect after restarting linX.</translation>
+        <translation>This setting will take effect after restarting Linx.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1030,7 +1030,7 @@ Address: %4
         <location line="+50"/>
         <location line="+166"/>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the linX network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the linX network after a connection is established, but this process has not completed yet.</translation>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Linx network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1070,7 +1070,7 @@ Address: %4
     <message>
         <location line="+29"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
-        <translation>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</translation>
+        <translation>Total of transactions that have yet to be confirmed, and do not yet count toward your available balance</translation>
     </message>
     <message>
         <location filename="../overviewpage.cpp" line="+116"/>
@@ -1234,7 +1234,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>Show the linX-Qt help message to get a list with possible linX command-line options.</source>
-        <translation>Show the linX-Qt help message to get a list with possible linX command-line options.</translation>
+        <translation>Show the linX-Qt help message to get a list with possible Linx command-line options.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1269,7 +1269,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>Open the linX debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Open the linX debug log file from the current data directory. This can take a few seconds for large log files.</translation>
+        <translation>Open the Linx debug log file from the current data directory. This can take a few seconds for large log files.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1279,7 +1279,7 @@ Address: %4
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
         <source>Welcome to the linX RPC console.</source>
-        <translation>Welcome to the linX RPC console.</translation>
+        <translation>Welcome to the Linx RPC console.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1334,7 +1334,7 @@ Address: %4
     <message>
         <location line="+10"/>
         <source>123.456 BTC</source>
-        <translation>123.456 BTC</translation>
+        <translation>123.456 LINX</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1463,7 +1463,7 @@ Address: %4
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
         <source>Enter a linX address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</source>
-        <translation>Enter a linX address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</translation>
+        <translation>Enter a Linx address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</translation>
     </message>
 </context>
 <context>
@@ -1528,7 +1528,7 @@ Address: %4
     <message>
         <location line="+21"/>
         <source>Sign the message to prove you own this linX address</source>
-        <translation>Sign the message to prove you own this linX address</translation>
+        <translation>Sign the message to prove you own this Linx address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1564,7 +1564,7 @@ Address: %4
     <message>
         <location line="+40"/>
         <source>Verify the message to ensure it was signed with the specified linX address</source>
-        <translation>Verify the message to ensure it was signed with the specified linX address</translation>
+        <translation>Verify the message to ensure it was signed with the specified Linx address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1580,7 +1580,7 @@ Address: %4
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
         <source>Enter a linX address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</source>
-        <translation>Enter a linX address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</translation>
+        <translation>Enter a Linx address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1590,7 +1590,7 @@ Address: %4
     <message>
         <location line="+3"/>
         <source>Enter linX signature</source>
-        <translation>Enter linX signature</translation>
+        <translation>Enter Linx signature</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1664,7 +1664,7 @@ Address: %4
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
         <source>The linX developers</source>
-        <translation>The linX developers</translation>
+        <translation>The Linx Partnership</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2852,7 +2852,7 @@ for example: alertnotify=echo %%s | mail -s &quot;linX Alert&quot; admin@foo.com
     <message>
         <location line="+93"/>
         <source>Wallet needed to be rewritten: restart linX to complete</source>
-        <translation>Wallet needed to be rewritten: restart linX to complete</translation>
+        <translation>Wallet needed to be rewritten: restart Linx to complete</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2912,7 +2912,7 @@ for example: alertnotify=echo %%s | mail -s &quot;linX Alert&quot; admin@foo.com
     <message>
         <location line="-25"/>
         <source>Unable to bind to %s on this computer. linX is probably already running.</source>
-        <translation>Unable to bind to %s on this computer. linX is probably already running.</translation>
+        <translation>Unable to bind to %s on this computer. Linx is probably already running.</translation>
     </message>
     <message>
         <location line="+64"/>

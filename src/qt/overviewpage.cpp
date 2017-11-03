@@ -166,7 +166,6 @@ void OverviewPage::setBalance(qint64 balance, qint64 unconfirmedBalance, qint64 
     ui->labelImmatureText->setVisible(showImmature);
 }
 
-
 void OverviewPage::setClientModel(ClientModel *model)
 {
     this->clientModel = model;

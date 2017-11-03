@@ -1,5 +1,5 @@
 Copyright (c) 2009-2013 Bitcoin Developers
-Copyright (c) 2017 The LinX Foundation
+Copyright (c) 2017 The Linx Partnership
 
 Distributed under the MIT/X11 software license, see the accompanying
 file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -13,7 +13,7 @@ To Build
 ---------------------
 
 	cd src/
-	make -f makefile.unix		# Headless linX
+	make -f makefile.unix		# Headless Linx
 
 See readme-qt.rst for instructions on building linX-Qt, the graphical user interface.
 
@@ -69,7 +69,7 @@ Build requirements (UB 12.x, 14.x & 16.x compatible) :
 	sudo add-apt-repository ppa:bitcoin/bitcoin
 	sudo apt-get update
 	sudo apt-get install libdb4.8-dev libdb4.8++-dev
-        
+
 
 Notes
 -----
@@ -105,7 +105,7 @@ If you need to build Boost yourself:
 
 Security
 --------
-To help make your linX installation more secure by making certain attacks impossible to
+To help make your Linx installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, you can take the following measures:
 
 * Position Independent Executable

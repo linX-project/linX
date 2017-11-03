@@ -1,4 +1,5 @@
 // Copyright (c) 2011-2013 The Bitcoin developers
+// Copyright (c) 2017 The Linx Partnership
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -38,7 +39,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
 #endif
 #if QT_VERSION >= 0x040700
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a linX address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)"));
+    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a Linx address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)"));
 #endif
 
     addEntry();
@@ -214,7 +215,7 @@ void SendCoinsDialog::on_sendButton_clicked()
         break;
     case WalletModel::TransactionCommitFailed:
         QMessageBox::warning(this, tr("Send Coins"),
-            tr("Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here."),
+            tr("Error: The transaction was rejected. This might happen if some of the LINX in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here."),
             QMessageBox::Ok, QMessageBox::Ok);
         break;
     case WalletModel::Aborted: // User aborted, nothing to do
@@ -442,7 +443,7 @@ void SendCoinsDialog::coinControlClipboardChange()
 void SendCoinsDialog::coinControlFeatureChanged(bool checked)
 {
     ui->frameCoinControl->setVisible(checked);
-    
+
     if (!checked && model) // coin control features disabled
         CoinControlDialog::coinControl->SetNull();
 }
@@ -466,7 +467,7 @@ void SendCoinsDialog::coinControlChangeChecked(int state)
         else
             CoinControlDialog::coinControl->destChange = CNoDestination();
     }
-    
+
     ui->lineEditCoinControlChange->setEnabled((state == Qt::Checked));
     ui->labelCoinControlChangeLabel->setVisible((state == Qt::Checked));
 }
@@ -477,7 +478,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString & text)
     if (model)
     {
         CoinControlDialog::coinControl->destChange = CBitcoinAddress(text.toStdString()).Get();
-        
+
         // label for the change address
         ui->labelCoinControlChangeLabel->setStyleSheet("QLabel{color:black;}");
         if (text.isEmpty())
@@ -485,7 +486,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString & text)
         else if (!CBitcoinAddress(text.toStdString()).IsValid())
         {
             ui->labelCoinControlChangeLabel->setStyleSheet("QLabel{color:red;}");
-            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid linX address"));
+            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid Linx address"));
         }
         else
         {
@@ -496,7 +497,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString & text)
             {
                 CPubKey pubkey;
                 CKeyID keyid;
-                CBitcoinAddress(text.toStdString()).GetKeyID(keyid);   
+                CBitcoinAddress(text.toStdString()).GetKeyID(keyid);
                 if (model->getPubKey(keyid, pubkey))
                     ui->labelCoinControlChangeLabel->setText(tr("(no label)"));
                 else
@@ -514,7 +515,7 @@ void SendCoinsDialog::coinControlUpdateLabels()
 {
     if (!model || !model->getOptionsModel() || !model->getOptionsModel()->getCoinControlFeatures())
         return;
-    
+
     // set pay amounts
     CoinControlDialog::payAmounts.clear();
     for(int i = 0; i < ui->entries->count(); ++i)
@@ -523,12 +524,12 @@ void SendCoinsDialog::coinControlUpdateLabels()
         if(entry)
             CoinControlDialog::payAmounts.append(entry->getValue().amount);
     }
-        
+
     if (CoinControlDialog::coinControl->HasSelected())
     {
         // actual coin control calculation
         CoinControlDialog::updateLabels(model, this);
-        
+
         // show coin control stats
         ui->labelCoinControlAutomaticallySelected->hide();
         ui->widgetCoinControl->show();
@@ -541,4 +542,3 @@ void SendCoinsDialog::coinControlUpdateLabels()
         ui->labelCoinControlInsuffFunds->hide();
     }
 }
-

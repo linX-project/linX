@@ -1,5 +1,5 @@
 Copyright (c) 2009-2013 Bitcoin Developers
-Copyright (c) 2017 The LinX Foundation
+Copyright (c) 2017 The Linx Partnership
 
 Distributed under the MIT/X11 software license, see the accompanying
 file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -82,8 +82,8 @@ MSYS shell:
 	mkdir miniupnpc
 	cp *.h miniupnpc/
 
-linX
--------
+Linx
+----
 MSYS shell:
 
 	cd \linX\src
