@@ -232,7 +232,7 @@
               <property name="font">
                <font>
                 <family>Arial</family>
-                <pointsize>11</pointsize>
+                <pointsize>10</pointsize>
                 <weight>50</weight>
                 <bold>false</bold>
                </font>
@@ -250,7 +250,7 @@
               <property name="font">
                <font>
                 <family>Arial</family>
-                <pointsize>11</pointsize>
+                <pointsize>10</pointsize>
                 <weight>50</weight>
                 <bold>false</bold>
                </font>
@@ -268,7 +268,7 @@
               <property name="font">
                <font>
                 <family>Arial</family>
-                <pointsize>11</pointsize>
+                <pointsize>10</pointsize>
                 <weight>50</weight>
                 <bold>false</bold>
                </font>
@@ -292,7 +292,7 @@
               <property name="font">
                <font>
                 <family>Arial</family>
-                <pointsize>11</pointsize>
+                <pointsize>10</pointsize>
                 <weight>50</weight>
                 <bold>false</bold>
                </font>
@@ -310,7 +310,7 @@
               <property name="font">
                <font>
                 <family>Arial 12,Gadget,sans-serif</family>
-                <pointsize>11</pointsize>
+                <pointsize>10</pointsize>
                </font>
               </property>
               <property name="toolTip">
@@ -329,7 +329,7 @@
               <property name="font">
                <font>
                 <family>Arial</family>
-                <pointsize>11</pointsize>
+                <pointsize>10</pointsize>
                 <weight>50</weight>
                 <bold>false</bold>
                </font>

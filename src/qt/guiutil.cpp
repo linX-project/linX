@@ -594,7 +594,7 @@ void SetThemeQSS(QApplication& app)
         "QTabWidget::pane { background-image:url(:/images/wallet_bg) no-repeat center center fixed;  border: 1px solid rgb(78,79,83); }"
 
         "QProgressBar   { color: rgb(255,255,255); border-color: rgb(24,24,24); }"
-        "QProgressBar::chunk { background: rgb(149,148,148); margin: 0.5px; }"
+        "QProgressBar::chunk { background: rgb(149,148,148); }"
 
         "QTreeView       { background-image:url(:/images/wallet_bg); background-repeat: repeat-xy; border: none; }"
         "QTreeView::item { background: rgb(24,24,24); color: rgb(255,255,255); }"
@@ -604,8 +604,8 @@ void SetThemeQSS(QApplication& app)
 
         "QScrollArea#scrollArea { background: rgb(24,24,24);}"
 
-        "QHeaderView::section { background: rgb(24,24,24); background: rgb(24,24,24); color: rgb(255,255,255); }"
-        "QHeaderView { background: rgb(24,24,24);}"
+        "QHeaderView::section { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; padding: 3px; background: rgb(24,24,24); background: rgb(24,24,24); color: rgb(255,255,255); }"
+        "QHeaderView { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; padding: 3px; background: rgb(24,24,24);}"
 
         "QToolBar       {background-image:url(:/images/wallet_bg_left); background-repeat: repeat-xy; border: none; }"
 
