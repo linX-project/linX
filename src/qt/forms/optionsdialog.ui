@@ -194,7 +194,7 @@
         </widget>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_Network">
+        <layout class="QHBoxLayout" name="horizontalLayout_Network_proxy">
          <item>
           <widget class="QLabel" name="proxyIpLabel">
            <property name="text">

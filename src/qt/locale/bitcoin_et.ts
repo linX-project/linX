@@ -1908,7 +1908,7 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+43"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Saadud koos</translation>
     </message>
     <message>
@@ -1918,7 +1918,7 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Saadetud</translation>
     </message>
     <message>
@@ -2002,12 +2002,12 @@ Aadress: %4⏎</translation>
     </message>
     <message>
         <location line="+11"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Saadud koos</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Saadetud</translation>
     </message>
     <message>

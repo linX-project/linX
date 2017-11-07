@@ -1909,7 +1909,7 @@ Adresse: %4
     </message>
     <message>
         <location line="+43"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Modtaget med</translation>
     </message>
     <message>
@@ -1919,7 +1919,7 @@ Adresse: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Sendt til</translation>
     </message>
     <message>
@@ -2003,12 +2003,12 @@ Adresse: %4
     </message>
     <message>
         <location line="+11"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Modtaget med</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Sendt til</translation>
     </message>
     <message>

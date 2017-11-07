@@ -1908,7 +1908,7 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+43"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Acceptum cum</translation>
     </message>
     <message>
@@ -1918,7 +1918,7 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Missum ad</translation>
     </message>
     <message>
@@ -2002,12 +2002,12 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+11"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Acceptum cum</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Missum ad</translation>
     </message>
     <message>

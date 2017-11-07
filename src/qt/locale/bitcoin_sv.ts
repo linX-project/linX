@@ -1910,7 +1910,7 @@ Adress: %4
     </message>
     <message>
         <location line="+43"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Mottagen med</translation>
     </message>
     <message>
@@ -1920,7 +1920,7 @@ Adress: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Skickad till</translation>
     </message>
     <message>
@@ -2004,12 +2004,12 @@ Adress: %4
     </message>
     <message>
         <location line="+11"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Mottagen med</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Skickad till</translation>
     </message>
     <message>

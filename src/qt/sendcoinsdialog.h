@@ -51,6 +51,10 @@ private:
     WalletModel *model;
     bool fNewRecipientAllowed;
 
+protected:
+    void paintEvent(QPaintEvent* );
+
+
 private slots:
     void on_sendButton_clicked();
     void removeEntry(SendCoinsEntry* entry);

@@ -1907,7 +1907,7 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+43"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Gauta su</translation>
     </message>
     <message>
@@ -1917,7 +1917,7 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Siųsta </translation>
     </message>
     <message>
@@ -2001,12 +2001,12 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+11"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Gauta su</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Išsiųsta</translation>
     </message>
     <message>

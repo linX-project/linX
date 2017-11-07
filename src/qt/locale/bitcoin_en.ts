@@ -1938,8 +1938,8 @@ Address: %4
     </message>
     <message>
         <location line="+43"/>
-        <source>Received with</source>
-        <translation>Received with</translation>
+        <source>Received</source>
+        <translation>Received</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1948,8 +1948,8 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Sent to</source>
-        <translation>Sent to</translation>
+        <source>Sent</source>
+        <translation>Sent</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2032,13 +2032,13 @@ Address: %4
     </message>
     <message>
         <location line="+11"/>
-        <source>Received with</source>
-        <translation>Received with</translation>
+        <source>Received</source>
+        <translation>Received</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Sent to</source>
-        <translation>Sent to</translation>
+        <source>Sent</source>
+        <translation>Sent</translation>
     </message>
     <message>
         <location line="+2"/>

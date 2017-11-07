@@ -1909,7 +1909,7 @@ Endereço: %4
     </message>
     <message>
         <location line="+43"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Recebido com</translation>
     </message>
     <message>
@@ -1919,7 +1919,7 @@ Endereço: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Enviado para</translation>
     </message>
     <message>
@@ -2003,12 +2003,12 @@ Endereço: %4
     </message>
     <message>
         <location line="+11"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Recebida com</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Enviada para</translation>
     </message>
     <message>

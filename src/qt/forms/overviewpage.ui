@@ -56,7 +56,7 @@
        <property name="maximumSize">
         <size>
          <width>16777215</width>
-         <height>57</height>
+         <height>65</height>
         </size>
        </property>
        <property name="frameShape">
@@ -160,6 +160,12 @@
          <layout class="QVBoxLayout" name="verticalLayout_4">
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <property name="topMargin">
+             <number>18</number>
+            </property>
+            <property name="bottomMargin">
+             <number>22</number>
+            </property>
             <item>
              <widget class="QLabel" name="label_5">
               <property name="font">
@@ -173,6 +179,9 @@
               </property>
               <property name="text">
                <string>WALLET</string>
+              </property>
+              <property name="margin">
+               <number>0</number>
               </property>
               <property name="indent">
                <number>4</number>
@@ -228,7 +237,7 @@
              <number>12</number>
             </property>
             <item row="0" column="0">
-             <widget class="QLabel" name="label">
+             <widget class="QLabel" name="labelBalance_2">
               <property name="font">
                <font>
                 <family>Arial</family>
@@ -238,7 +247,7 @@
                </font>
               </property>
               <property name="text">
-               <string>Balance:</string>
+               <string>Balance</string>
               </property>
               <property name="indent">
                <number>4</number>
@@ -246,7 +255,7 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_3">
+             <widget class="QLabel" name="labelPending">
               <property name="font">
                <font>
                 <family>Arial</family>
@@ -281,6 +290,9 @@
               </property>
               <property name="text">
                <string notr="true">0 LINX</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
               </property>
               <property name="textInteractionFlags">
                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -319,6 +331,9 @@
               <property name="text">
                <string notr="true">0 LINX</string>
               </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
               <property name="textInteractionFlags">
                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
               </property>
@@ -342,6 +357,9 @@
               </property>
               <property name="text">
                <string notr="true">0 LINX</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
               </property>
               <property name="textInteractionFlags">
                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -384,6 +402,12 @@
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <property name="topMargin">
+             <number>18</number>
+            </property>
+            <property name="bottomMargin">
+             <number>22</number>
+            </property>
             <item>
              <widget class="QLabel" name="label_4">
               <property name="font">
@@ -449,17 +473,28 @@
               <height>0</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+             </font>
+            </property>
             <property name="styleSheet">
              <string notr="true">QListView { background: transparent; }</string>
             </property>
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>
             </property>
+            <property name="lineWidth">
+             <number>1</number>
+            </property>
             <property name="verticalScrollBarPolicy">
              <enum>Qt::ScrollBarAlwaysOff</enum>
             </property>
             <property name="horizontalScrollBarPolicy">
              <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="autoScrollMargin">
+             <number>18</number>
             </property>
             <property name="selectionMode">
              <enum>QAbstractItemView::NoSelection</enum>

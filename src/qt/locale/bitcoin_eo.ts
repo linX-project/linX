@@ -1900,7 +1900,7 @@ Address: %4
     </message>
     <message>
         <location line="+43"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Ricevita kun</translation>
     </message>
     <message>
@@ -1910,7 +1910,7 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Sendita al</translation>
     </message>
     <message>
@@ -1994,12 +1994,12 @@ Address: %4
     </message>
     <message>
         <location line="+11"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Ricevita kun</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Sendita al</translation>
     </message>
     <message>

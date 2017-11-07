@@ -1909,7 +1909,7 @@ Address: %4
     </message>
     <message>
         <location line="+43"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Отримано</translation>
     </message>
     <message>
@@ -1919,7 +1919,7 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Відправлено</translation>
     </message>
     <message>
@@ -2003,12 +2003,12 @@ Address: %4
     </message>
     <message>
         <location line="+11"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Отримані на</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Відправлені на</translation>
     </message>
     <message>

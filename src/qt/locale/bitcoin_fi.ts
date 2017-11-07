@@ -1909,7 +1909,7 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+43"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Vastaanotettu osoitteella</translation>
     </message>
     <message>
@@ -1919,7 +1919,7 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Saaja</translation>
     </message>
     <message>
@@ -2003,12 +2003,12 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+11"/>
-        <source>Received with</source>
+        <source>Received</source>
         <translation>Vastaanotettu osoitteella</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Sent to</source>
+        <source>Sent</source>
         <translation>Saaja</translation>
     </message>
     <message>
