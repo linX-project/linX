@@ -586,7 +586,7 @@ void SetThemeQSS(QApplication& app)
         "QTreeView       { background-image:url(:/images/wallet_bg); background-repeat: repeat-xy; border: none; }"
         "QTreeView::item { background: rgb(24,24,24); color: rgb(255,255,255); }"
         "QTreeView::item:selected { background: rgb(149,148,148); }"
-        "QTableView     { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold;   background-color: transparent ; color: white; selection-background-color: #aaaaaa; alternate-background-color: #222222; }"
+        "QTableView     { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 13px; background-color: transparent ; color: white; selection-background-color: #aaaaaa; alternate-background-color: #222222; }"
         "QScrollArea#scrollArea { background-color: rgba(0,0,0,0);}"
         "QHeaderView::section { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; padding: 3px; background: rgb(24,24,24); color: rgb(255,255,255); }"
         "QHeaderView { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; padding: 3px; background: rgb(24,24,24);}"
