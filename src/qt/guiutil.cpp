@@ -538,98 +538,192 @@ void HelpMessageBox::showOrPrint()
 //
 void SetThemeQSS(QApplication& app)
 {
-    app.setStyleSheet("QMainWindow    { border-image: url(:images/wallet_bg) no-repeat center center fixed;   background-color: rgb(24,24,24); background-position: top left; background-repeat: none; }"
+
+#ifdef Q_OS_MAC
+// Mac OS styles here
+    app.setStyleSheet(
+        "QMainWindow    { border-image: url(:images/wallet_bg) no-repeat center center fixed;   background-color: rgb(24,24,24); background-position: top left; background-repeat: none; }"
         "QFrame         { border: none; }"
-//        "QFrame#balance_box {border-radius: 10px; background-image:url(:/images/balance_box_bg) stretch stretch fixed ;}"
-                      "QFrame#balance_box {border-radius: 10px; background-image:url(:/images/balance_box_bg) repeat center center fixed ;}"
+        "QFrame#balance_box {border-radius: 10px; background-image:url(:/images/balance_box_bg) repeat center center fixed ;}"
         "QFrame#SendCoinsEntry  { background-color: rgba(0,0,0,0);; color: rgb(255,255,255); }"
-
         "QMenu {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold;} "
-
         "QPushButton    { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; background: rgb(28,28,28) ; color: white; padding: 3px; margin: 4px; }"
         "QPushButton:hover  { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; background: rgb(70,70,70) ; color: white; padding: 3px; margin: 4px; }"
         "QPushButton:disabled { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(100,100,100);}"
-
         "QPushButton#sendButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(24,108,20) ; color: white; padding: 3px; margin: 4px; }"
         "QPushButton#sendButton:hover { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(48,142,54) ; color: white; padding: 3px; margin: 4px; }"
         "QPushButton#sendButton:pressed { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(24,108,20) ; color: white; padding: 3px; margin: 4px; }"
-
         "QPushButton#clearButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb( 28,28,28) ; color: white; padding: 3px; margin: 4px; }"
         "QPushButton#clearButton:hover { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(70,70,70) ; color: white; padding: 3px; margin: 4px; }"
         "QPushButton#clearButton:pressed { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-image:url(:/images/clear_all_off) no-repeat center center fixed;   }"
-
         "QPushButton#addButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb( 28,28,28) ; color: white; padding: 3px; margin: 4px; }"
         "QPushButton#addButton:hover { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(70,70,70) ; color: white; padding: 3px; margin: 4px; }"
         "QPushButton#addButton:pressed { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-image:url(:/images/clear_all_off) no-repeat center center fixed;   }"
-
-
         "QTabBar::tab   { color: rgb(255,255,255); border: 1px solid rgb(78,79,83); border-bottom: none; padding: 5px; }"
         "QTabBar::tab:selected  { background: rgb(70,70,70); }"
         "QTabBar::tab:!selected { background: rgb(24,24,24); margin-top: 2px; }"
-
         "QToolButton    { border-radius: 2px; background: rgb( 28,28,28) ; color: white; padding: 3px; margin: 4px; }"
         "QToolButton:hover  { border-radius: 2px; background: rgb(70,70,70) ; color: white; padding: 3px; margin: 4px; }"
         "QToolButton:disabled { border-radius: 2px; color: rgb(100,100,100);}"
-
         "QDoubleSpinBox { background: rgb(255,255,255); color: rgb(24,24,24); border-color: rgb(222,222,222); }"
         "QLineEdit      { background: rgb(255,255,255); color: rgb(24,24,24); border-color: rgb(222,222,222); }"
         "QTextEdit      { background: rgb(255,255,255); color: rgb(24,24,24); }"
         "QPlainTextEdit { background: rgb(255,255,255); color: rgb(24,24,24); }"
-
         "QLabel#top_bar_balance {color: rgb(196,181,148);}"
-
         "QMenuBar          { background: rgb(24,24,24); color: rgb(233,233,233); }"
-
         "QMenu       { background: rgb(24,24,24); color: rgb(233,233,233); }"
         "QMenuBar::item { background: rgb(28.83.122); color: rgb(233,233,233);}"
         "QMenu::item:selected { background: rgb(70,70,70); }"
-
         "QMenuBar::item:selected { background: rgb(70,70,70); }"
-
         "QLabel         { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; color: rgb(255,255,255); }"
         "QScrollBar     { color: rgb(255,255,255); }"
         "QCheckBox      { color: rgb(255,255,255); }"
         "QRadioButton   { color: rgb(255,255,255); }"
         "QListView      { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; color: rgb(255,255,255); show-decoration-selected: 1; }"
-
         "QTabWidget::pane { background-image:url(:/images/wallet_bg) no-repeat center center fixed;  border: 1px solid rgb(78,79,83); }"
-
         "QProgressBar   { color: rgb(255,255,255); border-color: rgb(24,24,24); }"
         "QProgressBar::chunk { background: rgb(149,148,148); }"
-
         "QTreeView       { background-image:url(:/images/wallet_bg); background-repeat: repeat-xy; border: none; }"
         "QTreeView::item { background: rgb(24,24,24); color: rgb(255,255,255); }"
         "QTreeView::item:selected { background: rgb(149,148,148); }"
-
         "QTableView     { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold;   background-color: transparent ; color: white; selection-background-color: #aaaaaa; alternate-background-color: #222222; }"
-
         "QScrollArea#scrollArea { background-color: rgba(0,0,0,0);}"
-
         "QHeaderView::section { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; padding: 3px; background: rgb(24,24,24); color: rgb(255,255,255); }"
         "QHeaderView { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; padding: 3px; background: rgb(24,24,24);}"
-
         "QToolBar       {background-image:url(:/images/wallet_bg_left); background-repeat: repeat-xy; border: none; }"
-
         "QWidget#transactionsPage { background-color: rgba(0,0,0,0);}"
         "QWidget#scrollAreaWidgetContents { background-color: rgba(0,0,0,0);}"
-
         "QDialog#EditAddressDialog, QDialog#SignVerifyMessageDialog, QDialog#AskPassphraseDialog, QDialog#CoinControlDialog, QDialog#TransactionDescDialog, QDialog#AboutDialog, QDialog#OptionsDialog, QDialog#QRCodeDialog, QDialog#RPCConsole, QMessageBox  {color: rgb(255,255,255); background-image:url(:/images/wallet_bg) no-repeat center center fixed;   }"
-
         "QSpinBox {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
-
         "QComboBox {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
-
         "QComboBox QAbstractItemView  {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold;  border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
-
         "QVBoxLayout { background: rgb(24,24,24);}"
-
-        "QLineEdit, QTextEdit {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
-
-
-
-
-                );
-
+        "QLineEdit, QTextEdit {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }" );
 }
+
+#elif _WIN32
+// Windows styles here
+    app.setStyleSheet(
+        "QMainWindow    { border-image: url(:images/wallet_bg) no-repeat center center fixed;   background-color: rgb(24,24,24); background-position: top left; background-repeat: none; }"
+        "QFrame         { border: none; }"
+        "QFrame#balance_box {border-radius: 10px; background-image:url(:/images/balance_box_bg) repeat center center fixed ;}"
+        "QFrame#SendCoinsEntry  { background-color: rgba(0,0,0,0);; color: rgb(255,255,255); }"
+        "QMenu {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold;} "
+        "QPushButton    { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; background: rgb(28,28,28) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton:hover  { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; background: rgb(70,70,70) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton:disabled { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(100,100,100);}"
+        "QPushButton#sendButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(24,108,20) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton#sendButton:hover { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(48,142,54) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton#sendButton:pressed { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(24,108,20) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton#clearButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb( 28,28,28) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton#clearButton:hover { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(70,70,70) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton#clearButton:pressed { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-image:url(:/images/clear_all_off) no-repeat center center fixed;   }"
+        "QPushButton#addButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb( 28,28,28) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton#addButton:hover { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(70,70,70) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton#addButton:pressed { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-image:url(:/images/clear_all_off) no-repeat center center fixed;   }"
+        "QTabBar::tab   { color: rgb(255,255,255); border: 1px solid rgb(78,79,83); border-bottom: none; padding: 5px; }"
+        "QTabBar::tab:selected  { background: rgb(70,70,70); }"
+        "QTabBar::tab:!selected { background: rgb(24,24,24); margin-top: 2px; }"
+        "QToolButton    { border-radius: 2px; background: rgb( 28,28,28) ; color: white; padding: 3px; margin: 4px; }"
+        "QToolButton:hover  { border-radius: 2px; background: rgb(70,70,70) ; color: white; padding: 3px; margin: 4px; }"
+        "QToolButton:disabled { border-radius: 2px; color: rgb(100,100,100);}"
+        "QDoubleSpinBox { background: rgb(255,255,255); color: rgb(24,24,24); border-color: rgb(222,222,222); }"
+        "QLineEdit      { background: rgb(255,255,255); color: rgb(24,24,24); border-color: rgb(222,222,222); }"
+        "QTextEdit      { background: rgb(255,255,255); color: rgb(24,24,24); }"
+        "QPlainTextEdit { background: rgb(255,255,255); color: rgb(24,24,24); }"
+        "QLabel#top_bar_balance {color: rgb(196,181,148);}"
+        "QMenuBar          { background: rgb(24,24,24); color: rgb(233,233,233); }"
+        "QMenu       { background: rgb(24,24,24); color: rgb(233,233,233); }"
+        "QMenuBar::item { background: rgb(28.83.122); color: rgb(233,233,233);}"
+        "QMenu::item:selected { background: rgb(70,70,70); }"
+        "QMenuBar::item:selected { background: rgb(70,70,70); }"
+        "QLabel         { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; color: rgb(255,255,255); }"
+        "QScrollBar     { color: rgb(255,255,255); }"
+        "QCheckBox      { color: rgb(255,255,255); }"
+        "QRadioButton   { color: rgb(255,255,255); }"
+        "QListView      { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; color: rgb(255,255,255); show-decoration-selected: 1; }"
+        "QTabWidget::pane { background-image:url(:/images/wallet_bg) no-repeat center center fixed;  border: 1px solid rgb(78,79,83); }"
+        "QProgressBar   { color: rgb(255,255,255); border-color: rgb(24,24,24); }"
+        "QProgressBar::chunk { background: rgb(149,148,148); }"
+        "QTreeView       { background-image:url(:/images/wallet_bg); background-repeat: repeat-xy; border: none; }"
+        "QTreeView::item { background: rgb(24,24,24); color: rgb(255,255,255); }"
+        "QTreeView::item:selected { background: rgb(149,148,148); }"
+        "QTableView     { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold;   background-color: transparent ; color: white; selection-background-color: #aaaaaa; alternate-background-color: #222222; }"
+        "QScrollArea#scrollArea { background-color: rgba(0,0,0,0);}"
+        "QHeaderView::section { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; padding: 3px; background: rgb(24,24,24); color: rgb(255,255,255); }"
+        "QHeaderView { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; padding: 3px; background: rgb(24,24,24);}"
+        "QToolBar       {background-image:url(:/images/wallet_bg_left); background-repeat: repeat-xy; border: none; }"
+        "QWidget#transactionsPage { background-color: rgba(0,0,0,0);}"
+        "QWidget#scrollAreaWidgetContents { background-color: rgba(0,0,0,0);}"
+        "QDialog#EditAddressDialog, QDialog#SignVerifyMessageDialog, QDialog#AskPassphraseDialog, QDialog#CoinControlDialog, QDialog#TransactionDescDialog, QDialog#AboutDialog, QDialog#OptionsDialog, QDialog#QRCodeDialog, QDialog#RPCConsole, QMessageBox  {color: rgb(255,255,255); background-image:url(:/images/wallet_bg) no-repeat center center fixed;   }"
+        "QSpinBox {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
+        "QComboBox {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
+        "QComboBox QAbstractItemView  {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold;  border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
+        "QVBoxLayout { background: rgb(24,24,24);}"
+        "QLineEdit, QTextEdit {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }" );
+}
+
+#else
+// Linux styles here
+    app.setStyleSheet(
+        "QMainWindow    { border-image: url(:images/wallet_bg) no-repeat center center fixed;   background-color: rgb(24,24,24); background-position: top left; background-repeat: none; }"
+        "QFrame         { border: none; }"
+        "QFrame#balance_box {border-radius: 10px; background-image:url(:/images/balance_box_bg) repeat center center fixed ;}"
+        "QFrame#SendCoinsEntry  { background-color: rgba(0,0,0,0);; color: rgb(255,255,255); }"
+        "QMenu {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold;} "
+        "QPushButton    { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; background: rgb(28,28,28) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton:hover  { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; background: rgb(70,70,70) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton:disabled { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(100,100,100);}"
+        "QPushButton#sendButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(24,108,20) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton#sendButton:hover { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(48,142,54) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton#sendButton:pressed { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(24,108,20) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton#clearButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb( 28,28,28) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton#clearButton:hover { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(70,70,70) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton#clearButton:pressed { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-image:url(:/images/clear_all_off) no-repeat center center fixed;   }"
+        "QPushButton#addButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb( 28,28,28) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton#addButton:hover { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-radius: 2px; background: rgb(70,70,70) ; color: white; padding: 3px; margin: 4px; }"
+        "QPushButton#addButton:pressed { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 11px; border-image:url(:/images/clear_all_off) no-repeat center center fixed;   }"
+        "QTabBar::tab   { color: rgb(255,255,255); border: 1px solid rgb(78,79,83); border-bottom: none; padding: 5px; }"
+        "QTabBar::tab:selected  { background: rgb(70,70,70); }"
+        "QTabBar::tab:!selected { background: rgb(24,24,24); margin-top: 2px; }"
+        "QToolButton    { border-radius: 2px; background: rgb( 28,28,28) ; color: white; padding: 3px; margin: 4px; }"
+        "QToolButton:hover  { border-radius: 2px; background: rgb(70,70,70) ; color: white; padding: 3px; margin: 4px; }"
+        "QToolButton:disabled { border-radius: 2px; color: rgb(100,100,100);}"
+        "QDoubleSpinBox { background: rgb(255,255,255); color: rgb(24,24,24); border-color: rgb(222,222,222); }"
+        "QLineEdit      { background: rgb(255,255,255); color: rgb(24,24,24); border-color: rgb(222,222,222); }"
+        "QTextEdit      { background: rgb(255,255,255); color: rgb(24,24,24); }"
+        "QPlainTextEdit { background: rgb(255,255,255); color: rgb(24,24,24); }"
+        "QLabel#top_bar_balance {color: rgb(196,181,148);}"
+        "QMenuBar          { background: rgb(24,24,24); color: rgb(233,233,233); }"
+        "QMenu       { background: rgb(24,24,24); color: rgb(233,233,233); }"
+        "QMenuBar::item { background: rgb(28.83.122); color: rgb(233,233,233);}"
+        "QMenu::item:selected { background: rgb(70,70,70); }"
+        "QMenuBar::item:selected { background: rgb(70,70,70); }"
+        "QLabel         { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; color: rgb(255,255,255); }"
+        "QScrollBar     { color: rgb(255,255,255); }"
+        "QCheckBox      { color: rgb(255,255,255); }"
+        "QRadioButton   { color: rgb(255,255,255); }"
+        "QListView      { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; color: rgb(255,255,255); show-decoration-selected: 1; }"
+        "QTabWidget::pane { background-image:url(:/images/wallet_bg) no-repeat center center fixed;  border: 1px solid rgb(78,79,83); }"
+        "QProgressBar   { color: rgb(255,255,255); border-color: rgb(24,24,24); }"
+        "QProgressBar::chunk { background: rgb(149,148,148); }"
+        "QTreeView       { background-image:url(:/images/wallet_bg); background-repeat: repeat-xy; border: none; }"
+        "QTreeView::item { background: rgb(24,24,24); color: rgb(255,255,255); }"
+        "QTreeView::item:selected { background: rgb(149,148,148); }"
+        "QTableView     { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold;   background-color: transparent ; color: white; selection-background-color: #aaaaaa; alternate-background-color: #222222; }"
+        "QScrollArea#scrollArea { background-color: rgba(0,0,0,0);}"
+        "QHeaderView::section { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; padding: 3px; background: rgb(24,24,24); color: rgb(255,255,255); }"
+        "QHeaderView { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; padding: 3px; background: rgb(24,24,24);}"
+        "QToolBar       {background-image:url(:/images/wallet_bg_left); background-repeat: repeat-xy; border: none; }"
+        "QWidget#transactionsPage { background-color: rgba(0,0,0,0);}"
+        "QWidget#scrollAreaWidgetContents { background-color: rgba(0,0,0,0);}"
+        "QDialog#EditAddressDialog, QDialog#SignVerifyMessageDialog, QDialog#AskPassphraseDialog, QDialog#CoinControlDialog, QDialog#TransactionDescDialog, QDialog#AboutDialog, QDialog#OptionsDialog, QDialog#QRCodeDialog, QDialog#RPCConsole, QMessageBox  {color: rgb(255,255,255); background-image:url(:/images/wallet_bg) no-repeat center center fixed;   }"
+        "QSpinBox {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
+        "QComboBox {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
+        "QComboBox QAbstractItemView  {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold;  border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
+        "QVBoxLayout { background: rgb(24,24,24);}"
+        "QLineEdit, QTextEdit {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }" );
+}
+#endif
 
 } // namespace GUIUtil
