@@ -4,9 +4,9 @@ fName1 = "linX"
 macx:TARGET = "linX-Qt"
 VERSION = 0.9.0.3
 contains(QT_ARCH, i386) {
-    fName2 = "-qt-x86-win-v"
+    fName2 = "-qt-x86-v"
 } else {
-    fName2 = "-qt-x64-win-v"
+    fName2 = "-qt-x64-v"
 }
 TARGET = $$fName1$$fName2$$VERSION
 INCLUDEPATH += src src/json \
