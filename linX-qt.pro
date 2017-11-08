@@ -8,7 +8,6 @@ contains(QT_ARCH, i386) {
 } else {
     fName2 = "-qt-x64-v"
 }
-TARGET = $$fName1$$fName2$$VERSION
 INCLUDEPATH += src src/json \
     src/qt \
 QT += core gui
@@ -28,7 +27,7 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 }
 
 win32 {
-
+TARGET = $$fName1$$fName2$$VERSION
     ## Windows common build here
 
     contains(QT_ARCH, i386) {
