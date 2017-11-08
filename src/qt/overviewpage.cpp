@@ -163,7 +163,7 @@ void OverviewPage::setBalance(qint64 balance, qint64 unconfirmedBalance, qint64 
     // for the non-mining users
     bool showImmature = immatureBalance != 0;
     ui->labelImmature->setVisible(showImmature);
-    ui->labelImmatureText->setVisible(showImmature);
+    ui->overview_immature_label->setVisible(showImmature);
 }
 
 void OverviewPage::setClientModel(ClientModel *model)

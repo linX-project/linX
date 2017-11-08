@@ -323,6 +323,58 @@ void BitcoinGUI::createMenuBar()
     help->addAction(aboutQtAction);
 }
 
+#ifdef Q_OS_MAC
+void BitcoinGUI::createToolBars()
+{
+    QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
+    toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    QLabel* header = new QLabel();
+    header->setMinimumSize(200,260);
+    header->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    header->setPixmap(QPixmap(":/images/logo2"));
+    header->setAlignment(Qt::AlignHCenter);
+    header->setMaximumSize(240,260);
+    header->setScaledContents(false);
+    toolbar->addWidget(header);
+    toolbar->addAction(overviewAction);
+    toolbar->widgetForAction(overviewAction)->setStyleSheet(
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 5px; border-radius: 5px; padding: 3px; margin: 6px;}"
+                );
+    toolbar->addAction(sendCoinsAction);
+    toolbar->widgetForAction(sendCoinsAction)->setStyleSheet(
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 5px; border-radius: 5px; padding: 3px; margin: 6px;}"
+                );
+    toolbar->addAction(receiveCoinsAction);
+    toolbar->widgetForAction(receiveCoinsAction)->setStyleSheet(
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 5px; border-radius: 5px; padding: 3px; margin: 6px;}"
+                );
+    toolbar->addAction(historyAction);
+    toolbar->widgetForAction(historyAction)->setStyleSheet(
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 5px; border-radius: 5px; padding: 3px; margin: 6px;}"
+                );
+    toolbar->addAction(addressBookAction);
+    toolbar->widgetForAction(addressBookAction)->setStyleSheet(
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 5px; border-radius: 5px; padding: 3px; margin: 6px;}"
+                );
+    toolbar->addAction(openExplorerAction);
+    toolbar->widgetForAction(openExplorerAction)->setStyleSheet(
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 5px; border-radius: 5px; padding: 3px; margin: 6px;}"
+                );
+    toolbar->addAction(openWebsiteAction);
+    toolbar->widgetForAction(openWebsiteAction)->setStyleSheet(
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 5px; border-radius: 5px; padding: 3px; margin: 6px;}"
+                );
+    toolbar->setOrientation(Qt::Vertical);
+    toolbar->setMovable(false);
+    addToolBar(Qt::LeftToolBarArea, toolbar);
+
+    foreach(QAction *action, toolbar->actions()) {
+    toolbar->widgetForAction(action)->setFixedWidth(240);
+
+    }
+}
+
+#elif _WIN32
 void BitcoinGUI::createToolBars()
 {
     QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
@@ -368,14 +420,64 @@ void BitcoinGUI::createToolBars()
     addToolBar(Qt::LeftToolBarArea, toolbar);
 
     foreach(QAction *action, toolbar->actions()) {
-#ifndef Q_OS_MAC
-            toolbar->widgetForAction(action)->setFixedWidth(240);
-#else
-            toolbar->widgetForAction(action)->setFixedWidth(240);
-#endif
+    toolbar->widgetForAction(action)->setFixedWidth(240);
+
 
     }
 }
+
+#else
+void BitcoinGUI::createToolBars()
+{
+    QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
+    toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    QLabel* header = new QLabel();
+    header->setMinimumSize(200,260);
+    header->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    header->setPixmap(QPixmap(":/images/logo2"));
+    header->setAlignment(Qt::AlignHCenter);
+    header->setMaximumSize(240,260);
+    header->setScaledContents(false);
+    toolbar->addWidget(header);
+    toolbar->addAction(overviewAction);
+    toolbar->widgetForAction(overviewAction)->setStyleSheet(
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 4px; border-radius: 6px; padding: 5px; margin: 8px;}"
+                );
+    toolbar->addAction(sendCoinsAction);
+    toolbar->widgetForAction(sendCoinsAction)->setStyleSheet(
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 4px; border-radius: 6px; padding: 5px; margin: 8px;}"
+                );
+    toolbar->addAction(receiveCoinsAction);
+    toolbar->widgetForAction(receiveCoinsAction)->setStyleSheet(
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 4px; border-radius: 6px; padding: 5px; margin: 8px;}"
+                );
+    toolbar->addAction(historyAction);
+    toolbar->widgetForAction(historyAction)->setStyleSheet(
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 4px; border-radius: 6px; padding: 5px; margin: 8px;}"
+                );
+    toolbar->addAction(addressBookAction);
+    toolbar->widgetForAction(addressBookAction)->setStyleSheet(
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 4px; border-radius: 6px; padding: 5px; margin: 8px;}"
+                );
+    toolbar->addAction(openExplorerAction);
+    toolbar->widgetForAction(openExplorerAction)->setStyleSheet(
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 4px; border-radius: 6px; padding: 5px; margin: 8px;}"
+                );
+    toolbar->addAction(openWebsiteAction);
+    toolbar->widgetForAction(openWebsiteAction)->setStyleSheet(
+                    "QToolButton { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 14px; border: 4px; border-radius: 6px; padding: 5px; margin: 8px;}"
+                );
+    toolbar->setOrientation(Qt::Vertical);
+    toolbar->setMovable(false);
+    addToolBar(Qt::LeftToolBarArea, toolbar);
+
+    foreach(QAction *action, toolbar->actions()) {
+    toolbar->widgetForAction(action)->setFixedWidth(240);
+
+    }
+}
+
+#endif
 
 void BitcoinGUI::setClientModel(ClientModel *clientModel)
 {

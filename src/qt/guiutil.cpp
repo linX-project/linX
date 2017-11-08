@@ -598,7 +598,10 @@ void SetThemeQSS(QApplication& app)
         "QComboBox {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
         "QComboBox QAbstractItemView  {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold;  border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
         "QVBoxLayout { background: rgb(24,24,24);}"
-        "QLineEdit, QTextEdit {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }" );
+        "QLineEdit, QTextEdit {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
+        "QLabel#top_bar_available {font-size: 10px;}"
+        "QLabel#overview_wallet_label, QLabel#overview_balance_label, QLabel#overview_pending_label, QLabel#overview_immature_label, QLabel#labelBalance, QLabel#labelUnconfirmed, QLabel#labelImmature, QLabel#overview_recent_transactions {font-size: 13px;}"
+ );
 }
 
 #elif _WIN32
@@ -660,7 +663,8 @@ void SetThemeQSS(QApplication& app)
         "QComboBox {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
         "QComboBox QAbstractItemView  {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold;  border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
         "QVBoxLayout { background: rgb(24,24,24);}"
-        "QLineEdit, QTextEdit {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }" );
+        "QLineEdit, QTextEdit {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
+ );
 }
 
 #else
@@ -722,7 +726,8 @@ void SetThemeQSS(QApplication& app)
         "QComboBox {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
         "QComboBox QAbstractItemView  {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold;  border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
         "QVBoxLayout { background: rgb(24,24,24);}"
-        "QLineEdit, QTextEdit {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }" );
+        "QLineEdit, QTextEdit {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
+ );
 }
 #endif
 
