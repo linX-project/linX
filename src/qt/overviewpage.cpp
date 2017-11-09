@@ -110,6 +110,13 @@ OverviewPage::OverviewPage(QWidget *parent) :
     ui->setupUi(this);
     this->setStyleSheet("QWidget#OverviewPage {background-image:url(:/images/wallet_bg); background-repeat: repeat-xy; border: none;}");
 
+#ifdef Q_OS_MAC
+    ui->balance_box->setMinimumHeight(72);
+#elif _WIN32
+    ui->balance_box->setMinimumHeight(65);
+#else
+    ui->balance_box->setMinimumHeight(65);
+#endif
 
     // Recent transactions
     ui->listTransactions->setItemDelegate(txdelegate);

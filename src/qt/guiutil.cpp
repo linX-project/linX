@@ -577,7 +577,7 @@ void SetThemeQSS(QApplication& app)
         "QScrollBar     { color: rgb(255,255,255); }"
         "QCheckBox      { color: rgb(255,255,255); }"
         "QRadioButton   { color: rgb(255,255,255); }"
-        "QListView      { font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; color: rgb(255,255,255); show-decoration-selected: 1; }"
+        "QListView      { font-family: Arial,Gadget,sans-serif; color: rgb(255,255,255); show-decoration-selected: 1; }"
         "QTabWidget::pane { background-image:url(:/images/wallet_bg) no-repeat center center fixed;  border: 1px solid rgb(78,79,83); }"
         "QProgressBar   { color: rgb(255,255,255); border-color: rgb(24,24,24); }"
         "QProgressBar::chunk { background: rgb(149,148,148); }"
@@ -597,8 +597,8 @@ void SetThemeQSS(QApplication& app)
         "QComboBox {font-family: Arial, Gadget,sans-serif; border-radius: 0px; color: rgb(24,24,24); background: rgb(255,255,255); min-width: 6em; }"
         "QComboBox QAbstractItemView  {font-family: Arial ,Gadget,sans-serif; border-radius: 0px; color: rgb(24,24,24); background: rgb(255,255,255); }"
         "QVBoxLayout { background: rgb(24,24,24);}"
-        "QLabel#top_bar_available {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 10px;}"
-        "QLabel#top_bar_balance {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 15px; color: rgb(196,181,148);}"
+        "QLabel#top_bar_available {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 12px;}"
+        "QLabel#top_bar_balance {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 19px; color: rgb(196,181,148);}"
         "QLabel#overview_wallet_label, QLabel#overview_balance_label, QLabel#overview_pending_label, QLabel#overview_immature_label, QLabel#labelBalance, QLabel#labelUnconfirmed, QLabel#labelImmature, QLabel#overview_recent_transactions {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 13px;}"
  );
 }
