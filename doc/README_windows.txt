@@ -23,9 +23,9 @@ Setup
 
 - Double click the setup.exe file to install automatically
 
-- Alternatively run linX-qt.exe or linXd.exe without using the installer
+- Alternatively run linx-qt.exe or linxd.exe without using the installer
 
-linX-Qt is the original Linx client and it builds the backbone of the network.
+linx-Qt is the original Linx client and it builds the backbone of the network.
 
 However, it downloads and stores the entire history of Linx transactions;
 depending on the speed of your computer and network connection, the

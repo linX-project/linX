@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About linX</source>
-        <translation>linX hakkında</translation>
+        <source>About linx</source>
+        <translation>linx hakkında</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;linX&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;linX&lt;/b&gt; sürüm</translation>
+        <source>&lt;b&gt;linx&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;linx&lt;/b&gt; sürüm</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -34,8 +34,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+0"/>
-        <source>The linX developers</source>
-        <translation>linX geliştiricileri</translation>
+        <source>The linx developers</source>
+        <translation>linx geliştiricileri</translation>
     </message>
 </context>
 <context>
@@ -67,8 +67,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your linX addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Bunlar, ödeme almak için linX adresleridir. Kimin ödeme yaptığını izleyebilmek için her ödeme yollaması gereken kişiye değişik bir adres verebilirsiniz.</translation>
+        <source>These are your linx addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Bunlar, ödeme almak için linx adresleridir. Kimin ödeme yaptığını izleyebilmek için her ödeme yollaması gereken kişiye değişik bir adres verebilirsiniz.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -82,8 +82,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a linX address</source>
-        <translation>Bir linX adresinin sizin olduğunu ispatlamak için mesaj imzalayın</translation>
+        <source>Sign a message to prove you own a linx address</source>
+        <translation>Bir linx adresinin sizin olduğunu ispatlamak için mesaj imzalayın</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -107,8 +107,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified linX address</source>
-        <translation>Belirtilen linX adresi ile imzalandığını doğrulamak için bir mesajı kontrol et</translation>
+        <source>Verify a message to ensure it was signed with a specified linx address</source>
+        <translation>Belirtilen linx adresi ile imzalandığını doğrulamak için bir mesajı kontrol et</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -122,8 +122,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your linX addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Bunlar ödeme yapmak için kullanacağınız linX adreslerinizdir. linX yollamadan önce meblağı ve alıcı adresini daima kontrol ediniz.</translation>
+        <source>These are your linx addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Bunlar ödeme yapmak için kullanacağınız linx adreslerinizdir. linx yollamadan önce meblağı ve alıcı adresini daima kontrol ediniz.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -275,8 +275,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>linX will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your linXs from being stolen by malware infecting your computer.</source>
-        <translation>Şifreleme işlemini tamamlamak için linX şimdi kapanacaktır. Cüzdanınızı şifrelemenin, linXlerinizin bilgisayara bulaşan kötücül bir yazılım tarafından çalınmaya karşı tamamen koruyamayacağını unutmayınız.</translation>
+        <source>linx will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your linxs from being stolen by malware infecting your computer.</source>
+        <translation>Şifreleme işlemini tamamlamak için linx şimdi kapanacaktır. Cüzdanınızı şifrelemenin, linxlerinizin bilgisayara bulaşan kötücül bir yazılım tarafından çalınmaya karşı tamamen koruyamayacağını unutmayınız.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -374,8 +374,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about linX</source>
-        <translation>linX hakkında bilgi göster</translation>
+        <source>Show information about linx</source>
+        <translation>linx hakkında bilgi göster</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -419,13 +419,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a linX address</source>
-        <translation>Bir linX adresine linX yolla</translation>
+        <source>Send coins to a linx address</source>
+        <translation>Bir linx adresine linx yolla</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for linX</source>
-        <translation>linX seçeneklerinin yapılandırmasını değiştir</translation>
+        <source>Modify configuration options for linx</source>
+        <translation>linx seçeneklerinin yapılandırmasını değiştir</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -455,8 +455,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>linX</source>
-        <translation>linX</translation>
+        <source>linx</source>
+        <translation>linx</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -480,8 +480,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About linX</source>
-        <translation>linX &amp;Hakkında</translation>
+        <source>&amp;About linx</source>
+        <translation>linx &amp;Hakkında</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your linX addresses to prove you own them</source>
-        <translation>Mesajları adreslerin size ait olduğunu ispatlamak için linX adresleri ile imzala</translation>
+        <source>Sign messages with your linx addresses to prove you own them</source>
+        <translation>Mesajları adreslerin size ait olduğunu ispatlamak için linx adresleri ile imzala</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified linX addresses</source>
-        <translation>Belirtilen linX adresleri ile imzalandıklarından emin olmak için mesajları kontrol et</translation>
+        <source>Verify messages to ensure they were signed with specified linx addresses</source>
+        <translation>Belirtilen linx adresleri ile imzalandıklarından emin olmak için mesajları kontrol et</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -536,13 +536,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+47"/>
-        <source>linX client</source>
-        <translation>linX istemcisi</translation>
+        <source>linx client</source>
+        <translation>linx istemcisi</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to linX network</source>
-        <translation><numerusform>linX şebekesine %n faal bağlantı</numerusform><numerusform>linX şebekesine %n faal bağlantı</numerusform></translation>
+        <source>%n active connection(s) to linx network</source>
+        <translation><numerusform>linx şebekesine %n faal bağlantı</numerusform><numerusform>linx şebekesine %n faal bağlantı</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -656,8 +656,8 @@ Adres: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid linX address or malformed URI parameters.</source>
-        <translation>URI okunamadı! Sebebi geçersiz bir linX adresi veya hatalı URI parametreleri olabilir.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid linx address or malformed URI parameters.</source>
+        <translation>URI okunamadı! Sebebi geçersiz bir linx adresi veya hatalı URI parametreleri olabilir.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -671,8 +671,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. linX can no longer continue safely and will quit.</source>
-        <translation>Ciddi bir hata oluştu. linX artık güvenli bir şekilde işlemeye devam edemez ve kapanacaktır.</translation>
+        <source>A fatal error occurred. linx can no longer continue safely and will quit.</source>
+        <translation>Ciddi bir hata oluştu. linx artık güvenli bir şekilde işlemeye devam edemez ve kapanacaktır.</translation>
     </message>
 </context>
 <context>
@@ -737,8 +737,8 @@ Adres: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid linX address.</source>
-        <translation>Girilen &quot;%1&quot; adresi geçerli bir linX adresi değildir.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid linx address.</source>
+        <translation>Girilen &quot;%1&quot; adresi geçerli bir linx adresi değildir.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -756,8 +756,8 @@ Adres: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>linX-Qt</source>
-        <translation>linX-Qt</translation>
+        <source>linx-Qt</source>
+        <translation>linx-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -819,13 +819,13 @@ Adres: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start linX after logging in to the system.</source>
-        <translation>Sistemde oturum açıldığında linX&apos;i otomatik olarak başlat.</translation>
+        <source>Automatically start linx after logging in to the system.</source>
+        <translation>Sistemde oturum açıldığında linx&apos;i otomatik olarak başlat.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start linX on system login</source>
-        <translation>linX&apos;i sistem oturumuyla &amp;başlat</translation>
+        <source>&amp;Start linx on system login</source>
+        <translation>linx&apos;i sistem oturumuyla &amp;başlat</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -844,8 +844,8 @@ Adres: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the linX client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Yönlendiricide linX istemci portlarını otomatik olarak açar. Bu, sadece yönlendiricinizin UPnP desteği bulunuyorsa ve etkinse çalışabilir.</translation>
+        <source>Automatically open the linx client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Yönlendiricide linx istemci portlarını otomatik olarak açar. Bu, sadece yönlendiricinizin UPnP desteği bulunuyorsa ve etkinse çalışabilir.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -854,8 +854,8 @@ Adres: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the linX network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>linX şebekesine SOCKS vekil sunucusu vasıtasıyla bağlan (mesela Tor ile bağlanıldığında).</translation>
+        <source>Connect to the linx network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>linx şebekesine SOCKS vekil sunucusu vasıtasıyla bağlan (mesela Tor ile bağlanıldığında).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -929,8 +929,8 @@ Adres: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting linX.</source>
-        <translation>Kullanıcı arayüzünün dili burada belirtilebilir. Bu ayar linX tekrar başlatıldığında etkinleşecektir.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting linx.</source>
+        <translation>Kullanıcı arayüzünün dili burada belirtilebilir. Bu ayar linx tekrar başlatıldığında etkinleşecektir.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -940,12 +940,12 @@ Adres: %4
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>linX gönderildiğinde arayüzde gösterilecek varsayılan alt birimi seçiniz.</translation>
+        <translation>linx gönderildiğinde arayüzde gösterilecek varsayılan alt birimi seçiniz.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show linX addresses in the transaction list or not.</source>
-        <translation>Muamele listesinde linX adreslerinin gösterilip gösterilmeyeceklerini belirler.</translation>
+        <source>Whether to show linx addresses in the transaction list or not.</source>
+        <translation>Muamele listesinde linx adreslerinin gösterilip gösterilmeyeceklerini belirler.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -996,8 +996,8 @@ Adres: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting linX.</source>
-        <translation>Bu ayarlar linX tekrar başlatıldığında etkinleşecektir.</translation>
+        <source>This setting will take effect after restarting linx.</source>
+        <translation>Bu ayarlar linx tekrar başlatıldığında etkinleşecektir.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1015,7 +1015,7 @@ Adres: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the linX network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the linx network after a connection is established, but this process has not completed yet.</source>
         <translation>Görüntülenen veriler zaman aşımına uğramış olabilir. Bağlantı kurulduğunda cüzdanınız otomatik olarak şebeke ile eşleşir ancak bu işlem henüz tamamlanmamıştır.</translation>
     </message>
     <message>
@@ -1069,8 +1069,8 @@ Adres: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start linX: click-to-pay handler</source>
-        <translation>linX başlatılamadı: tıkla-ve-öde yöneticisi</translation>
+        <source>Cannot start linx: click-to-pay handler</source>
+        <translation>linx başlatılamadı: tıkla-ve-öde yöneticisi</translation>
     </message>
 </context>
 <context>
@@ -1219,8 +1219,8 @@ Adres: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the linX-Qt help message to get a list with possible linX command-line options.</source>
-        <translation>Mevcut linX komut satırı seçeneklerinin listesini içeren linX-Qt yardımını göster.</translation>
+        <source>Show the linx-Qt help message to get a list with possible linx command-line options.</source>
+        <translation>Mevcut linx komut satırı seçeneklerinin listesini içeren linx-Qt yardımını göster.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1239,13 +1239,13 @@ Adres: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linX - Debug window</source>
-        <translation>linX - Hata ayıklama penceresi</translation>
+        <source>linx - Debug window</source>
+        <translation>linx - Hata ayıklama penceresi</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>linX Core</source>
-        <translation>linX Çekirdeği</translation>
+        <source>linx Core</source>
+        <translation>linx Çekirdeği</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1254,8 +1254,8 @@ Adres: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the linX debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Güncel veri klasöründen linX hata ayıklama kütük dosyasını açar. Büyük kütük dosyaları için bu birkaç saniye alabilir.</translation>
+        <source>Open the linx debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Güncel veri klasöründen linx hata ayıklama kütük dosyasını açar. Büyük kütük dosyaları için bu birkaç saniye alabilir.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1264,8 +1264,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the linX RPC console.</source>
-        <translation>linX RPC konsoluna hoş geldiniz.</translation>
+        <source>Welcome to the linx RPC console.</source>
+        <translation>linx RPC konsoluna hoş geldiniz.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1290,7 +1290,7 @@ Adres: %4
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>linX yolla</translation>
+        <translation>linx yolla</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -1448,8 +1448,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a linX address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</source>
-        <translation>linX adresi giriniz (mesela XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</translation>
+        <source>Enter a linx address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</source>
+        <translation>linx adresi giriniz (mesela XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</translation>
     </message>
 </context>
 <context>
@@ -1513,8 +1513,8 @@ Adres: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this linX address</source>
-        <translation>Bu linX adresinin sizin olduğunu ispatlamak için mesajı imzalayın</translation>
+        <source>Sign the message to prove you own this linx address</source>
+        <translation>Bu linx adresinin sizin olduğunu ispatlamak için mesajı imzalayın</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1549,8 +1549,8 @@ Adres: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified linX address</source>
-        <translation>Belirtilen linX adresi ile imzalandığını doğrulamak için mesajı kontrol et</translation>
+        <source>Verify the message to ensure it was signed with the specified linx address</source>
+        <translation>Belirtilen linx adresi ile imzalandığını doğrulamak için mesajı kontrol et</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1565,8 +1565,8 @@ Adres: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a linX address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</source>
-        <translation>linX adresi giriniz (mesela XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</translation>
+        <source>Enter a linx address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</source>
+        <translation>linx adresi giriniz (mesela XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1575,8 +1575,8 @@ Adres: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter linX signature</source>
-        <translation>linX imzası gir</translation>
+        <source>Enter linx signature</source>
+        <translation>linx imzası gir</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1649,8 +1649,8 @@ Adres: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The linX developers</source>
-        <translation>linX geliştiricileri</translation>
+        <source>The linx developers</source>
+        <translation>linx geliştiricileri</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1784,7 +1784,7 @@ Adres: %4
     <message>
         <location line="+3"/>
         <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Oluşturulan linX&apos;lerin harcanabilmelerinden önce 120 blok beklemeleri gerekmektedir. Bu blok, oluşturduğunuzda blok zincirine eklenmesi için ağda yayınlandı. Zincire eklenmesi başarısız olursa, durumu &quot;kabul edilmedi&quot; olarak değiştirilecek ve harcanamayacaktır. Bu, bazen başka bir düğüm sizden birkaç saniye önce ya da sonra blok oluşturursa meydana gelebilir.</translation>
+        <translation>Oluşturulan linx&apos;lerin harcanabilmelerinden önce 120 blok beklemeleri gerekmektedir. Bu blok, oluşturduğunuzda blok zincirine eklenmesi için ağda yayınlandı. Zincire eklenmesi başarısız olursa, durumu &quot;kabul edilmedi&quot; olarak değiştirilecek ve harcanamayacaktır. Bu, bazen başka bir düğüm sizden birkaç saniye önce ya da sonra blok oluşturursa meydana gelebilir.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2137,7 +2137,7 @@ Adres: %4
     <message>
         <location filename="../walletmodel.cpp" line="+193"/>
         <source>Send Coins</source>
-        <translation>linX yolla</translation>
+        <translation>linx yolla</translation>
     </message>
 </context>
 <context>
@@ -2187,8 +2187,8 @@ Adres: %4
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>linX version</source>
-        <translation>linX sürümü</translation>
+        <source>linx version</source>
+        <translation>linx sürümü</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2197,8 +2197,8 @@ Adres: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or linXd</source>
-        <translation>-server ya da linXd&apos;ye komut gönder</translation>
+        <source>Send command to -server or linxd</source>
+        <translation>-server ya da linxd&apos;ye komut gönder</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2217,13 +2217,13 @@ Adres: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: linX.conf)</source>
-        <translation>Yapılandırma dosyası belirt (varsayılan: linX.conf)</translation>
+        <source>Specify configuration file (default: linx.conf)</source>
+        <translation>Yapılandırma dosyası belirt (varsayılan: linx.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: linXd.pid)</source>
-        <translation>Pid dosyası belirt (varsayılan: linXd.pid)</translation>
+        <source>Specify pid file (default: linxd.pid)</source>
+        <translation>Pid dosyası belirt (varsayılan: linxd.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2300,24 +2300,24 @@ Adres: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=linXrpc
+rpcuser=linxrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;linX Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;linx Alert&quot; admin@foo.com
 </source>
         <translation>%s, şu yapılandırma dosyasında rpc parolası belirtmeniz gerekir:
 %s
 Aşağıdaki rastgele oluşturulan parolayı kullanmanız tavsiye edilir:
-rpcuser=linXrpc
+rpcuser=linxrpc
 rpcpassword=%s
 (bu parolayı hatırlamanız gerekli değildir)
 Kullanıcı ismi ile parolanın FARKLI olmaları gerekir.
 Dosya mevcut değilse, sadece sahibi için okumayla sınırlı izin ile oluşturunuz.
 Sorunlar hakkında bildiri almak için alertnotify unsurunu ayarlamanız tavsiye edilir;
-mesela: alertnotify=echo %%s | mail -s &quot;linX Alert&quot; admin@foo.com
+mesela: alertnotify=echo %%s | mail -s &quot;linx Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2332,8 +2332,8 @@ mesela: alertnotify=echo %%s | mail -s &quot;linX Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. linX is probably already running.</source>
-        <translation>%s veri dizininde kilit elde edilemedi. linX muhtemelen hâlihazırda çalışmaktadır.</translation>
+        <source>Cannot obtain a lock on data directory %s. linx is probably already running.</source>
+        <translation>%s veri dizininde kilit elde edilemedi. linx muhtemelen hâlihazırda çalışmaktadır.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2363,7 +2363,7 @@ mesela: alertnotify=echo %%s | mail -s &quot;linX Alert&quot; admin@foo.com
     <message>
         <location line="+6"/>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation>Bu yayın öncesi bir deneme sürümüdür - tüm riski siz üstlenmiş olursunuz - linX oluşturmak ya da ticari uygulamalar için kullanmayınız</translation>
+        <translation>Bu yayın öncesi bir deneme sürümüdür - tüm riski siz üstlenmiş olursunuz - linx oluşturmak ya da ticari uygulamalar için kullanmayınız</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -2377,8 +2377,8 @@ mesela: alertnotify=echo %%s | mail -s &quot;linX Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong linX will not work properly.</source>
-        <translation>Uyarı: Lütfen bilgisayarınızın tarih ve saatinin doğru olup olmadığını kontrol ediniz! Saatiniz doğru değilse linX gerektiği gibi çalışamaz.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong linx will not work properly.</source>
+        <translation>Uyarı: Lütfen bilgisayarınızın tarih ve saatinin doğru olup olmadığını kontrol ediniz! Saatiniz doğru değilse linx gerektiği gibi çalışamaz.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2518,7 +2518,7 @@ mesela: alertnotify=echo %%s | mail -s &quot;linX Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Generate coins (default: 0)</source>
-        <translation>linX oluştur (varsayılan: 0)</translation>
+        <translation>linx oluştur (varsayılan: 0)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2627,8 +2627,8 @@ mesela: alertnotify=echo %%s | mail -s &quot;linX Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the linX Wiki for SSL setup instructions)</source>
-        <translation> SSL seçenekleri: (SSL kurulum bilgisi için linX vikisine bakınız)</translation>
+        <source>SSL options: (see the linx Wiki for SSL setup instructions)</source>
+        <translation> SSL seçenekleri: (SSL kurulum bilgisi için linx vikisine bakınız)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2817,13 +2817,13 @@ mesela: alertnotify=echo %%s | mail -s &quot;linX Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of linX</source>
-        <translation>wallet.dat dosyasının yüklenmesinde hata oluştu: cüzdanın daha yeni bir linX sürümüne ihtiyacı var</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of linx</source>
+        <translation>wallet.dat dosyasının yüklenmesinde hata oluştu: cüzdanın daha yeni bir linx sürümüne ihtiyacı var</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart linX to complete</source>
-        <translation>Cüzdanın tekrar yazılması gerekiyordu: işlemi tamamlamak için linX&apos;i yeniden başlatınız</translation>
+        <source>Wallet needed to be rewritten: restart linx to complete</source>
+        <translation>Cüzdanın tekrar yazılması gerekiyordu: işlemi tamamlamak için linx&apos;i yeniden başlatınız</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2882,8 +2882,8 @@ mesela: alertnotify=echo %%s | mail -s &quot;linX Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. linX is probably already running.</source>
-        <translation>Bu bilgisayarda %s unsuruna bağlanılamadı. linX muhtemelen hâlihazırda çalışmaktadır.</translation>
+        <source>Unable to bind to %s on this computer. linx is probably already running.</source>
+        <translation>Bu bilgisayarda %s unsuruna bağlanılamadı. linx muhtemelen hâlihazırda çalışmaktadır.</translation>
     </message>
     <message>
         <location line="+64"/>

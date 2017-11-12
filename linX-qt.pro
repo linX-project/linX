@@ -1,7 +1,7 @@
 TEMPLATE = app
 DEFINES += fName1 fName2
-fName1 = "linX"
-macx:TARGET = "linX-Qt"
+fName1 = "linx"
+macx:TARGET = "linx-Qt"
 VERSION = 0.9.0.3
 contains(QT_ARCH, i386) {
     fName2 = "-qt-x86-v"
@@ -514,7 +514,7 @@ macx: {
     OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm src/qt/macnotificationhandler.mm
     LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
     DEFINES += MAC_OSX MSG_NOSIGNAL=0 IS_ARCH_64
-    ICON = src/qt/res/icons/linX.icns
+    ICON = src/qt/res/icons/linx.icns
     QMAKE_CFLAGS_THREAD += -pthread
     QMAKE_LFLAGS_THREAD += -pthread
     QMAKE_CXXFLAGS_THREAD += -pthread

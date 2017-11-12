@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About linX</source>
-        <translation>Informatio de linX</translation>
+        <source>About linx</source>
+        <translation>Informatio de linx</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;linX&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;linX&lt;/b&gt; versio</translation>
+        <source>&lt;b&gt;linx&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;linx&lt;/b&gt; versio</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -33,8 +33,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+0"/>
-        <source>The linX developers</source>
-        <translation>linX curatores</translation>
+        <source>The linx developers</source>
+        <translation>linx curatores</translation>
     </message>
 </context>
 <context>
@@ -66,8 +66,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your linX addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Haec sunt inscriptiones linX tuae pro accipendo pensitationes.  Cupias variam ad quemque mittentem dare ut melius scias quem tibi pensare.</translation>
+        <source>These are your linx addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Haec sunt inscriptiones linx tuae pro accipendo pensitationes.  Cupias variam ad quemque mittentem dare ut melius scias quem tibi pensare.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -81,8 +81,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a linX address</source>
-        <translation>Signa nuntium ut demonstres inscriptionem linX a te possessam esse</translation>
+        <source>Sign a message to prove you own a linx address</source>
+        <translation>Signa nuntium ut demonstres inscriptionem linx a te possessam esse</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -106,8 +106,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified linX address</source>
-        <translation>Verifica nuntium ut cures signatum esse cum specificata inscriptione linX</translation>
+        <source>Verify a message to ensure it was signed with a specified linx address</source>
+        <translation>Verifica nuntium ut cures signatum esse cum specificata inscriptione linx</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -121,7 +121,7 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your linX addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your linx addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Hae sunt inscriptiones mittendi pensitationes.  Semper inspice quantitatem et inscriptionem accipiendi antequam nummos mittis.</translation>
     </message>
     <message>
@@ -274,8 +274,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="-56"/>
-        <source>linX will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your linXs from being stolen by malware infecting your computer.</source>
-        <translation>linX iam desinet ut finiat actionem cifrandi.  Memento cassidile cifrare non posse cuncte curare ne tui nummi clepantur ab malis programatibus in tuo computatro.</translation>
+        <source>linx will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your linxs from being stolen by malware infecting your computer.</source>
+        <translation>linx iam desinet ut finiat actionem cifrandi.  Memento cassidile cifrare non posse cuncte curare ne tui nummi clepantur ab malis programatibus in tuo computatro.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -373,8 +373,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about linX</source>
-        <translation>Monstra informationem de linX</translation>
+        <source>Show information about linx</source>
+        <translation>Monstra informationem de linx</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -418,13 +418,13 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a linX address</source>
-        <translation>Mitte nummos ad inscriptionem linX</translation>
+        <source>Send coins to a linx address</source>
+        <translation>Mitte nummos ad inscriptionem linx</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for linX</source>
-        <translation>Muta configurationis optiones pro linX</translation>
+        <source>Modify configuration options for linx</source>
+        <translation>Muta configurationis optiones pro linx</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -454,8 +454,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>linX</source>
-        <translation>linX</translation>
+        <source>linx</source>
+        <translation>linx</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -479,8 +479,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About linX</source>
-        <translation>&amp;Informatio de linX</translation>
+        <source>&amp;About linx</source>
+        <translation>&amp;Informatio de linx</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -499,13 +499,13 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your linX addresses to prove you own them</source>
-        <translation>Signa nuntios cum tuis inscriptionibus linX ut demonstres te eas possidere</translation>
+        <source>Sign messages with your linx addresses to prove you own them</source>
+        <translation>Signa nuntios cum tuis inscriptionibus linx ut demonstres te eas possidere</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified linX addresses</source>
-        <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus linX</translation>
+        <source>Verify messages to ensure they were signed with specified linx addresses</source>
+        <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus linx</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -535,13 +535,13 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+47"/>
-        <source>linX client</source>
-        <translation>linX cliens</translation>
+        <source>linx client</source>
+        <translation>linx cliens</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to linX network</source>
-        <translation><numerusform>%n activa conexio ad rete linX</numerusform><numerusform>%n activae conexiones ad rete linX</numerusform></translation>
+        <source>%n active connection(s) to linx network</source>
+        <translation><numerusform>%n activa conexio ad rete linx</numerusform><numerusform>%n activae conexiones ad rete linx</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -655,8 +655,8 @@ Inscriptio: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid linX address or malformed URI parameters.</source>
-        <translation>URI intellegi non posse!  Huius causa possit inscriptionem linX non validam aut URI parametra maleformata.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid linx address or malformed URI parameters.</source>
+        <translation>URI intellegi non posse!  Huius causa possit inscriptionem linx non validam aut URI parametra maleformata.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -670,8 +670,8 @@ Inscriptio: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. linX can no longer continue safely and will quit.</source>
-        <translation>Error fatalis accidit.  linX nondum pergere tute potest, et exibit.</translation>
+        <source>A fatal error occurred. linx can no longer continue safely and will quit.</source>
+        <translation>Error fatalis accidit.  linx nondum pergere tute potest, et exibit.</translation>
     </message>
 </context>
 <context>
@@ -736,8 +736,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid linX address.</source>
-        <translation>Inscriptio inserta &quot;%1&quot; non valida inscriptio linX est.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid linx address.</source>
+        <translation>Inscriptio inserta &quot;%1&quot; non valida inscriptio linx est.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -755,8 +755,8 @@ Inscriptio: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>linX-Qt</source>
-        <translation>linX-Qt</translation>
+        <source>linx-Qt</source>
+        <translation>linx-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -818,13 +818,13 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start linX after logging in to the system.</source>
-        <translation>Pelle linX per se postquam in systema inire.</translation>
+        <source>Automatically start linx after logging in to the system.</source>
+        <translation>Pelle linx per se postquam in systema inire.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start linX on system login</source>
-        <translation>&amp;Pelle linX cum inire systema</translation>
+        <source>&amp;Start linx on system login</source>
+        <translation>&amp;Pelle linx cum inire systema</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -843,8 +843,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the linX client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Aperi per se portam clientis linX in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
+        <source>Automatically open the linx client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Aperi per se portam clientis linx in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -853,8 +853,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the linX network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Connecte ad rete linX per SOCKS vicarium (e.g. quando conectens per Tor).</translation>
+        <source>Connect to the linx network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Connecte ad rete linx per SOCKS vicarium (e.g. quando conectens per Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -928,8 +928,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting linX.</source>
-        <translation>Lingua monstranda utenti hic constitui potest.  Haec configuratio effectiva erit postquam linX iterum initiatum erit.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting linx.</source>
+        <translation>Lingua monstranda utenti hic constitui potest.  Haec configuratio effectiva erit postquam linx iterum initiatum erit.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -943,8 +943,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show linX addresses in the transaction list or not.</source>
-        <translation>Num monstrare inscriptiones linX in enumeratione transactionum.</translation>
+        <source>Whether to show linx addresses in the transaction list or not.</source>
+        <translation>Num monstrare inscriptiones linx in enumeratione transactionum.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -995,8 +995,8 @@ Inscriptio: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting linX.</source>
-        <translation>Haec configuratio effectiva erit postquam linX iterum initiatum erit.</translation>
+        <source>This setting will take effect after restarting linx.</source>
+        <translation>Haec configuratio effectiva erit postquam linx iterum initiatum erit.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1014,8 +1014,8 @@ Inscriptio: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the linX network after a connection is established, but this process has not completed yet.</source>
-        <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete linX postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the linx network after a connection is established, but this process has not completed yet.</source>
+        <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete linx postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1068,8 +1068,8 @@ Inscriptio: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start linX: click-to-pay handler</source>
-        <translation>linX incipere non potest: cliccare-ad-pensandum handler</translation>
+        <source>Cannot start linx: click-to-pay handler</source>
+        <translation>linx incipere non potest: cliccare-ad-pensandum handler</translation>
     </message>
 </context>
 <context>
@@ -1218,8 +1218,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the linX-Qt help message to get a list with possible linX command-line options.</source>
-        <translation>Monstra nuntium auxilii linX-Qt ut videas enumerationem possibilium optionum linX mandati initiantis.</translation>
+        <source>Show the linx-Qt help message to get a list with possible linx command-line options.</source>
+        <translation>Monstra nuntium auxilii linx-Qt ut videas enumerationem possibilium optionum linx mandati initiantis.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1238,13 +1238,13 @@ Inscriptio: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linX - Debug window</source>
-        <translation>linX - Fenestra debug</translation>
+        <source>linx - Debug window</source>
+        <translation>linx - Fenestra debug</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>linX Core</source>
-        <translation>linX Nucleus</translation>
+        <source>linx Core</source>
+        <translation>linx Nucleus</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1253,8 +1253,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the linX debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Aperi plicam catalogi de linX debug ex activo indice datorum.  Hoc possit pauca secunda pro plicis magnis catalogi.</translation>
+        <source>Open the linx debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Aperi plicam catalogi de linx debug ex activo indice datorum.  Hoc possit pauca secunda pro plicis magnis catalogi.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1263,8 +1263,8 @@ Inscriptio: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the linX RPC console.</source>
-        <translation>Bene ventio in terminale RPC de linX.</translation>
+        <source>Welcome to the linx RPC console.</source>
+        <translation>Bene ventio in terminale RPC de linx.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1447,8 +1447,8 @@ Inscriptio: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a linX address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</source>
-        <translation>Insero inscriptionem linX (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</translation>
+        <source>Enter a linx address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</source>
+        <translation>Insero inscriptionem linx (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</translation>
     </message>
 </context>
 <context>
@@ -1512,8 +1512,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this linX address</source>
-        <translation>Signa nuntium ut demonstres hanc inscriptionem linX a te possessa esse</translation>
+        <source>Sign the message to prove you own this linx address</source>
+        <translation>Signa nuntium ut demonstres hanc inscriptionem linx a te possessa esse</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1548,8 +1548,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified linX address</source>
-        <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione linX</translation>
+        <source>Verify the message to ensure it was signed with the specified linx address</source>
+        <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione linx</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1564,8 +1564,8 @@ Inscriptio: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a linX address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</source>
-        <translation>Insere inscriptionem linX (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</translation>
+        <source>Enter a linx address (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</source>
+        <translation>Insere inscriptionem linx (e.g. XNmiy1Cd9cER1mBp3jHiokMabPy2iftfL4)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1574,8 +1574,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter linX signature</source>
-        <translation>Insere signationem linX</translation>
+        <source>Enter linx signature</source>
+        <translation>Insere signationem linx</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1648,8 +1648,8 @@ Inscriptio: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The linX developers</source>
-        <translation>linX curatores</translation>
+        <source>The linx developers</source>
+        <translation>linx curatores</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2186,8 +2186,8 @@ Inscriptio: %4
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>linX version</source>
-        <translation>Versio de linX</translation>
+        <source>linx version</source>
+        <translation>Versio de linx</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2196,8 +2196,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or linXd</source>
-        <translation>Mitte mandatum ad -server vel linXd</translation>
+        <source>Send command to -server or linxd</source>
+        <translation>Mitte mandatum ad -server vel linxd</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2216,13 +2216,13 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: linX.conf)</source>
-        <translation>Specifica configurationis plicam (praedefinitum: linX.conf)</translation>
+        <source>Specify configuration file (default: linx.conf)</source>
+        <translation>Specifica configurationis plicam (praedefinitum: linx.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: linXd.pid)</source>
-        <translation>Specifica pid plicam (praedefinitum: linX.pid)</translation>
+        <source>Specify pid file (default: linxd.pid)</source>
+        <translation>Specifica pid plicam (praedefinitum: linx.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2299,24 +2299,24 @@ Inscriptio: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=linXrpc
+rpcuser=linxrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;linX Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;linx Alert&quot; admin@foo.com
 </source>
         <translation>%s, necesse est te rpcpassword constituere in plica configurationis:
 %s
 Hortatur te hanc fortuitam tesseram uti:
-rpcuser=linXrpc
+rpcuser=linxrpc
 rpcpassword=%s
 (non est necesse te hanc tesseram meminisse)
 Nomen usoris et tessera eadem esse NON POSSUNT.
 Si plica non existit, eam crea cum permissionibus ut eius dominus tantum sinitur id legere.
 Quoque hortatur alertnotify constituere ut tu notificetur de problematibus;
-exempli gratia: alertnotify=echo %%s | mail -s &quot;linX Notificatio&quot; admin@foo.com
+exempli gratia: alertnotify=echo %%s | mail -s &quot;linx Notificatio&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2331,8 +2331,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;linX Notificatio&quot; admi
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. linX is probably already running.</source>
-        <translation>Non posse serare datorum indicem %s.  linX probabiliter iam operatur.</translation>
+        <source>Cannot obtain a lock on data directory %s. linx is probably already running.</source>
+        <translation>Non posse serare datorum indicem %s.  linx probabiliter iam operatur.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2376,8 +2376,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;linX Notificatio&quot; admi
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong linX will not work properly.</source>
-        <translation>Monitio: Sodes cura ut dies tempusque computatri tui recti sunt!  Si horologium tuum pravum est, linX non proprie fungetur.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong linx will not work properly.</source>
+        <translation>Monitio: Sodes cura ut dies tempusque computatri tui recti sunt!  Si horologium tuum pravum est, linx non proprie fungetur.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2626,8 +2626,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;linX Notificatio&quot; admi
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the linX Wiki for SSL setup instructions)</source>
-        <translation>Optiones SSL: (vide vici de linX pro instructionibus SSL configurationis)</translation>
+        <source>SSL options: (see the linx Wiki for SSL setup instructions)</source>
+        <translation>Optiones SSL: (vide vici de linx pro instructionibus SSL configurationis)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2816,13 +2816,13 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;linX Notificatio&quot; admi
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of linX</source>
-        <translation>Error legendi wallet.dat: Cassidili necesse est recentior versio linX</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of linx</source>
+        <translation>Error legendi wallet.dat: Cassidili necesse est recentior versio linx</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart linX to complete</source>
-        <translation>Cassidili necesse erat rescribi: Repelle linX ut compleas</translation>
+        <source>Wallet needed to be rewritten: restart linx to complete</source>
+        <translation>Cassidili necesse erat rescribi: Repelle linx ut compleas</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2881,8 +2881,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;linX Notificatio&quot; admi
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. linX is probably already running.</source>
-        <translation>Non posse conglutinare ad %s in hoc cumputatro.  linX probabiliter iam operatur.</translation>
+        <source>Unable to bind to %s on this computer. linx is probably already running.</source>
+        <translation>Non posse conglutinare ad %s in hoc cumputatro.  linx probabiliter iam operatur.</translation>
     </message>
     <message>
         <location line="+64"/>

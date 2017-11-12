@@ -23,12 +23,12 @@ Build Instructions
 ------------------
 
 ```
-cd linX
+cd linx
 qmake
 make
 ```
 
-See [docs](https://github.com/linX-project/linX/tree/master/doc) for flags, deps and more info.
+See [docs](https://github.com/linx-project/linx/tree/master/doc) for flags, deps and more info.
 
 
 Compiled Binaries Instructions
@@ -44,7 +44,7 @@ Windows Setup
 
 - Double click the setup.exe file to install automatically
 
-- Alternatively run **linX-qt.exe** or **linXd.exe** without using the installer
+- Alternatively run **linx-qt.exe** or **linxd.exe** without using the installer
 
 If the wallet doesn't automatically start syncing you will need to create a
 .conf file.
@@ -63,12 +63,12 @@ addnode=51.255.43.51
 addnode=217.182.68.186
 ```
 
-4) Save the file as **linX.conf**
+4) Save the file as **linx.conf**
 
 5) Place it inside the following DIR :
 
 ```
-/Users/<username>/AppData/Roaming/linX
+/Users/<username>/AppData/Roaming/linx
 ```
 
 6) Restart Wallet / Daemon
@@ -77,31 +77,31 @@ addnode=217.182.68.186
 Nix Setup
 --------------------
 
-1) Navigate to the folder where linXd is and run it :
+1) Navigate to the folder where linxd is and run it :
 
 ```
-./linXd -daemon
+./linxd -daemon
 ```
 
 The Linx server will start and then stop saying it needs a missing config file.
 
-In the folder you downloaded will find a file called **linX.conf.example.txt**
+In the folder you downloaded will find a file called **linx.conf.example.txt**
 
-Open it and put your user and password in the correct places then save the file as **linX.conf**
+Open it and put your user and password in the correct places then save the file as **linx.conf**
 
 Put this file in the following folder :
 
 ```
-.linX
+.linx
 ```
 
 It's a hidden folder click ctrl + H to display hidden folders if you can't see it.
 
 
-linX-qt (The GUI Wallet)
+linx-qt (The GUI Wallet)
 ------------------------
 
-This is NOT a static build. It requires external libraries for it to work. If you have built other wallets on your computer before, the chances are that you will already have all of the required libraries. If not see the build [docs](https://github.com/linX-project/linX/tree/master/doc).
+This is NOT a static build. It requires external libraries for it to work. If you have built other wallets on your computer before, the chances are that you will already have all of the required libraries. If not see the build [docs](https://github.com/linx-project/linx/tree/master/doc).
 
 
 For more information, as well as pre-compiled versions of the latest Linx client sofware visit https://www.mylinx.io
@@ -123,7 +123,7 @@ If it is a *more complicated or potentially controversial* change, then the patc
 The patch will be accepted if there is broad consensus that it is a good thing.
 Developers should expect to rework and resubmit patches if the code doesn't match the project's coding conventions (see `doc/coding.txt`) or are controversial.
 
-The `master` branch is regularly built and tested, but is not guaranteed to be completely stable. [Tags](https://github.com/linX-project/linX/tags) are created regularly to indicate new official, stable release versions of Linx.
+The `master` branch is regularly built and tested, but is not guaranteed to be completely stable. [Tags](https://github.com/linx-project/linx/tags) are created regularly to indicate new official, stable release versions of Linx.
 
 
 Disclaimer

@@ -36,7 +36,7 @@ Value importprivkey(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 3)
         throw runtime_error(
-            "importprivkey <linXprivkey> [label] [rescan=true]\n"
+            "importprivkey <linxprivkey> [label] [rescan=true]\n"
             "Adds a private key (as returned by dumpprivkey) to your wallet.");
 
     EnsureWalletIsUnlocked();
@@ -83,8 +83,8 @@ Value dumpprivkey(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "dumpprivkey <linXaddress>\n"
-            "Reveals the private key corresponding to <linXaddress>.");
+            "dumpprivkey <linxaddress>\n"
+            "Reveals the private key corresponding to <linxaddress>.");
 
     string strAddress = params[0].get_str();
     CBitcoinAddress address;

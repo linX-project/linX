@@ -15,7 +15,7 @@ To Build
 	cd src/
 	make -f makefile.unix		# Headless Linx
 
-See readme-qt.rst for instructions on building linX-Qt, the graphical user interface.
+See readme-qt.rst for instructions on building linx-Qt, the graphical user interface.
 
 Dependencies
 ---------------------
@@ -123,7 +123,7 @@ exploit even if a vulnerability is found, you can take the following measures:
 
     To test that you have built PIE executable, install scanelf, part of paxutils, and use:
 
-    	scanelf -e ./linX
+    	scanelf -e ./linx
 
     The output should contain:
      TYPE
@@ -137,7 +137,7 @@ exploit even if a vulnerability is found, you can take the following measures:
     executable without the non-executable stack protection.
 
     To verify that the stack is non-executable after compiling use:
-    `scanelf -e ./linX`
+    `scanelf -e ./linx`
 
     the output should contain:
 	STK/REL/PTL

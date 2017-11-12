@@ -249,7 +249,7 @@ public:
     bool operator> (const CBase58Data& b58) const { return CompareTo(b58) >  0; }
 };
 
-/** base58-encoded linX addresses.
+/** base58-encoded linx addresses.
  * Public-key-hash-addresses have version 0 (or 137 testnet).
  * The data vector contains RIPEMD160(SHA256(pubkey)), where pubkey is the serialized public key.
  * Script-hash-addresses have version 5 (or 196 testnet).
@@ -272,9 +272,9 @@ class CBitcoinAddress : public CBase58Data
 public:
     enum
     {
-        PUBKEY_ADDRESS = 75, // linX addresses start with X
+        PUBKEY_ADDRESS = 75, // linx addresses start with X
         SCRIPT_ADDRESS = 5,
-        PUBKEY_ADDRESS_TEST = 111, // linX testnet addresses start with x
+        PUBKEY_ADDRESS_TEST = 111, // linx testnet addresses start with x
         SCRIPT_ADDRESS_TEST = 196,
     };
 

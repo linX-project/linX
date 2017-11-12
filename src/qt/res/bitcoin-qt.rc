@@ -21,13 +21,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "Linx"
-            VALUE "FileDescription",    "linX-Qt (OSS GUI client for linX)"
+            VALUE "FileDescription",    "linx-Qt (OSS GUI client for linx)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "linX-qt"
+            VALUE "InternalName",       "linx-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "linX-qt.exe"
-            VALUE "ProductName",        "linX-Qt"
+            VALUE "OriginalFilename",   "linx-qt.exe"
+            VALUE "ProductName",        "linx-Qt"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

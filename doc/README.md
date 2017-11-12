@@ -20,15 +20,15 @@ with each other, with the help of a P2P network to check for double-spending.
 
 Setup
 ---------------------
-You need the Qt4 run-time libraries to run linX-Qt. On Debian or Ubuntu:
+You need the Qt4 run-time libraries to run linx-Qt. On Debian or Ubuntu:
 	`sudo apt-get install libqtgui4`
 
 Unpack the files into a directory and run:
 
-- bin/32/linX-qt (GUI, 32-bit)
-- bin/32/linXd (headless, 32-bit)
-- bin/64/linX-qt (GUI, 64-bit)
-- bin/64/linXd (headless, 64-bit)
+- bin/32/linx-qt (GUI, 32-bit)
+- bin/32/linxd (headless, 32-bit)
+- bin/64/linx-qt (GUI, 64-bit)
+- bin/64/linxd (headless, 64-bit)
 
 
 Other Pages

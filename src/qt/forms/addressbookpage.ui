@@ -102,7 +102,7 @@
      <item>
       <widget class="QPushButton" name="signMessage">
        <property name="toolTip">
-        <string>Sign a message to prove you own a linX address</string>
+        <string>Sign a message to prove you own a linx address</string>
        </property>
        <property name="text">
         <string>Sign &amp;Message</string>
@@ -116,7 +116,7 @@
      <item>
       <widget class="QPushButton" name="verifyMessage">
        <property name="toolTip">
-        <string>Verify a message to ensure it was signed with a specified linX address</string>
+        <string>Verify a message to ensure it was signed with a specified linx address</string>
        </property>
        <property name="text">
         <string>&amp;Verify Message</string>

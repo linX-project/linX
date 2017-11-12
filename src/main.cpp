@@ -19,7 +19,7 @@ using namespace std;
 using namespace boost;
 
 #if defined(NDEBUG)
-# error "linX cannot be compiled without assertions."
+# error "linx cannot be compiled without assertions."
 #endif
 
 //
@@ -362,7 +362,7 @@ unsigned int LimitOrphanTxSize(unsigned int nMaxOrphans)
 
 bool CTxOut::IsDust() const
 {
-    // linX: IsDust() detection disabled, allows any valid dust to be relayed.
+    // linx: IsDust() detection disabled, allows any valid dust to be relayed.
     // The fees imposed on each dust txo is considered sufficient spam deterrant. 
     return false;
 }
@@ -623,7 +623,7 @@ int64 CTransaction::GetMinFee(unsigned int nBlockSize, bool fAllowFree,
             nMinFee = 0;
     }
 
-    // linX
+    // linx
     // To limit dust spam, add nBaseFee for each output less than DUST_SOFT_LIMIT
     BOOST_FOREACH(const CTxOut& txout, vout)
         if (txout.nValue < DUST_SOFT_LIMIT)
@@ -1095,23 +1095,23 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
     }
     else if(nHeight <= 1000000)
     {
-        nSubsidy = 50 * COIN; // 50 linX : Until coin supply reaches 51,000,000
+        nSubsidy = 50 * COIN; // 50 linx : Until coin supply reaches 51,000,000
     }
     else if(nHeight <= 2800000) 
     {
-        nSubsidy = 25 * COIN; // 25 linX : Until coin supply reaches 96,000,000
+        nSubsidy = 25 * COIN; // 25 linx : Until coin supply reaches 96,000,000
     }
     else if(nHeight <= 3100000) 
     {
-        nSubsidy = 10 * COIN; // 10 linX : Until coin supply reaches 99,000,000
+        nSubsidy = 10 * COIN; // 10 linx : Until coin supply reaches 99,000,000
     }
     else if(nHeight <= 3200000)
     {
-        nSubsidy = 5 * COIN; // 5 linX : Until coin supply reaches 99,500,000
+        nSubsidy = 5 * COIN; // 5 linx : Until coin supply reaches 99,500,000
     }
     else if(nHeight <= 3700000)
     {
-        nSubsidy = 1 * COIN; // 1 linX : Until coin supply reaches 100,000,000
+        nSubsidy = 1 * COIN; // 1 linx : Until coin supply reaches 100,000,000
     }
 
     return nSubsidy + nFees;
@@ -2130,7 +2130,7 @@ bool CBlock::CheckBlock(CValidationState &state, bool fCheckPOW, bool fCheckMerk
     if (vtx.empty() || vtx.size() > MAX_BLOCK_SIZE || ::GetSerializeSize(*this, SER_NETWORK, PROTOCOL_VERSION) > MAX_BLOCK_SIZE)
         return state.DoS(100, error("CheckBlock() : size limits failed"));
 
-    // linX: Special short-term limits to avoid 10,000 BDB lock limit:
+    // linx: Special short-term limits to avoid 10,000 BDB lock limit:
     if (GetBlockTime() < 1376568000)  // stop enforcing 15 August 2013 00:00:00
     {
         // Rule is: #unique txids referenced <= 4,500
@@ -3113,7 +3113,7 @@ bool static AlreadyHave(const CInv& inv)
 // The message start string is designed to be unlikely to occur in normal data.
 // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
 // a large 4-byte int at any alignment.
-unsigned char pchMessageStart[4] = { 0x23, 0xb2, 0xa3, 0xcb }; // linX: increase each by adding 2 to linX value.
+unsigned char pchMessageStart[4] = { 0x23, 0xb2, 0xa3, 0xcb }; // linx: increase each by adding 2 to linx value.
 
 
 void static ProcessGetData(CNode* pfrom)
@@ -4163,7 +4163,7 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// linXMiner
+// linxMiner
 //
 
 int static FormatHashBlocks(void* pbuffer, unsigned int len)
@@ -4576,7 +4576,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         return false;
 
     //// debug print
-    printf("linXMiner:\n");
+    printf("linxMiner:\n");
     printf("proof-of-work found  \n  hash: %s  \ntarget: %s\n", hash.GetHex().c_str(), hashTarget.GetHex().c_str());
     pblock->print();
     printf("generated %s\n", FormatMoney(pblock->vtx[0].vout[0].nValue).c_str());
@@ -4585,7 +4585,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     {
         LOCK(cs_main);
         if (pblock->hashPrevBlock != hashBestChain)
-            return error("linXMiner : generated block is stale");
+            return error("linxMiner : generated block is stale");
 
         // Remove key from key pool
         reservekey.KeepKey();
@@ -4599,17 +4599,17 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         // Process this block the same as if we had received it from another node
         CValidationState state;
         if (!ProcessBlock(state, NULL, pblock))
-            return error("linXMiner : ProcessBlock, block not accepted");
+            return error("linxMiner : ProcessBlock, block not accepted");
     }
 
     return true;
 }
 
-void static linXMiner(CWallet *pwallet)
+void static linxMiner(CWallet *pwallet)
 {
-    printf("linXMiner started\n");
+    printf("linxMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("linX-miner");
+    RenameThread("linx-miner");
 
     // Each thread has its own key and counter
     CReserveKey reservekey(pwallet);
@@ -4631,7 +4631,7 @@ void static linXMiner(CWallet *pwallet)
         CBlock *pblock = &pblocktemplate->block;
         IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
 
-        printf("Running linXMiner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
+        printf("Running linxMiner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
                ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
         //
@@ -4730,7 +4730,7 @@ void static linXMiner(CWallet *pwallet)
     } }
     catch (boost::thread_interrupted)
     {
-        printf("linXMiner terminated\n");
+        printf("linxMiner terminated\n");
         throw;
     }
 }
@@ -4755,7 +4755,7 @@ void GenerateBitcoins(bool fGenerate, CWallet* pwallet)
 
     minerThreads = new boost::thread_group();
     for (int i = 0; i < nThreads; i++)
-        minerThreads->create_thread(boost::bind(&linXMiner, pwallet));
+        minerThreads->create_thread(boost::bind(&linxMiner, pwallet));
 }
 
 // Amount compression:

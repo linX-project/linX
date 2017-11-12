@@ -147,7 +147,7 @@ int main(int argc, char *argv[])
     {
         // This message can not be translated, as translation is not initialized yet
         // (which not yet possible because lang=XX can be overridden in bitcoin.conf in the data directory)
-        QMessageBox::critical(0, "linX",
+        QMessageBox::critical(0, "linx",
                               QString("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(mapArgs["-datadir"])));
         return 1;
     }
@@ -158,9 +158,9 @@ int main(int argc, char *argv[])
     QApplication::setOrganizationName("The Linx Partnership");
     QApplication::setOrganizationDomain("mylinx.io");
     if(GetBoolArg("-testnet")) // Separate UI settings for testnet
-        QApplication::setApplicationName("linX-Qt-testnet");
+        QApplication::setApplicationName("linx-Qt-testnet");
     else
-        QApplication::setApplicationName("linX-Qt");
+        QApplication::setApplicationName("linx-Qt");
 
     // ... then GUI settings:
     OptionsModel optionsModel;

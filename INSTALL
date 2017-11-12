@@ -1,9 +1,9 @@
-Building linX
+Building linx
 
-See doc/readme-qt.rst for instructions on building linX-Qt,
+See doc/readme-qt.rst for instructions on building linx-Qt,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of linX.
+implementation of linx.
 
-See doc/build-*.txt for instructions on building linXd,
+See doc/build-*.txt for instructions on building linxd,
 the intended-for-services, no-graphical-interface, reference
-implementation of linX.
+implementation of linx.

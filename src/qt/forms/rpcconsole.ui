@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>linX - Debug window</string>
+   <string>linx - Debug window</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -36,7 +36,7 @@
           </font>
          </property>
          <property name="text">
-          <string>linX Core</string>
+          <string>linx Core</string>
          </property>
         </widget>
        </item>
@@ -348,7 +348,7 @@
        <item row="17" column="0">
         <widget class="QPushButton" name="showCLOptionsButton">
          <property name="toolTip">
-          <string>Show the linX-Qt help message to get a list with possible linX command-line options.</string>
+          <string>Show the linx-Qt help message to get a list with possible linx command-line options.</string>
          </property>
          <property name="text">
           <string>&amp;Show</string>

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Use the raw transactions API to spend linX received on particular addresses,
+# Use the raw transactions API to spend linx received on particular addresses,
 # and send any change back to that same address.
 #
 # Example usage:

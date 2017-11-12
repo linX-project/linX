@@ -1,4 +1,4 @@
-Name linX
+Name linx
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
@@ -19,8 +19,8 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
-!define MUI_STARTMENUPAGE_DEFAULTFOLDER linX
-!define MUI_FINISHPAGE_RUN $INSTDIR\linX-qt.exe
+!define MUI_STARTMENUPAGE_DEFAULTFOLDER linx
+!define MUI_FINISHPAGE_RUN $INSTDIR\linx-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 !define MUI_UNWELCOMEFINISHPAGE_BITMAP "../share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
@@ -45,14 +45,14 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile linX-${VERSION}-win32-setup.exe
-InstallDir $PROGRAMFILES\linX
+OutFile linx-${VERSION}-win32-setup.exe
+InstallDir $PROGRAMFILES\linx
 CRCCheck on
 XPStyle on
 BrandingText " "
 ShowInstDetails show
 VIProductVersion ${VERSION}
-VIAddVersionKey ProductName linX
+VIAddVersionKey ProductName linx
 VIAddVersionKey ProductVersion "${VERSION}"
 VIAddVersionKey CompanyName "${COMPANY}"
 VIAddVersionKey CompanyWebsite "${URL}"
@@ -66,18 +66,18 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File ../release/linX-qt.exe
+    File ../release/linx-qt.exe
     File /oname=COPYING.txt ../COPYING
     File /oname=readme.txt ../doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File ../src/linXd.exe
+    File ../src/linxd.exe
     SetOutPath $INSTDIR\src
     File /r /x *.exe /x *.o ../src\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 
     # Remove old wxwidgets-based-bitcoin executable and locales:
-    Delete /REBOOTOK $INSTDIR\linX.exe
+    Delete /REBOOTOK $INSTDIR\linx.exe
     RMDir /r /REBOOTOK $INSTDIR\locale
 SectionEnd
 
@@ -87,8 +87,8 @@ Section -post SEC0001
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\linX.lnk" $INSTDIR\linX-qt.exe
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall linX.lnk" $INSTDIR\uninstall.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\linx.lnk" $INSTDIR\linx-qt.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall linx.lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayVersion "${VERSION}"
@@ -98,10 +98,10 @@ Section -post SEC0001
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" UninstallString $INSTDIR\uninstall.exe
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
-    WriteRegStr HKCR "linX" "URL Protocol" ""
-    WriteRegStr HKCR "linX" "" "URL:linX"
-    WriteRegStr HKCR "linX\DefaultIcon" "" $INSTDIR\linX-qt.exe
-    WriteRegStr HKCR "linX\shell\open\command" "" '"$INSTDIR\linX-qt.exe" "%1"'
+    WriteRegStr HKCR "linx" "URL Protocol" ""
+    WriteRegStr HKCR "linx" "" "URL:linx"
+    WriteRegStr HKCR "linx\DefaultIcon" "" $INSTDIR\linx-qt.exe
+    WriteRegStr HKCR "linx\shell\open\command" "" '"$INSTDIR\linx-qt.exe" "%1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections
@@ -119,7 +119,7 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    Delete /REBOOTOK $INSTDIR\linX-qt.exe
+    Delete /REBOOTOK $INSTDIR\linx-qt.exe
     Delete /REBOOTOK $INSTDIR\COPYING.txt
     Delete /REBOOTOK $INSTDIR\readme.txt
     RMDir /r /REBOOTOK $INSTDIR\daemon
@@ -129,9 +129,9 @@ SectionEnd
 
 Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall linX.lnk"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\linX.lnk"
-    Delete /REBOOTOK "$SMSTARTUP\linX.lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall linx.lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\linx.lnk"
+    Delete /REBOOTOK "$SMSTARTUP\linx.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log
     Delete /REBOOTOK $INSTDIR\db.log
@@ -139,7 +139,7 @@ Section -un.post UNSEC0001
     DeleteRegValue HKCU "${REGKEY}" Path
     DeleteRegKey /IfEmpty HKCU "${REGKEY}\Components"
     DeleteRegKey /IfEmpty HKCU "${REGKEY}"
-    DeleteRegKey HKCR "linX"
+    DeleteRegKey HKCR "linx"
     RmDir /REBOOTOK $SMPROGRAMS\$StartMenuGroup
     RmDir /REBOOTOK $INSTDIR
     Push $R0

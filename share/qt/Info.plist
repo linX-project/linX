@@ -3,7 +3,7 @@
 <plist version="0.9">
 <dict>
 	<key>CFBundleIconFile</key>
-	<string>linX.icns</string>
+	<string>linx.icns</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleGetInfoString</key>
@@ -15,19 +15,19 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleExecutable</key>
-	<string>linX-Qt</string>
+	<string>linx-Qt</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.linX.linX-Qt</string>
+	<string>org.linx.linx-Qt</string>
         <key>CFBundleURLTypes</key>
         <array>
           <dict>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string>org.linX.linXPayment</string>
+            <string>org.linx.linxPayment</string>
             <key>CFBundleURLSchemes</key>
             <array>
-              <string>linX</string>
+              <string>linx</string>
             </array>
           </dict>
         </array>
