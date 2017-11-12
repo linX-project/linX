@@ -1,3 +1,4 @@
+build_config.mk
 *.a
 *.o
 *.dylib*
