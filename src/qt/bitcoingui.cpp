@@ -75,8 +75,12 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     setMaximumSize(1200,800);
     setWindowTitle(tr("Linx wallet - Mac"));
 #elif _WIN32
+    if (!fTestNet) {
+    resize(1010, 690);
+    } else {
     resize(1010, 690);
     setMaximumSize(1200,800);
+    }
     setWindowTitle(tr("Linx wallet - Windows"));
 #else
     resize(1000, 710);
