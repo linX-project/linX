@@ -71,20 +71,28 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     restoreWindowGeometry();
 	
 #ifdef Q_OS_MAC
-    resize(1000, 700);
-    setMaximumSize(1200,800);
+    if (!fTestNet) {
+        resize(1000, 700);
+    } else {
+        resize(1000, 700);
+        setMaximumSize(1200,800);
+    }
     setWindowTitle(tr("Linx wallet - Mac"));
 #elif _WIN32
     if (!fTestNet) {
-    resize(1010, 690);
+        resize(1010, 690);
     } else {
-    resize(1010, 690);
-    setMaximumSize(1200,800);
+        resize(1010, 690);
+        setMaximumSize(1200,800);
     }
     setWindowTitle(tr("Linx wallet - Windows"));
 #else
-    resize(1000, 710);
-    setMaximumSize(1200,800);
+    if (!fTestNet) {
+        resize(1000, 710);
+    } else {
+        resize(1000, 710);
+        setMaximumSize(1200,800);
+    }
     setWindowTitle(tr("Linx wallet - Linux"));
 #endif
 #ifndef Q_OS_MAC

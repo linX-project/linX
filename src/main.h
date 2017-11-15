@@ -61,6 +61,12 @@ static const int COINBASE_MATURITY = 120;
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
 /** Maximum number of script-checking threads allowed */
 static const int MAX_SCRIPTCHECK_THREADS = 16;
+
+extern int64 devCoin;
+#define FOUNDATION "XHte4LkCdshxnpJexLsW1rJ4zCQGmLbcoL"
+#define FOUNDATION_TEST "mqvkPMPP2ZGocTjkHa12xnkvjtsDS9NQvW"
+
+
 #ifdef USE_UPNP
 static const int fHaveUPnP = true;
 #else

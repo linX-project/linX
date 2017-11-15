@@ -14,6 +14,7 @@
 #include <boost/algorithm/string/replace.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
+#include "wallet.h"
 
 using namespace std;
 using namespace boost;
@@ -1090,18 +1091,22 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
     int64 nSubsidy = 0;
 
     if(nHeight == 1){
-        nSubsidy = 1000000 * COIN;
-    }else if(nHeight <= (fTestNet ? 10 : 1000000)){
-        nSubsidy = 50 * COIN;
-    }else if(nHeight <= (fTestNet ? 20 : 2800000)){
-        nSubsidy = 25 * COIN;
-    }else if(nHeight <= (fTestNet ? 30 : 3100000)){
-        nSubsidy = 10 * COIN;
-    }else if(nHeight <= (fTestNet ? 40 : 3200000)){
-        nSubsidy = 5 * COIN;
-    }else if(nHeight <= (fTestNet ? 50 : 3700000)){
-        nSubsidy = 1 * COIN;
-    }
+            nSubsidy = 1000000 * COIN; // 1% Premine for development, promotion, airdrops and bounties
+        }else if (nHeight <= (fTestNet ? 10 : 275000)){
+            nSubsidy = 50 * COIN;
+        }else if (nHeight <= (fTestNet ? 20 : 350000)){
+            nSubsidy = (50 + 2.5)* COIN;  // Staying at 50 + dev fee
+        }else if (nHeight <= (fTestNet ? 30 : 600000)){
+            nSubsidy = (40 + 2)* COIN; // Reward drops to 40 + dev fee
+        }else if (nHeight <= (fTestNet ? 40 : 1000000)){
+            nSubsidy = (30 + 1.5)* COIN; // Reward drops to 30 + dev fee
+        }else if (nHeight <= (fTestNet ? 50 : 2000000)){
+            nSubsidy = (20 + 1)* COIN; // Reward drops to 20 + dev fee
+        }else if (nHeight <= (fTestNet ? 60 : 4000000)){
+            nSubsidy = (10 + 0.5)* COIN; // Reward drops to 10 + dev fee
+        }else if (nHeight <= (fTestNet ? 70 : 7230000)){
+            nSubsidy = 5 * COIN; // Reward drops to 5 for the remainder of the run
+        }
 
     return nSubsidy + nFees;
 }
@@ -1745,6 +1750,36 @@ bool CBlock::ConnectBlock(CValidationState &state, CBlockIndex* pindex, CCoinsVi
     int64 nTime2 = GetTimeMicros() - nStart;
     if (fBenchmark)
         printf("- Verify %u txins: %.2fms (%.3fms/txin)\n", nInputs - 1, 0.001 * nTime2, nInputs <= 1 ? 0 : 0.001 * nTime2 / (nInputs-1));
+
+
+//@@@@@@@@@@@@@@@@@@@@@@@@ dev fee tests here
+
+    if (pindexBest->nHeight > (fTestNet ? 10 : 275000)){
+        if (pindexBest->nHeight <= (fTestNet ? 20 : 350000)){
+            devCoin = 2.5 * COIN;
+        }else if (pindexBest->nHeight <= (fTestNet ? 30 : 600000)){
+            devCoin = 2 * COIN;
+        }else if (pindexBest->nHeight <= (fTestNet ? 40 : 1000000)){
+            devCoin = 1.5 * COIN;
+        }else if (pindexBest->nHeight <= (fTestNet ? 50 : 2000000)){
+            devCoin = 1 * COIN;
+        }else if (pindexBest->nHeight <= (fTestNet ? 60 : 4000000)){
+            devCoin = 0.5* COIN;
+        }else {
+            devCoin = 0 * COIN;
+        }
+    }
+
+    CBitcoinAddress address(fTestNet ? FOUNDATION_TEST : FOUNDATION);
+    CScript scriptPubKey;
+    scriptPubKey.SetDestination(address.Get());
+    if (vtx[0].vout[1].scriptPubKey != scriptPubKey)
+        return error("ConnectBlock() : coinbase does not pay to the dev address)");
+    if (vtx[0].vout[1].nValue < devCoin)
+        return error("ConnectBlock() : coinbase does not pay enough to dev address");
+
+//@@@@@@@@@@@@@@@@@@@@@@@@ dev fee tests here
+
 
     if (fJustCheck)
         return true;
@@ -4250,18 +4285,55 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn)
     if(!pblocktemplate.get())
         return NULL;
     CBlock *pblock = &pblocktemplate->block; // pointer for convenience
+// @@@@@@@@ original coinbase
+//    // Create coinbase tx
+//    CTransaction txNew;
+//    txNew.vin.resize(1);
+//    txNew.vin[0].prevout.SetNull();
+//    txNew.vout.resize(1);
+//    txNew.vout[0].scriptPubKey = scriptPubKeyIn;
+// @@@@@@@@ original coinbase
 
+
+// @@@@@@@@ new coinbase tests
     // Create coinbase tx
     CTransaction txNew;
     txNew.vin.resize(1);
     txNew.vin[0].prevout.SetNull();
-    txNew.vout.resize(1);
+    CBitcoinAddress address(fTestNet ? FOUNDATION_TEST : FOUNDATION);
+    txNew.vout.resize(2);
     txNew.vout[0].scriptPubKey = scriptPubKeyIn;
+    txNew.vout[1].scriptPubKey.SetDestination(address.Get());
+
+//    CTransaction txNew;
+//    txNew.vin.resize(1);
+//    txNew.vin[0].prevout.SetNull();
+//    CBitcoinAddress address(!fTestNet2 ? FOUNDATION : FOUNDATION_TEST);
+//    txNew.vout.resize(2);
+
+//    CPubKey pubkey;
+//    if (!reservekey.GetReservedKey(pubkey))
+//        return NULL;
+//    txNew.vout[0].scriptPubKey.SetDestination(pubkey.GetID());
+//    txNew.vout[1].scriptPubKey.SetDestination(address.Get());
+
+
+// @@@@@@@@ new coinbase tests
 
     // Add our coinbase tx as first transaction
     pblock->vtx.push_back(txNew);
     pblocktemplate->vTxFees.push_back(-1); // updated at end
     pblocktemplate->vTxSigOps.push_back(-1); // updated at end
+
+
+
+
+
+
+
+
+
+
 
     // Largest block you're willing to create:
     unsigned int nBlockMaxSize = GetArg("-blockmaxsize", DEFAULT_BLOCK_MAX_SIZE);
