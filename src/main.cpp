@@ -54,6 +54,8 @@ bool fBenchmark = false;
 bool fTxIndex = false;
 unsigned int nCoinCacheSize = 5000;
 int64 devCoin;
+int64 devFeeStartHeight = 275000;
+int64 devFeeStartHeight_TestNet = 5;
 
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
 int64 CTransaction::nMinTxFee = 100000;
@@ -1092,29 +1094,57 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
 {
     int64 nSubsidy = 0;
 
-//        if(nHeight == 1){
-//            nSubsidy = 1000000 * COIN; // 1% Premine for development, promotion, airdrops and bounties
-//        }else if (nHeight <= (fTestNet ? 2 : 275000)){
-//            nSubsidy = 50 * COIN;
-//        }else if (nHeight <= (fTestNet ? 4 : 350000)){
-//            nSubsidy = (50 + 2.5)* COIN;  // Staying at 50 + dev fee
-//        }else if (nHeight <= (fTestNet ? 6 : 600000)){
-//            nSubsidy = (40 + 2)* COIN; // Reward drops to 40 + dev fee
-//        }else if (nHeight <= (fTestNet ? 8 : 1000000)){
-//            nSubsidy = (30 + 1.5)* COIN; // Reward drops to 30 + dev fee
-//        }else if (nHeight <= (fTestNet ? 10 : 2000000)){
-//            nSubsidy = (20 + 1)* COIN; // Reward drops to 20 + dev fee
-//        }else if (nHeight <= (fTestNet ? 12 : 4000000)){
-//            nSubsidy = (10 + 0.5)* COIN; // Reward drops to 10 + dev fee
-//        }else if (nHeight <= (fTestNet ? 14 : 7230000)){
-//            nSubsidy = 5 * COIN; // Reward drops to 5 for the remainder of the run
-//        }
+//    if(nHeight == 1){
+//        nSubsidy = 1000000 * COIN;
+//    } else if (nHeight <= 10) {
+//        nSubsidy = 50 * COIN;
+//    } else if (nHeight <= 20) {
+//        nSubsidy = (50 + 2.5) * COIN;
+//        devCoin = 2.5 * COIN;
+//    } else {
+//        nSubsidy = 10 * COIN;
+//        devCoin = 0 * COIN;
+//    }
 
-    if(nHeight == 1){
-        nSubsidy = 1000000 * COIN; // 1% Premine for development, promotion, airdrops and bounties
-    }else{
-        nSubsidy = 50 * COIN;
-    }
+
+        if(nHeight == 1){
+            nSubsidy = 1000000 * COIN; // 1% Premine
+
+        } else if(nHeight < (fTestNet ? devFeeStartHeight_TestNet : devFeeStartHeight)) {
+            nSubsidy = 50 * COIN; // Reward 50 LINX
+
+        } else if(nHeight+1 < (fTestNet ? 10 : 375000)) {
+            nSubsidy = (50 + 2.5) * COIN;  // Reward 50 LINX
+            devCoin = 2.5 * COIN;   // 5% dev fee
+
+        } else if(nHeight+1 < (fTestNet ? 15 : 900000)) {
+            nSubsidy = (40 + 2) * COIN; // Reward 40 LINX
+            devCoin = 2 * COIN;    // 5% dev fee
+
+        } else if(nHeight+1 < (fTestNet ? 20 : 2000000)) {
+            nSubsidy = (20 + 1) * COIN; // Reward 20 LINX
+            devCoin = 1 * COIN;    // 5% dev fee
+
+        } else if(nHeight+1 < (fTestNet ? 25 : 4000000)) {
+            nSubsidy = (10 + 0.5) * COIN; // Reward 10 LINX
+            devCoin = 0.5 * COIN;    // 5% dev fee
+
+        } else if(nHeight+1 < (fTestNet ? 30 : 5000000)) {
+            nSubsidy = (5 + 0.25) * COIN; // Reward 5 LINX
+            devCoin = 0.25 * COIN;    // 5% dev fee
+
+        } else if(nHeight+1 < (fTestNet ? 35 : 9095306)) {
+            nSubsidy = (2 + 0.1) * COIN; // Reward 2 LINX
+            devCoin = 0.1 * COIN;    // 5% dev fee
+
+        } else if(nHeight == (fTestNet ? 40 : 9095307)) {
+            nSubsidy = 0.75 * COIN; // Total supply now at 100000000 LINX
+            devCoin = 0 * COIN;
+        } else {
+            nSubsidy = 0 * COIN; // Reward 2 LINX
+            devCoin = 0 * COIN;    // 5% dev fee
+        }
+
 
     return nSubsidy + nFees;
 }
@@ -1760,45 +1790,22 @@ bool CBlock::ConnectBlock(CValidationState &state, CBlockIndex* pindex, CCoinsVi
         printf("- Verify %u txins: %.2fms (%.3fms/txin)\n", nInputs - 1, 0.001 * nTime2, nInputs <= 1 ? 0 : 0.001 * nTime2 / (nInputs-1));
 
 
-//@@@@@@@@@@@@@@@@@@@@@@@@ dev fee tests here
-
-//    if (pindexBest->nHeight > (fTestNet ? 2 : 275000)){
-//        if (pindexBest->nHeight <= (fTestNet ? 4 : 350000)){
-//            devCoin = 2.5 * COIN;
-//            devCoin = 0 * COIN;
-//        }else if (pindexBest->nHeight <= (fTestNet ? 6 : 600000)){
-//            devCoin = 2 * COIN;
-//            devCoin = 0 * COIN;
-//        }else if (pindexBest->nHeight <= (fTestNet ? 8 : 1000000)){
-//            devCoin = 1.5 * COIN;
-//            devCoin = 0 * COIN;
-//        }else if (pindexBest->nHeight <= (fTestNet ? 10 : 2000000)){
-//            devCoin = 1 * COIN;
-//            devCoin = 0 * COIN;
-//        }else if (pindexBest->nHeight <= (fTestNet ? 12 : 4000000)){
-//            devCoin = 0.5* COIN;
-//            devCoin = 0 * COIN;
-//        }else {
-//            devCoin = 0 * COIN;
-//        }
-
-
-
-        if (pindexBest->nHeight > (fTestNet ? 5 : 275000)){
-
-                devCoin = 1 * COIN;
+//@@@ Dev Fee checks
+    if (pindexBest->nHeight-1 >= (fTestNet ? devFeeStartHeight_TestNet : devFeeStartHeight)){
 
         CBitcoinAddress address(fTestNet ? FOUNDATION_TEST : FOUNDATION);
         CScript scriptPubKey;
         scriptPubKey.SetDestination(address.Get());
-//        if (vtx[0].vout[1].scriptPubKey != scriptPubKey)
-//            return error("ConnectBlock() : coinbase does not pay to the dev address)");
-//        if (vtx[0].vout[1].nValue < devCoin)
-//            return error("ConnectBlock() : coinbase does not pay enough to dev address");
+        if (vtx[0].vout[1].scriptPubKey != scriptPubKey)
+        return error("ConnectBlock() : coinbase does not pay to the dev address)");
+        if (vtx[0].vout[1].nValue < devCoin)
+        return error("ConnectBlock() : coinbase does not pay enough to dev address");
+        if (vtx[0].vout[1].scriptPubKey != scriptPubKey)
+        return error("ConnectBlock() : coinbase does not pay to the dev address)");
+        if (vtx[0].vout[1].nValue < devCoin)
+        return error("ConnectBlock() : coinbase does not pay enough to dev address");
 
     }
-
-//@@@@@@@@@@@@@@@@@@@@@@@@ dev fee tests here
 
 
     if (fJustCheck)
@@ -4305,24 +4312,12 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn)
     if(!pblocktemplate.get())
         return NULL;
     CBlock *pblock = &pblocktemplate->block; // pointer for convenience
-// @@@@@@@@ original coinbase
 
-//    // Create coinbase tx
-//    CTransaction txNew;
-//    txNew.vin.resize(1);
-//    txNew.vin[0].prevout.SetNull();
-//    txNew.vout.resize(1);
-//    txNew.vout[0].scriptPubKey = scriptPubKeyIn;
-
-// @@@@@@@@ original coinbase
-
-
-// @@@@@@@@ new coinbase tests
-    // Create coinbase tx
+    // Create coinbase tx and devfee tx
     CTransaction txNew;
     txNew.vin.resize(1);
     txNew.vin[0].prevout.SetNull();
-    if (pindexBest->nHeight > (fTestNet ? 10 : 275000)){
+    if (pindexBest->nHeight >= (fTestNet ? devFeeStartHeight_TestNet : devFeeStartHeight)){
         CBitcoinAddress address(fTestNet ? FOUNDATION_TEST : FOUNDATION);
         txNew.vout.resize(2);
         txNew.vout[0].scriptPubKey = scriptPubKeyIn;
@@ -4332,21 +4327,10 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn)
         txNew.vout[0].scriptPubKey = scriptPubKeyIn;
     }
 
-
-
-// @@@@@@@@ new coinbase tests
-
     // Add our coinbase tx as first transaction
     pblock->vtx.push_back(txNew);
     pblocktemplate->vTxFees.push_back(-1); // updated at end
     pblocktemplate->vTxSigOps.push_back(-1); // updated at end
-
-
-
-
-
-
-
 
 
 
@@ -4547,9 +4531,8 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn)
         nLastBlockSize = nBlockSize;
         printf("CreateNewBlock(): total size %"PRI64u"\n", nBlockSize);
 
-
-
-        if (pindexBest->nHeight > (fTestNet ? 5 : 275000)){
+//@@@ Dev fee output
+        if (pindexBest->nHeight >= (fTestNet ? devFeeStartHeight_TestNet : devFeeStartHeight)){
             pblock->vtx[0].vout[0].nValue = GetBlockValue(pindexPrev->nHeight+1, nFees) - devCoin;
             pblocktemplate->vTxFees[0] = -nFees;
             pblock->vtx[0].vout[1].nValue = devCoin;
