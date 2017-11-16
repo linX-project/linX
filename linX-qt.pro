@@ -34,26 +34,17 @@ TARGET = $$fName1$$fName2$$VERSION
         message("32-Bit build")
         message("Target build name:" $$TARGET)
 
-        LIBS += -lshlwapi
-        LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,)
-        LIBS += -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX -lcrypt32
-        LIBS += -lws2_32 -lole32 -loleaut32 -luuid -lgdi32
-        LIBS += -lboost_system-mgw49-mt-s-1_57 -lboost_filesystem-mgw49-mt-s-1_57 -lboost_program_options-mgw49-mt-s-1_57 -lboost_thread-mgw49-mt-s-1_57
-        LIBS += -L"C:/deps/MinGW/msys/1.0/local/lib"
 
-        INCLUDEPATH += "C:/deps/MinGW/msys/1.0/local/include"
-
-        BOOST_LIB_SUFFIX=-mgw49-mt-s-1_57
-        BOOST_INCLUDE_PATH=C:/deps/boost_1_57_0
-        BOOST_LIB_PATH=C:/deps/boost_1_57_0/stage/lib
+        BOOST_LIB_SUFFIX=-mgw63-mt-d-1_63
+        BOOST_INCLUDE_PATH=C:/tools/boost/x86/include/boost-1_63
+        BOOST_LIB_PATH=C:/tools/boost/x86/lib
         BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
         BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
-        OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.1l/include
-        OPENSSL_LIB_PATH=C:/deps/openssl-1.0.1l
+        OPENSSL_INCLUDE_PATH=C:/tools/openssl/x86/1.0.2-stable/include
+        OPENSSL_LIB_PATH=C:/tools/openssl/x86/1.0.2-stable/lib
         MINIUPNPC_INCLUDE_PATH=C:/deps/
         MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
-        QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.4
-        QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.4/.libs
+	
         LEVELDB_INCLUDE_PATH+="C:/tools/leveldb/leveldb/include" "C:/tools/leveldb/leveldb/helpers"
         LEVELDB_LIB_PATH=C:/tools/leveldb/x86
         LIBS += "C:/tools/leveldb/x86/libleveldb.a" "C:/tools/leveldb/x86/libmemenv.a"
@@ -63,18 +54,24 @@ TARGET = $$fName1$$fName2$$VERSION
         message("64-Bit build")
         message("Target build name:" $$TARGET)
         BOOST_LIB_SUFFIX=-mgw63-mt-d-1_63
-        BOOST_INCLUDE_PATH=C:\tools\boost\x64\include\boost-1_63
-        BOOST_LIB_PATH=C:\tools\boost\boost_1_63_0\stage\lib
-        BDB_INCLUDE_PATH=C:\tools\berkeley-db\db4\x64\include
-        BDB_LIB_PATH=C:\tools\berkeley-db\db4\x64\lib
-        OPENSSL_INCLUDE_PATH=C:\tools\openssl\x64\include
-        OPENSSL_LIB_PATH=C:\tools\openssl\x64\lib
-        MINIUPNPC_INCLUDE_PATH=C:\tools\miniupnpc
-        MINIUPNPC_LIB_PATH=C:\tools\miniupnpc\miniupnpc
-        QRENCODE_INCLUDE_PATH=C:\tools\qrencode\x64\include
-        QRENCODE_LIB_PATH=C:\tools\qrencode\x64\lib
-        LIBEVENT_INCLUDE_PATH=C:\tools\libevent\x64\include
-        LIBEVENT_LIB_PATH=C:\tools\libevent\x64\lib
+        BOOST_INCLUDE_PATH=C:/tools/boost/x64/include/boost-1_63
+        BOOST_LIB_PATH=C:/tools/boost/x64/lib
+
+        BDB_INCLUDE_PATH=C:/tools/berkeley-db/db4/x64/include
+        BDB_LIB_PATH=C:/tools/berkeley-db/db4/x64/lib
+
+        OPENSSL_INCLUDE_PATH=C:/tools/openssl/x64/1.0.2-stable/include
+        OPENSSL_LIB_PATH=C:/tools/openssl/x64/1.0.2-stable/lib
+
+        MINIUPNPC_INCLUDE_PATH=C:/tools/miniupnpc
+        MINIUPNPC_LIB_PATH=C:/tools/miniupnpc/miniupnpc
+
+        QRENCODE_INCLUDE_PATH=C:/tools/qrencode/x64/include
+        QRENCODE_LIB_PATH=C:/tools/qrencode/x64/lib
+
+        LIBEVENT_INCLUDE_PATH=C:/tools/libevent/x64/include
+        LIBEVENT_LIB_PATH=C:/tools/libevent/x64/lib
+
         LEVELDB_INCLUDE_PATH+="C:/tools/leveldb/leveldb/include" "C:/tools/leveldb/leveldb/helpers"
         LEVELDB_LIB_PATH=C:/tools/leveldb/x64
         LIBS += "C:/tools/leveldb/x64/libleveldb.a" "C:/tools/leveldb/x64/libmemenv.a"
