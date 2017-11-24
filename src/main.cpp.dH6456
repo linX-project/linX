@@ -55,10 +55,10 @@ bool fTxIndex = false;
 unsigned int nCoinCacheSize = 5000;
 int64 devCoin;
 bool devFeeEnable = false;
-int devFeeStartHeight = 315001;
+int devFeeStartHeight = 275000;
 int devFeeStartHeight_testnet = 10;
-long LEGACY_CUTOFF_TIME = 1514851200;
-long LEGACY_CUTOFF_TIME_TESTNET = 1511381700;
+int LEGACY_CUTOFF_BLOCK = 270000;
+int LEGACY_CUTOFF_BLOCK_TESTNET = 20;
 
 
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
@@ -1100,28 +1100,36 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
 
 
         if (nHeight == 1){
-            nSubsidy = 1000000 * COIN; // 1% Premine
+            nSubsidy = 1000000 * COIN; // 1% Premine for development, promotion, airdrops and bounties
         } else if (nHeight <= (fTestNet ? devFeeStartHeight_testnet : devFeeStartHeight)){
             nSubsidy = 50 * COIN;
-        } else if (nHeight <= (fTestNet ? 15 : 500000)){
+        } else if (nHeight <= (fTestNet ? 15 : 375000)){
             devFeeEnable = true;
             nSubsidy = 52.5 * COIN;
             devCoin = 2.5 * COIN;
+        } else if (nHeight <= (fTestNet ? 20 : 900000)){
+            devFeeEnable = true;
+            nSubsidy = 42 * COIN;
+            devCoin = 2 * COIN;
         } else if (nHeight <= (fTestNet ? 25 : 2000000)){
             devFeeEnable = true;
-            nSubsidy = 26.25 * COIN;
-            devCoin = 1.25 * COIN;
-        } else if (nHeight <= (fTestNet ? 35 : 3500000)){
+            nSubsidy = 21 * COIN;
+            devCoin = 1 * COIN;
+        } else if (nHeight <= (fTestNet ? 30 : 4000000)){
             devFeeEnable = true;
             nSubsidy = 10.5 * COIN;
             devCoin = 0.5 * COIN;
-        } else if (nHeight <= (fTestNet ? 45 : 7007152)){
+        } else if (nHeight <= (fTestNet ? 35 : 5000000)){
             devFeeEnable = true;
             nSubsidy = 5.25 * COIN;
             devCoin = 0.25 * COIN;
-        } else if (nHeight == (fTestNet ? 55 : 7007153)){
+        } else if (nHeight <= (fTestNet ? 40 : 9095306)){
             devFeeEnable = true;
-            nSubsidy = 2 * COIN;
+            nSubsidy = 2.1 * COIN;
+            devCoin = 0.1 * COIN;
+        } else if (nHeight <= (fTestNet ? 45 : 9095307)){
+            devFeeEnable = true;
+            nSubsidy = 0.75 * COIN;
             devCoin = 0 * COIN;
         } else {
             devFeeEnable = true;
@@ -3309,27 +3317,22 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
         CAddress addrFrom;
         uint64 nNonce = 1;
         vRecv >> pfrom->nVersion >> pfrom->nServices >> nTime >> addrMe;
-        if(pfrom->nVersion <= (PROTOCOL_VERSION - 1)){
-            printf("recieved pfrom message from old node with versoin %i \n", pfrom->nVersion);
-            printf("LEGACY_CUTOFF_TIME = %i;\n", LEGACY_CUTOFF_TIME);
-            printf("LEGACY_CUTOFF_TIME_TESTNET = %i;\n", LEGACY_CUTOFF_TIME_TESTNET);
-            printf("pindexBest->GetBlockTime() = %i;\n", pindexBest->GetBlockTime());
-            printf("pindexBest->nHeight = %i;\n", pindexBest->nHeight);
-
-            if(pindexBest->GetBlockTime() > (fTestNet ? LEGACY_CUTOFF_TIME_TESTNET : LEGACY_CUTOFF_TIME)){
+        if(pfrom->nVersion <= (PROTOCOL_VERSION - 1))
+        {
+            if(pindexBest->GetBlockTime() > HRD_LEGACY_CUTOFF)
+            {
                 // disconnect from peers older than legacy cutoff allows
                 printf("partner %s using obsolete version %i; disconnecting\n", pfrom->addr.ToString().c_str(), pfrom->nVersion);
                 pfrom->fDisconnect = true;
                 return false;
             }
-        }
-
-        if(pfrom->nVersion < MIN_PEER_PROTO_VERSION)
-        {
-            // disconnect from peers older than this proto version
-            printf("partner %s using obsolete version %i; disconnecting\n", pfrom->addr.ToString().c_str(), pfrom->nVersion);
-            pfrom->fDisconnect = true;
-            return false;
+            if(pfrom->nVersion < MIN_PEER_PROTO_VERSION)
+            {
+                // disconnect from peers older than this proto version
+                printf("partner %s using obsolete version %i; disconnecting\n", pfrom->addr.ToString().c_str(), pfrom->nVersion);
+                pfrom->fDisconnect = true;
+                return false;
+            }
         }
 
         if (pfrom->nVersion == 10300)
