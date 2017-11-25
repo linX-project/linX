@@ -57,7 +57,7 @@ int64 devCoin;
 bool devFeeEnable = false;
 int devFeeStartHeight = 315001;
 int devFeeStartHeight_testnet = 10;
-long LEGACY_CUTOFF_TIME = 1514851200;
+long LEGACY_CUTOFF_TIME = 1514851200; //Tuesday, 2 January 2018 00:00:00 GMT+00:00
 long LEGACY_CUTOFF_TIME_TESTNET = 1511381700;
 
 

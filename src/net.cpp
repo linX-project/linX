@@ -1186,12 +1186,22 @@ void MapPort(bool)
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strMainNetDNSSeed[][2] = {
-    {"seed.linx.io", "51.255.43.51"},
+    {"seed.mylinx.io", "seed.mylinx.io"},
+    {"seed1.mylinx.io", "seed1.mylinx.io"},
+    {"seed2.mylinx.io", "seed2.mylinx.io"},
+    {"seed3.mylinx.io", "seed3.mylinx.io"},
+    {"seed4.mylinx.io", "seed4.mylinx.io"},
+    {"seed5.mylinx.io", "seed5.mylinx.io"},
     {NULL, NULL}
 };
 
 static const char *strTestNetDNSSeed[][2] = {
-    {"testnet.linx.io", "testnet-seed.linxtools.com"},
+    {"testnet.mylinx.io", "testnet.mylinx.io"},
+    {"testnet1.mylinx.io", "testnet1.mylinx.io"},
+    {"testnet2.mylinx.io", "testnet2.mylinx.io"},
+    {"testnet3.mylinx.io", "testnet3.mylinx.io"},
+    {"testnet4.mylinx.io", "testnet4.mylinx.io"},
+    {"testnet5.mylinx.io", "testnet5.mylinx.io"},
     {"testlinx.ffptech.com" , "testlinx.ffptech.com"},
     {NULL, NULL}
 };
