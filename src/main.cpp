@@ -21,7 +21,7 @@ using namespace std;
 using namespace boost;
 
 #if defined(NDEBUG)
-# error "linx cannot be compiled without assertions."
+# error "Linx cannot be compiled without assertions."
 #endif
 
 //

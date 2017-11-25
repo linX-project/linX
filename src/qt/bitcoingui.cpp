@@ -224,21 +224,21 @@ void BitcoinGUI::createActions()
     tabGroup->addAction(historyAction);
 
     addressBookAction = new QAction(QIcon(":/icons/address-book-btn"), tr("&ADDRESS BOOK"), this);
-    addressBookAction->setStatusTip(tr("Edit the list of stored addresses and labels"));
+    addressBookAction->setStatusTip(tr("Linx address"));
     addressBookAction->setToolTip(addressBookAction->statusTip());
     addressBookAction->setCheckable(true);
     addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
     tabGroup->addAction(addressBookAction);
 
     openExplorerAction = new QAction(QIcon(":/icons/explorer-btn"), tr("&EXPLORER"), this);
-    openExplorerAction->setStatusTip(tr("Open the LinX block explorer in your web browser"));
+    openExplorerAction->setStatusTip(tr("Open the Linx block explorer in your web browser"));
     openExplorerAction->setToolTip(openExplorerAction->statusTip());
     openExplorerAction->setCheckable(true);
     openExplorerAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
     tabGroup->addAction(openExplorerAction);
 
     openWebsiteAction = new QAction(QIcon(":/icons/website-btn"), tr("&LINX WEBSITE"), this);
-    openWebsiteAction->setStatusTip(tr("Open the LinX WebSite in your web browser"));
+    openWebsiteAction->setStatusTip(tr("Open the Linx WebSite in your web browser"));
     openWebsiteAction->setToolTip(openWebsiteAction->statusTip());
     openWebsiteAction->setCheckable(true);
     openWebsiteAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_7));
