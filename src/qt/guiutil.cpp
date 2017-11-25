@@ -663,7 +663,8 @@ void SetThemeQSS(QApplication& app)
         "QComboBox QAbstractItemView  {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold;  border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
         "QVBoxLayout { background: rgb(24,24,24);}"
         "QLineEdit, QTextEdit {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
- );
+        "QToolTip { color: rgb(24,24,24); }"
+                );
 }
 
 #else
