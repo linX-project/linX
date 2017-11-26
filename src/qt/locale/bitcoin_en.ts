@@ -1253,8 +1253,8 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Console</source>
-        <translation>linx - Console</translation>
+        <source>Linx - Console</source>
+        <translation>Linx - Console</translation>
     </message>
     <message>
         <location line="+25"/>

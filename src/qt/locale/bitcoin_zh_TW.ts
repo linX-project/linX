@@ -1239,7 +1239,7 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Console</source>
+        <source>Linx - Console</source>
         <translation>莱特幣 - 除錯視窗</translation>
     </message>
     <message>

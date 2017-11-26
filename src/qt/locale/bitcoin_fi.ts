@@ -1239,7 +1239,7 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Console</source>
+        <source>Linx - Console</source>
         <translation>linx - Debug ikkuna</translation>
     </message>
     <message>

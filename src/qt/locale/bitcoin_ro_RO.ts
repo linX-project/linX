@@ -1230,7 +1230,7 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Console</source>
+        <source>Linx - Console</source>
         <translation>linx-Fereastra pentru debug</translation>
     </message>
     <message>

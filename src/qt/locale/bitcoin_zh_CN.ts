@@ -1240,7 +1240,7 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Console</source>
+        <source>Linx - Console</source>
         <translation>莱特币 - 调试窗口</translation>
     </message>
     <message>
