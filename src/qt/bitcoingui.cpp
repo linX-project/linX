@@ -69,7 +69,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     prevBlocks(0)
 {
     restoreWindowGeometry();
-	
+
 #ifdef Q_OS_MAC
     if (!fTestNet) {
         resize(1000, 700);
@@ -77,7 +77,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
         resize(1000, 700);
         setMaximumSize(1200,800);
     }
-    setWindowTitle(tr("Linx wallet - Mac"));
+    setWindowTitle(tr("Linx wallet"));
 #elif _WIN32
     if (!fTestNet) {
         resize(1010, 690);
@@ -85,7 +85,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
         resize(1010, 690);
         setMaximumSize(1200,800);
     }
-    setWindowTitle(tr("Linx wallet - Windows"));
+    setWindowTitle(tr("Linx wallet"));
 #else
     if (!fTestNet) {
         resize(1000, 710);
@@ -93,7 +93,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
         resize(1000, 710);
         setMaximumSize(1200,800);
     }
-    setWindowTitle(tr("Linx wallet - Linux"));
+    setWindowTitle(tr("Linx wallet"));
 #endif
 #ifndef Q_OS_MAC
     QApplication::setWindowIcon(QIcon(":icons/bitcoin"));
@@ -203,7 +203,7 @@ void BitcoinGUI::createActions()
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send-btn"), tr("&SEND"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a Linx address"));
+    sendCoinsAction->setStatusTip(tr("Send Linx to an address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
@@ -224,21 +224,21 @@ void BitcoinGUI::createActions()
     tabGroup->addAction(historyAction);
 
     addressBookAction = new QAction(QIcon(":/icons/address-book-btn"), tr("&ADDRESS BOOK"), this);
-    addressBookAction->setStatusTip(tr("Linx address"));
+    addressBookAction->setStatusTip(tr("Open your address book"));
     addressBookAction->setToolTip(addressBookAction->statusTip());
     addressBookAction->setCheckable(true);
     addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
     tabGroup->addAction(addressBookAction);
 
     openExplorerAction = new QAction(QIcon(":/icons/explorer-btn"), tr("&EXPLORER"), this);
-    openExplorerAction->setStatusTip(tr("Open the Linx block explorer in your web browser"));
+    openExplorerAction->setStatusTip(tr("Open the Linx block explorer in your browser"));
     openExplorerAction->setToolTip(openExplorerAction->statusTip());
     openExplorerAction->setCheckable(true);
     openExplorerAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
     tabGroup->addAction(openExplorerAction);
 
     openWebsiteAction = new QAction(QIcon(":/icons/website-btn"), tr("&LINX WEBSITE"), this);
-    openWebsiteAction->setStatusTip(tr("Open the Linx WebSite in your web browser"));
+    openWebsiteAction->setStatusTip(tr("Open the Linx Website in your browser"));
     openWebsiteAction->setToolTip(openWebsiteAction->statusTip());
     openWebsiteAction->setCheckable(true);
     openWebsiteAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_7));
