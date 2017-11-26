@@ -439,7 +439,7 @@ Dieses Produkt enthält Software, die vom OpenSSL-Projekt zur Verwendung im Open
     </message>
     <message>
         <location line="+6"/>
-        <source>&amp;Debug window</source>
+        <source>&amp;Console</source>
         <translation>&amp;Debugfenster</translation>
     </message>
     <message>
@@ -1238,7 +1238,7 @@ Adresse: %4</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Debug window</source>
+        <source>linx - Console</source>
         <translation>linx - Debugfenster</translation>
     </message>
     <message>

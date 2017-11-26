@@ -439,7 +439,7 @@ Este produto inclui software desenvolvido pelo Projecto OpenSSL para uso no Open
     </message>
     <message>
         <location line="+6"/>
-        <source>&amp;Debug window</source>
+        <source>&amp;Console</source>
         <translation>Janela de &amp;depuração</translation>
     </message>
     <message>
@@ -1239,7 +1239,7 @@ Endereço: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Debug window</source>
+        <source>linx - Console</source>
         <translation>linx - Janela de depuração</translation>
     </message>
     <message>

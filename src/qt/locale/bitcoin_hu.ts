@@ -438,7 +438,7 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="+6"/>
-        <source>&amp;Debug window</source>
+        <source>&amp;Console</source>
         <translation>&amp;Debug ablak</translation>
     </message>
     <message>
@@ -1239,7 +1239,7 @@ Cím: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Debug window</source>
+        <source>linx - Console</source>
         <translation type="unfinished"/>
     </message>
     <message>

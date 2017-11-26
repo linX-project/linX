@@ -439,7 +439,7 @@ Ce produit comprend des logiciels développés par le projet OpenSSL pour être 
     </message>
     <message>
         <location line="+6"/>
-        <source>&amp;Debug window</source>
+        <source>&amp;Console</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1235,7 +1235,7 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Debug window</source>
+        <source>linx - Console</source>
         <translation type="unfinished"/>
     </message>
     <message>

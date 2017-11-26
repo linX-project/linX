@@ -439,7 +439,7 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="+6"/>
-        <source>&amp;Debug window</source>
+        <source>&amp;Console</source>
         <translation>&amp;Ladicí okno</translation>
     </message>
     <message>
@@ -1239,7 +1239,7 @@ Adresa: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Debug window</source>
+        <source>linx - Console</source>
         <translation>linx - ladicí okno</translation>
     </message>
     <message>

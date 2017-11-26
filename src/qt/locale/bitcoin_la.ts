@@ -438,7 +438,7 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+6"/>
-        <source>&amp;Debug window</source>
+        <source>&amp;Console</source>
         <translation>Fenestra &amp;Debug</translation>
     </message>
     <message>
@@ -1238,7 +1238,7 @@ Inscriptio: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Debug window</source>
+        <source>linx - Console</source>
         <translation>linx - Fenestra debug</translation>
     </message>
     <message>

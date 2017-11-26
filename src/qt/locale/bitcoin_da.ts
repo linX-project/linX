@@ -439,7 +439,7 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     </message>
     <message>
         <location line="+6"/>
-        <source>&amp;Debug window</source>
+        <source>&amp;Console</source>
         <translation>Fejlsøgningsvindue</translation>
     </message>
     <message>
@@ -1239,7 +1239,7 @@ Adresse: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Debug window</source>
+        <source>linx - Console</source>
         <translation>linx - Fejlsøgningsvindue</translation>
     </message>
     <message>

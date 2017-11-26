@@ -439,7 +439,7 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+6"/>
-        <source>&amp;Debug window</source>
+        <source>&amp;Console</source>
         <translation>&amp;Debugscherm</translation>
     </message>
     <message>
@@ -1239,7 +1239,7 @@ Adres: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Debug window</source>
+        <source>linx - Console</source>
         <translation>linx-debugscherm</translation>
     </message>
     <message>

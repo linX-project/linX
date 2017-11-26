@@ -440,7 +440,7 @@ Denna produkten innehåller mjukvara utvecklad av OpenSSL Project för användni
     </message>
     <message>
         <location line="+6"/>
-        <source>&amp;Debug window</source>
+        <source>&amp;Console</source>
         <translation>&amp;Debug fönster</translation>
     </message>
     <message>
@@ -1240,7 +1240,7 @@ Adress: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Debug window</source>
+        <source>linx - Console</source>
         <translation>linx - Debug fönster</translation>
     </message>
     <message>

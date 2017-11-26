@@ -434,7 +434,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+6"/>
-        <source>&amp;Debug window</source>
+        <source>&amp;Console</source>
         <translation>&amp; Fereastra debug</translation>
     </message>
     <message>
@@ -1230,7 +1230,7 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Debug window</source>
+        <source>linx - Console</source>
         <translation>linx-Fereastra pentru debug</translation>
     </message>
     <message>

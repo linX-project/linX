@@ -441,8 +441,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+6"/>
-        <source>&amp;Debug window</source>
-        <translation>&amp;Debug window</translation>
+        <source>&amp;Console</source>
+        <translation>&amp;Console</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1253,8 +1253,8 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Debug window</source>
-        <translation>linx - Debug window</translation>
+        <source>linx - Console</source>
+        <translation>linx - Console</translation>
     </message>
     <message>
         <location line="+25"/>

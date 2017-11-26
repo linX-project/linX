@@ -442,7 +442,7 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+6"/>
-        <source>&amp;Debug window</source>
+        <source>&amp;Console</source>
         <translation>Ventana de &amp;depuración</translation>
     </message>
     <message>
@@ -1242,7 +1242,7 @@ Dirección: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Debug window</source>
+        <source>linx - Console</source>
         <translation>linx - Ventana de depuración</translation>
     </message>
     <message>

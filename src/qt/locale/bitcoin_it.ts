@@ -439,7 +439,7 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location line="+6"/>
-        <source>&amp;Debug window</source>
+        <source>&amp;Console</source>
         <translation>Finestra &amp;Debug</translation>
     </message>
     <message>
@@ -1241,7 +1241,7 @@ Indirizzo: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Debug window</source>
+        <source>linx - Console</source>
         <translation>linx - Finestra debug</translation>
     </message>
     <message>

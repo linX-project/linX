@@ -438,7 +438,7 @@ Platinama pagal MIT/X11 licenciją, kurią rasite faile COPYING arba http://www.
     </message>
     <message>
         <location line="+6"/>
-        <source>&amp;Debug window</source>
+        <source>&amp;Console</source>
         <translation>&amp;Derinimo langas</translation>
     </message>
     <message>
@@ -1237,7 +1237,7 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Debug window</source>
+        <source>linx - Console</source>
         <translation>linx - Derinimo langas</translation>
     </message>
     <message>

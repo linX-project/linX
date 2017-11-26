@@ -440,7 +440,7 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="+6"/>
-        <source>&amp;Debug window</source>
+        <source>&amp;Console</source>
         <translation>&amp;Testausikkuna</translation>
     </message>
     <message>
@@ -1239,7 +1239,7 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="-104"/>
-        <source>linx - Debug window</source>
+        <source>linx - Console</source>
         <translation>linx - Debug ikkuna</translation>
     </message>
     <message>
