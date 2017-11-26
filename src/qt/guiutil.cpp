@@ -6,7 +6,7 @@
 
 #include "guiutil.h"
 
-#include "bitcoinaddressvalidator.h"
+#include "linxaddressvalidator.h"
 #include "walletmodel.h"
 #include "bitcoinunits.h"
 
@@ -71,8 +71,8 @@ QFont bitcoinAddressFont()
 
 void setupAddressWidget(QLineEdit *widget, QWidget *parent)
 {
-    widget->setMaxLength(BitcoinAddressValidator::MaxAddressLength);
-    widget->setValidator(new BitcoinAddressValidator(parent));
+    widget->setMaxLength(LinxAddressValidator::MaxAddressLength);
+    widget->setValidator(new LinxAddressValidator(parent));
     widget->setFont(bitcoinAddressFont());
 }
 

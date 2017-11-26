@@ -44,7 +44,7 @@ TARGET = $$fName1$$fName2$$VERSION
         OPENSSL_LIB_PATH=C:/tools/openssl/x86/1.0.2-stable/lib
         MINIUPNPC_INCLUDE_PATH=C:/deps/
         MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
-	
+
         LEVELDB_INCLUDE_PATH+="C:/tools/leveldb/leveldb/include" "C:/tools/leveldb/leveldb/helpers"
         LEVELDB_LIB_PATH=C:/tools/leveldb/x86
         LIBS += "C:/tools/leveldb/x86/libleveldb.a" "C:/tools/leveldb/x86/libmemenv.a"
@@ -241,7 +241,7 @@ HEADERS += src/qt/bitcoingui.h \
     src/qt/signverifymessagedialog.h \
     src/qt/aboutdialog.h \
     src/qt/editaddressdialog.h \
-    src/qt/bitcoinaddressvalidator.h \
+    src/qt/linxaddressvalidator.h \
     src/alert.h \
     src/addrman.h \
     src/base58.h \
@@ -328,7 +328,7 @@ SOURCES += src/qt/bitcoin.cpp \
     src/qt/signverifymessagedialog.cpp \
     src/qt/aboutdialog.cpp \
     src/qt/editaddressdialog.cpp \
-    src/qt/bitcoinaddressvalidator.cpp \
+    src/qt/linxaddressvalidator.cpp \
     src/alert.cpp \
     src/version.cpp \
     src/sync.cpp \
