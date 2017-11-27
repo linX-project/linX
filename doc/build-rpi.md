@@ -58,8 +58,11 @@ and password.
 `$ sudo apt-get -y install build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev`
 
 `$ sudo apt-get -y install libtool autotools-dev autoconf`
+
 `$ sudo apt-get -y install libboost-all-dev`
+
 `$ sudo apt-get -y install libminiupnpc-dev`
+
 `$ sudo apt-get -y install libdb++-dev`
 
 We have to use an old version of BerkeleyDB (4.8) and it won't be available from
@@ -69,8 +72,11 @@ Bitcoin repo and install it directly.
 
 
 `$ sudo apt-get install software-properties-common`
+
 `$ sudo add-apt-repository ppa:bitcoin/bitcoin`
+
 `$ sudo apt-get update`
+
 `$ sudo apt-get install libdb4.8-dev libdb4.8++-dev`
 
 8) Install git if you don't already have it
@@ -84,6 +90,7 @@ Bitcoin repo and install it directly.
 10) Build Linx
 
 `$ cd linX/src`
+
 `$ make -f makefile.unix`
 
 The build process will take a very long time so grab a coffee or two.
@@ -97,8 +104,11 @@ config file.
 11) Create and set up the config file
 
 `$ cd`
+
 `$ cd ./linX`
+
 `$ sudo nano linX.config`
+
 Paste in the following, changing the username and password to something secure
 and save it.
 
@@ -116,13 +126,17 @@ addnode=testnet.mylinx.io
 you deserve it) while the blockchain syncs. This is going to take a while.
 
 `$ cd`
+
 `$ cd linX/src`
+
 `$ ./linXd -daemon`
+
 `$ ./linXd getinfo`
 
 If you want to launch Linx on the testnet run
 
 `$ ./linXd - testnet`
+
 `$ ./linXd getinfo`
 
 Enjoy!
