@@ -69,7 +69,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     prevBlocks(0)
 {
     restoreWindowGeometry();
-
+	
 #ifdef Q_OS_MAC
     if (!fTestNet) {
         resize(1000, 700);

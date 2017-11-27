@@ -2,7 +2,7 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "linxaddressvalidator.h"
+#include "bitcoinaddressvalidator.h"
 
 /* Base58 characters are:
      "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
@@ -17,12 +17,12 @@
   - '0' and 'O' to 'o'
 */
 
-LinxAddressValidator::LinxAddressValidator(QObject *parent) :
+BitcoinAddressValidator::BitcoinAddressValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State LinxAddressValidator::validate(QString &input, int &pos) const
+QValidator::State BitcoinAddressValidator::validate(QString &input, int &pos) const
 {
     // Correction
     for(int idx=0; idx<input.size();)
