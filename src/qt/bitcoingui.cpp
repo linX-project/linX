@@ -166,6 +166,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     statusBar()->addPermanentWidget(frameBlocks);
     statusBar()->setStyleSheet("background: rgb(24,24,24); color: rgb(255,255,255);");
 
+
     syncIconMovie = new QMovie(":/movies/update_spinner", "mng", this);
 
     rpcConsole = new RPCConsole(this);
@@ -727,7 +728,6 @@ void BitcoinGUI::setNumConnections(int count)
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
     labelConnectionsIcon->setToolTip(tr("%n active connection(s) to the Linx network", "", count));
-    labelConnectionsIcon->setStyleSheet("color: black");
 }
 
 void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
