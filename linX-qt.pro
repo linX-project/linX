@@ -38,12 +38,18 @@ TARGET = $$fName1$$fName2$$VERSION
         BOOST_LIB_SUFFIX=-mgw63-mt-d-1_63
         BOOST_INCLUDE_PATH=C:/tools/boost/x86/include/boost-1_63
         BOOST_LIB_PATH=C:/tools/boost/x86/lib
+
         BDB_INCLUDE_PATH=C:/deps/db-4.8.30.NC/build_unix
         BDB_LIB_PATH=C:/deps/db-4.8.30.NC/build_unix
+
         OPENSSL_INCLUDE_PATH=C:/tools/openssl/x86/1.0.2-stable/include
         OPENSSL_LIB_PATH=C:/tools/openssl/x86/1.0.2-stable/lib
+
         MINIUPNPC_INCLUDE_PATH=C:/deps/
         MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+
+#        QRENCODE_INCLUDE_PATH=C:/tools/qrencode/x86/include
+#        QRENCODE_LIB_PATH=C:/tools/qrencode/x86/lib
 
         LEVELDB_INCLUDE_PATH+="C:/tools/leveldb/leveldb/include" "C:/tools/leveldb/leveldb/helpers"
         LEVELDB_LIB_PATH=C:/tools/leveldb/x86
@@ -51,6 +57,7 @@ TARGET = $$fName1$$fName2$$VERSION
 
 
     } else {
+TARGET = $$fName1$$fName2$$VERSION
         message("64-Bit build")
         message("Target build name:" $$TARGET)
         BOOST_LIB_SUFFIX=-mgw63-mt-d-1_63
@@ -68,9 +75,6 @@ TARGET = $$fName1$$fName2$$VERSION
 
         QRENCODE_INCLUDE_PATH=C:/tools/qrencode/x64/include
         QRENCODE_LIB_PATH=C:/tools/qrencode/x64/lib
-
-        LIBEVENT_INCLUDE_PATH=C:/tools/libevent/x64/include
-        LIBEVENT_LIB_PATH=C:/tools/libevent/x64/lib
 
         LEVELDB_INCLUDE_PATH+="C:/tools/leveldb/leveldb/include" "C:/tools/leveldb/leveldb/helpers"
         LEVELDB_LIB_PATH=C:/tools/leveldb/x64

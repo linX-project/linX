@@ -600,7 +600,8 @@ void SetThemeQSS(QApplication& app)
         "QLabel#top_bar_available {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 12px;}"
         "QLabel#top_bar_balance {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 19px; color: rgb(196,181,148);}"
         "QLabel#overview_wallet_label, QLabel#overview_balance_label, QLabel#overview_pending_label, QLabel#overview_immature_label, QLabel#labelBalance, QLabel#labelUnconfirmed, QLabel#labelImmature, QLabel#overview_recent_transactions {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; font-size: 13px;}"
- );
+        "QToolTip { color: rgb(24,24,24); }"
+                );
 }
 
 #elif _WIN32
@@ -727,7 +728,8 @@ void SetThemeQSS(QApplication& app)
         "QComboBox QAbstractItemView  {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold;  border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
         "QVBoxLayout { background: rgb(24,24,24);}"
         "QLineEdit, QTextEdit {font-family: Arial Black,Arial Bold,Gadget,sans-serif; font-weight:bold; border-radius: 2px; color: rgb(24,24,24); background: rgb(255,255,255); }"
- );
+        "QToolTip { color: rgb(24,24,24); }"
+                );
 }
 #endif
 
