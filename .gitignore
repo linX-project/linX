@@ -3,3 +3,4 @@
 *.user.*
 *.qm
 *.exe
+.DS_Store

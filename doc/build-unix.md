@@ -15,7 +15,7 @@ To Build
 	cd src/
 	make -f makefile.unix		# Headless Linx
 
-See readme-qt.rst for instructions on building linx-Qt, the graphical user interface.
+See readme-qt.rst for instructions on building Linx wallet, the graphical user interface built with Qt.
 
 Dependencies
 ---------------------
@@ -56,24 +56,45 @@ Dependency Build Instructions: Ubuntu & Debian
 ----------------------------------------------
 Build requirements (UB 12.x, 14.x & 16.x compatible) :
 
-	sudo apt-get -y install qt4-qmake libqt4-dev build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev
+	$ sudo apt-get -y install qt4-qmake libqt4-dev build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev
 
-        sudo apt-get -y install libtool autotools-dev autoconf
-	sudo apt-get -y install libboost-all-dev
-	sudo apt-get -y install libminiupnpc-dev
-	sudo apt-get -y install libdb++-dev
-	sudo apt-get -y install libprotobuf-dev
-	sudo apt-get -y install libqrencode-dev
+  $ sudo apt-get -y install libtool autotools-dev autoconf
+	$ sudo apt-get -y install libboost-all-dev
+	$ sudo apt-get -y install libminiupnpc-dev
+	$ sudo apt-get -y install libdb++-dev
+	$ sudo apt-get -y install libprotobuf-dev
+	$ sudo apt-get -y install libqrencode-dev
 
-	sudo apt-get install software-properties-common
-	sudo add-apt-repository ppa:bitcoin/bitcoin
-	sudo apt-get update
-	sudo apt-get install libdb4.8-dev libdb4.8++-dev
+Add the bitcoin repo to get the old version of Berkeley (Ubuntu only)...
 
+	$ sudo apt-get install software-properties-common
+	$ sudo add-apt-repository ppa:bitcoin/bitcoin
+	$ sudo apt-get update
+	$ sudo apt-get install libdb4.8-dev libdb4.8++-dev
+
+Installing Berkeley on newer Debian builds...
+
+Debian removed this old version of Berkeley (4.8) from their repo after Squeeze.
+If you don't want to build it yourself from source you can add the old Squeeze
+repo just to install it. Make sure you remove it from your sources.list once
+you're done or you may end up with some funky business.
+
+$ nano /etc/apt/sources.list
+
+add the following line and save
+
+deb http://archive.debian.org/debian/ squeeze main contrib non-free
+
+$ apt-get update
+$ sudo apt-get install libdb4.8-dev libdb4.8++-dev
+
+Once installed remove the old repo you just added in your sources.list
+
+$ nano /etc/apt/sources.list
 
 Notes
 -----
-The release is built with GCC and then "strip bitcoind" to strip the debug
+The release is built with GCC and then "strip linXd" to strip the debug
 symbols, which reduces the executable size by about 90%.
 
 
@@ -88,10 +109,13 @@ miniupnpc
 
 Berkeley DB
 -----------
-You need Berkeley DB 4.8.  If you have to build Berkeley DB yourself:
+If you need to build Berkeley DB 4.8 yourself:
 
-	../dist/configure --enable-cxx
-	make
+  $ wget http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz
+	$ tar -xvf db-4.8.30.NC.tar.gz
+	$ cd db-4.8.30.NC/build_unix
+	$ ../dist/configure --enable-cxx
+	$ make install
 
 
 Boost
