@@ -728,6 +728,11 @@ void BitcoinGUI::setNumConnections(int count)
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
     labelConnectionsIcon->setToolTip(tr("%n active connection(s) to the Linx network", "", count));
+#ifdef Q_OS_MAC
+    labelConnectionsIcon->setStyleSheet("color: white");
+#else
+    labelConnectionsIcon->setStyleSheet("color: black");
+#endif
 }
 
 void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
