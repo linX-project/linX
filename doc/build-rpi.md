@@ -55,12 +55,12 @@ and password.
 7) Install the dependencies
 
 
-`$ sudo apt-get -y install build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev
+`$ sudo apt-get -y install build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev`
 
-$ sudo apt-get -y install libtool autotools-dev autoconf
-$ sudo apt-get -y install libboost-all-dev
-$ sudo apt-get -y install libminiupnpc-dev
-$ sudo apt-get -y install libdb++-dev`
+`$ sudo apt-get -y install libtool autotools-dev autoconf`
+`$ sudo apt-get -y install libboost-all-dev`
+`$ sudo apt-get -y install libminiupnpc-dev`
+`$ sudo apt-get -y install libdb++-dev`
 
 We have to use an old version of BerkeleyDB (4.8) and it won't be available from
 the current dist repo. You can build this yourself from source if you wish, full
@@ -68,10 +68,10 @@ instructions are located in build-unix.md, but to save time you can just add the
 Bitcoin repo and install it directly.
 
 
-`$ sudo apt-get install software-properties-common
-$ sudo add-apt-repository ppa:bitcoin/bitcoin
-$ sudo apt-get update
-$ sudo apt-get install libdb4.8-dev libdb4.8++-dev`
+`$ sudo apt-get install software-properties-common`
+`$ sudo add-apt-repository ppa:bitcoin/bitcoin`
+`$ sudo apt-get update`
+`$ sudo apt-get install libdb4.8-dev libdb4.8++-dev`
 
 8) Install git if you don't already have it
 
@@ -83,8 +83,8 @@ $ sudo apt-get install libdb4.8-dev libdb4.8++-dev`
 
 10) Build Linx
 
-`$ cd linX/src
-$ make -f makefile.unix`
+`$ cd linX/src`
+`$ make -f makefile.unix`
 
 The build process will take a very long time so grab a coffee or two.
 When you get back, if all has gone well you are ready to launch Linx.
@@ -96,32 +96,33 @@ config file.
 
 11) Create and set up the config file
 
-`$ cd
-$ cd ./linX
-$ sudo nano linX.config`
-
+`$ cd`
+`$ cd ./linX`
+`$ sudo nano linX.config`
 Paste in the following, changing the username and password to something secure
 and save it.
 
 
-`rpcuser=YourUserName
+```
+rpcuser=YourUserName
 rpcpassword=YourVeryStrongPassword
 rpcport=12924
 port=13925
 addnode=seed.mylinx.io
-addnode=testnet.mylinx.io`
+addnode=testnet.mylinx.io
+```
 
 12) Fire up Linx on the mainnet and grab another coffee (or maybe even a beer,
 you deserve it) while the blockchain syncs. This is going to take a while.
 
-`$ cd
-$ cd linX/src
-$ ./linXd -daemon
-$ ./linXd getinfo`
+`$ cd`
+`$ cd linX/src`
+`$ ./linXd -daemon`
+`$ ./linXd getinfo`
 
 If you want to launch Linx on the testnet run
 
-`$ ./linXd - testnet
-$ ./linXd getinfo`
+`$ ./linXd - testnet`
+`$ ./linXd getinfo`
 
 Enjoy!
