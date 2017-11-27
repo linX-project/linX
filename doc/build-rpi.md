@@ -38,9 +38,7 @@ processor intensive routines if the desktop GUI is also running.
 
 6) Open a terminal and fire up raspi-config
 
-		```
     $ sudo raspi-config
-		```
 
 a) Select "Boot Options" from the menu.
 
@@ -56,10 +54,11 @@ and password.
 7) Install the dependencies
 
     $ sudo apt-get -y install build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev
+
 		$ sudo apt-get -y install libtool autotools-dev autoconf
 		$ sudo apt-get -y install libboost-all-dev
-    $ sudo apt-get -y install libminiupnpc-dev
-    $ sudo apt-get -y install libdb++-dev
+		$ sudo apt-get -y install libminiupnpc-dev
+		$ sudo apt-get -y install libdb++-dev
 
 We have to use an old version of BerkeleyDB (4.8) and it won't be available from
 the current dist repo. You can build this yourself from source if you wish, full
