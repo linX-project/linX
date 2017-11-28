@@ -165,6 +165,9 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     statusBar()->addWidget(progressBar);
     statusBar()->addPermanentWidget(frameBlocks);
     statusBar()->setStyleSheet("background: rgb(24,24,24); color: rgb(255,255,255);");
+#ifdef Q_OS_MAC
+    progressBar->setStyleSheet("QToolTip { color: rgb(255,255,255); }"
+#endif
 
 
     syncIconMovie = new QMovie(":/movies/update_spinner", "mng", this);
