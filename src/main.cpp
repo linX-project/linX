@@ -3310,7 +3310,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
         uint64 nNonce = 1;
         vRecv >> pfrom->nVersion >> pfrom->nServices >> nTime >> addrMe;
         if(pfrom->nVersion <= (PROTOCOL_VERSION - 1)){
-            printf("recieved pfrom message from old node with versoin %i \n", pfrom->nVersion);
+            printf("recieved pfrom message from old node with version %i \n", pfrom->nVersion);
             printf("LEGACY_CUTOFF_TIME = %i;\n", LEGACY_CUTOFF_TIME);
             printf("LEGACY_CUTOFF_TIME_TESTNET = %i;\n", LEGACY_CUTOFF_TIME_TESTNET);
             printf("pindexBest->GetBlockTime() = %i;\n", pindexBest->GetBlockTime());
