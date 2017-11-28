@@ -726,11 +726,11 @@ void BitcoinGUI::setNumConnections(int count)
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
     labelConnectionsIcon->setToolTip(tr("%n active connection(s) to the Linx network", "", count));
-#ifdef Q_OS_MAC
-    labelConnectionsIcon->setStyleSheet("color: white");
-#else
-    labelConnectionsIcon->setStyleSheet("color: black");
-#endif
+//#ifdef _WIN32
+//    labelConnectionsIcon->setStyleSheet("color: black");
+//#else
+//    labelConnectionsIcon->setStyleSheet("color: white");
+//#endif
 }
 
 void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
@@ -776,8 +776,11 @@ void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
     {
         tooltip = tr("Up to date") + QString(".<br>") + tooltip;
         labelBlocksIcon->setPixmap(QIcon(":/icons/synced").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
-        labelBlocksIcon->setStyleSheet("color: black");
-
+#ifdef _WIN32
+    labelBlocksIcon->setStyleSheet("color: black");
+#else
+    labelBlocksIcon->setStyleSheet("color: white");
+#endif
         walletFrame->showOutOfSyncWarning(false);
 
         progressBarLabel->setVisible(false);
