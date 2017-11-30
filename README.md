@@ -14,10 +14,11 @@ Linx is an experimental cryptocurrency designed for the electronic music communi
 scrypt as a proof-of-work algorithm.
 
  - 60 second block targets
+ - Retargets every block using Dark Gravity Wave 3
  - 2mb block size
  - Block reward reduces in stages depending on current coin supply (50,25,10,5,2,0)
  - 100,000,000 total coins
- - Retargets every block using Dark Gravity Wave 3
+ - Block rewards end around the year 2030
 
 
 Build Instructions
@@ -39,7 +40,7 @@ on the testnet you will need to create a .conf file.
 ```
 rpcuser=ChooseAUserName
 rpcpassword=ChooseAStrongRandomPassword
-seed.myinx.io
+seed.mylinx.io
 testnet.mylinx.io
 ```
 
@@ -74,9 +75,17 @@ This is NOT a static build. It requires external libraries for it to work. If yo
 Other useful links
 -------------------
 
-Official Linx Mining pool : http://pool.mylinx.io
+Main website : https://mylinx.io
+
+Linx Twitter : https://twitter.com/linxcoin
+
+Linx Mining pool : http://pool.mylinx.io
 
 Linx Block Explorer : http://explorer.mylinx.io
+
+Slack Channel : https://linxcoin.slack.com
+
+BCT ANN : https://bitcointalk.org/index.php?topic=1944710.0
 
 
 License
