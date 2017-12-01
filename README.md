@@ -20,6 +20,17 @@ scrypt as a proof-of-work algorithm.
  - 100,000,000 total coins
  - Block rewards end around the year 2030
 
+ Block Reward Schedule In Detail
+ ----------------
+
+| From Block#       | Block Reward | Est. Date  | Total Supply  |
+| ----------------- |:------------:| ----------:| -------------:|
+| 2                 | 50           | 30/05/17   | 1,000,000     |
+| 500001            | 25           | 08/06/18   | 26,462,450    |
+| 2000001           | 10           | 15/04/21   | 65,837,450    |
+| 3500001           | 5            | 20/02/24   | 81,587,450    |
+| 7007153           | 2 (Final)    | 20/10/30   | 100,000,000   |
+
 
 Build Instructions
 ------------------
