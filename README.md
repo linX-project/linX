@@ -40,8 +40,8 @@ on the testnet you will need to create a .conf file.
 ```
 rpcuser=ChooseAUserName
 rpcpassword=ChooseAStrongRandomPassword
-seed.mylinx.io
-testnet.mylinx.io
+addnode=seed.mylinx.io
+addnode=testnet.mylinx.io
 ```
 
 2) Save the file as **linX.conf**
