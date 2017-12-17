@@ -94,6 +94,8 @@ Linx Mining pool : http://pool.mylinx.io
 
 Linx Block Explorer : http://explorer.mylinx.io
 
+Linx Block Explorer v2 : http://explorer2.mylinx.io
+
 Slack Channel : https://linxcoin.slack.com
 
 BCT ANN : https://bitcointalk.org/index.php?topic=1944710.0
