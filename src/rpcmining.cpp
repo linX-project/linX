@@ -7,6 +7,7 @@
 #include "db.h"
 #include "init.h"
 #include "bitcoinrpc.h"
+#include "main.h"
 
 using namespace json_spirit;
 using namespace std;
@@ -423,6 +424,7 @@ Value getblocktemplate(const Array& params, bool fHelp)
             "  \"transactions\" : contents of non-coinbase transactions that should be included in the next block\n"
             "  \"coinbaseaux\" : data that should be included in coinbase\n"
             "  \"coinbasevalue\" : maximum allowable input to coinbase transaction, including the generation award and transaction fees\n"
+	        "  \"charityvalue\" : dev fee amount\n"
             "  \"target\" : hash target\n"
             "  \"mintime\" : minimum timestamp appropriate for next block\n"
             "  \"curtime\" : current timestamp\n"
@@ -540,24 +542,46 @@ Value getblocktemplate(const Array& params, bool fHelp)
         aMutable.push_back("transactions");
         aMutable.push_back("prevblock");
     }
+if (devFeeEnable) {
+        if (pindexBest->nHeight >= fTestNet ? devFeeStartHeight_testnet : devFeeStartHeight ){
+            Object result;
+            result.push_back(Pair("version", pblock->nVersion));
+            result.push_back(Pair("previousblockhash", pblock->hashPrevBlock.GetHex()));
+            result.push_back(Pair("transactions", transactions));
+            result.push_back(Pair("coinbaseaux", aux));
+            result.push_back(Pair("coinbasevalue", (int64_t)pblock->vtx[0].vout[0].nValue + (int64_t)pblock->vtx[0].vout[1].nValue));
+            result.push_back(Pair("target", hashTarget.GetHex()));
+            result.push_back(Pair("mintime", (int64_t)pindexPrev->GetMedianTimePast()+1));
+            result.push_back(Pair("mutable", aMutable));
+            result.push_back(Pair("noncerange", "00000000ffffffff"));
+            result.push_back(Pair("sigoplimit", (int64_t)MAX_BLOCK_SIGOPS));
+            result.push_back(Pair("sizelimit", (int64_t)MAX_BLOCK_SIZE));
+            result.push_back(Pair("curtime", (int64_t)pblock->nTime));
+            result.push_back(Pair("bits", HexBits(pblock->nBits)));
+            result.push_back(Pair("height", (int64_t)(pindexPrev->nHeight+1)));
+            return result;
+        }
+    } else {
 
-    Object result;
-    result.push_back(Pair("version", pblock->nVersion));
-    result.push_back(Pair("previousblockhash", pblock->hashPrevBlock.GetHex()));
-    result.push_back(Pair("transactions", transactions));
-    result.push_back(Pair("coinbaseaux", aux));
-    result.push_back(Pair("coinbasevalue", (int64_t)pblock->vtx[0].vout[0].nValue));
-    result.push_back(Pair("target", hashTarget.GetHex()));
-    result.push_back(Pair("mintime", (int64_t)pindexPrev->GetMedianTimePast()+1));
-    result.push_back(Pair("mutable", aMutable));
-    result.push_back(Pair("noncerange", "00000000ffffffff"));
-    result.push_back(Pair("sigoplimit", (int64_t)MAX_BLOCK_SIGOPS));
-    result.push_back(Pair("sizelimit", (int64_t)MAX_BLOCK_SIZE));
-    result.push_back(Pair("curtime", (int64_t)pblock->nTime));
-    result.push_back(Pair("bits", HexBits(pblock->nBits)));
-    result.push_back(Pair("height", (int64_t)(pindexPrev->nHeight+1)));
+        Object result;
+        result.push_back(Pair("version", pblock->nVersion));
+        result.push_back(Pair("previousblockhash", pblock->hashPrevBlock.GetHex()));
+        result.push_back(Pair("transactions", transactions));
+        result.push_back(Pair("coinbaseaux", aux));
+        result.push_back(Pair("coinbasevalue", (int64_t)pblock->vtx[0].vout[0].nValue));
+        result.push_back(Pair("target", hashTarget.GetHex()));
+        result.push_back(Pair("mintime", (int64_t)pindexPrev->GetMedianTimePast()+1));
+        result.push_back(Pair("mutable", aMutable));
+        result.push_back(Pair("noncerange", "00000000ffffffff"));
+        result.push_back(Pair("sigoplimit", (int64_t)MAX_BLOCK_SIGOPS));
+        result.push_back(Pair("sizelimit", (int64_t)MAX_BLOCK_SIZE));
+        result.push_back(Pair("curtime", (int64_t)pblock->nTime));
+        result.push_back(Pair("bits", HexBits(pblock->nBits)));
+        result.push_back(Pair("height", (int64_t)(pindexPrev->nHeight+1)));
+        return result;
+    }
 
-    return result;
+
 }
 
 Value submitblock(const Array& params, bool fHelp)

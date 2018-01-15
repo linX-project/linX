@@ -57,6 +57,7 @@ static const int64 MAX_MONEY = 100000000 * COIN;
 inline bool MoneyRange(int64 nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 /** Coinbase transaction outputs can only be spent after this number of new blocks (network rule) */
 static const int COINBASE_MATURITY = 120;
+static const int COINBASE_MATURITY_TESTNET = 20;
 /** Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp. */
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
 /** Maximum number of script-checking threads allowed */
@@ -65,7 +66,9 @@ static const int MAX_SCRIPTCHECK_THREADS = 16;
 extern int64 devCoin;
 #define FOUNDATION "XF7kCcs4woQD9WWnCHuN6SWPeUNK2fBspr"
 #define FOUNDATION_TEST "mqvkPMPP2ZGocTjkHa12xnkvjtsDS9NQvW"
-
+extern bool devFeeEnable;
+extern int devFeeStartHeight;
+extern int devFeeStartHeight_testnet;
 
 #ifdef USE_UPNP
 static const int fHaveUPnP = true;
