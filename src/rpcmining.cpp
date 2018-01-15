@@ -424,7 +424,6 @@ Value getblocktemplate(const Array& params, bool fHelp)
             "  \"transactions\" : contents of non-coinbase transactions that should be included in the next block\n"
             "  \"coinbaseaux\" : data that should be included in coinbase\n"
             "  \"coinbasevalue\" : maximum allowable input to coinbase transaction, including the generation award and transaction fees\n"
-	        "  \"charityvalue\" : dev fee amount\n"
             "  \"target\" : hash target\n"
             "  \"mintime\" : minimum timestamp appropriate for next block\n"
             "  \"curtime\" : current timestamp\n"
