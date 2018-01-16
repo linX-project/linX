@@ -5,7 +5,7 @@ https://www.mylinx.io
 
 Copyright (c) 2009-2014 Bitcoin Developers
 
-Copyright (c) 2017 The Linx Partnership
+Copyright (c) 2017-2018 The Linx Partnership
 
 What is Linx?
 ----------------
@@ -19,6 +19,8 @@ scrypt as a proof-of-work algorithm.
  - Block reward reduces in stages depending on current coin supply (50,25,10,5,2,0)
  - 100,000,000 total coins
  - Block rewards end around the year 2030
+ - 6 confirmations
+ - 140 for newly minted coins
 
  Block Reward Schedule In Detail
  ----------------
