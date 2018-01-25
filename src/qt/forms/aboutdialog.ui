@@ -92,7 +92,7 @@
        </property>
        <property name="text">
         <string notr="true">Copyright &amp;copy; 2009-YYYY The Bitcoin developers
-Copyright &amp;copy; 2017 The Linx Foundation</string>
+Copyright &amp;copy; 2018 The Linx Partnership</string>
        </property>
        <property name="textFormat">
         <enum>Qt::RichText</enum>
