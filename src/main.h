@@ -76,6 +76,23 @@ static const int fHaveUPnP = true;
 static const int fHaveUPnP = false;
 #endif
 
+static const int nTimeDriftCondition = 1457136000; // Saturday, 1 December 2018 21:16:20 GMT+00:00
+inline int64_t PastDrift(int64_t nTime){
+    if (nTime >= nTimeDriftCondition){
+        return nTime - 10 * 60;
+    } else {
+        return nTime - 2 * 60 * 60;
+    }
+}
+
+inline int64_t FutureDrift(int64_t nTime){
+    if (nTime >= nTimeDriftCondition){
+        return nTime + 10 * 60;
+    } else {
+        return nTime + 2 * 60 * 60;
+    }
+
+}
 
 extern CScript COINBASE_FLAGS;
 
@@ -486,6 +503,7 @@ public:
     static int64 nMinRelayTxFee;
     static const int CURRENT_VERSION=1;
     int nVersion;
+    unsigned int nTime;
     std::vector<CTxIn> vin;
     std::vector<CTxOut> vout;
     unsigned int nLockTime;
@@ -499,6 +517,7 @@ public:
     (
         READWRITE(this->nVersion);
         nVersion = this->nVersion;
+        READWRITE(nTime);
         READWRITE(vin);
         READWRITE(vout);
         READWRITE(nLockTime);
@@ -507,9 +526,11 @@ public:
     void SetNull()
     {
         nVersion = CTransaction::CURRENT_VERSION;
+        nTime = GetAdjustedTime();
         vin.clear();
         vout.clear();
         nLockTime = 0;
+
     }
 
     bool IsNull() const

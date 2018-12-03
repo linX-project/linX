@@ -2183,7 +2183,7 @@ bool CBlock::CheckBlock(CValidationState &state, bool fCheckPOW, bool fCheckMerk
         return state.DoS(50, error("CheckBlock() : proof of work failed"));
 
     // Check timestamp
-    if (GetBlockTime() > GetAdjustedTime() + 2 * 60 * 60)
+    if (GetBlockTime() > FutureDrift(GetAdjustedTime()))
         return state.Invalid(error("CheckBlock() : block timestamp too far in the future"));
 
     // First transaction must be coinbase, the rest must not be
@@ -2192,7 +2192,10 @@ bool CBlock::CheckBlock(CValidationState &state, bool fCheckPOW, bool fCheckMerk
     for (unsigned int i = 1; i < vtx.size(); i++)
         if (vtx[i].IsCoinBase())
             return state.DoS(100, error("CheckBlock() : more than one coinbase"));
-
+			
+    // Check coinbase timestamp
+    if (GetBlockTime() > FutureDrift((int64_t)vtx[0].nTime))
+        return state.DoS(50, error("CheckBlock() : coinbase timestamp is too early"));
     // Check transactions
     BOOST_FOREACH(const CTransaction& tx, vtx)
         if (!tx.CheckTransaction(state))
@@ -2249,7 +2252,7 @@ bool CBlock::AcceptBlock(CValidationState &state, CDiskBlockPos *dbp)
             return state.DoS(100, error("AcceptBlock() : incorrect proof of work"));
 
         // Check timestamp against prev
-        if (GetBlockTime() <= pindexPrev->GetMedianTimePast())
+        if (GetBlockTime() <= pindexPrev->GetMedianTimePast() || FutureDrift(GetBlockTime()) < pindexPrev->GetBlockTime())
             return state.Invalid(error("AcceptBlock() : block's timestamp is too early"));
 
         // Check that all transactions are finalized
@@ -2839,7 +2842,7 @@ bool InitBlockIndex() {
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
         assert(block.hashMerkleRoot == uint256("0x06d04bf5f054454f4884ab184fc0e50139e830c6dd1f0914a97c37175cf1dde7"));
 
-        if (true && block.GetHash() != hashGenesisBlock)
+        if (false && block.GetHash() != hashGenesisBlock)
 {
     printf("Searching for genesis block...\n");
     // This will figure out a valid hash and Nonce if you're

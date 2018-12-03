@@ -2,7 +2,7 @@ TEMPLATE = app
 DEFINES += fName1 fName2
 fName1 = "Linx"
 macx:TARGET = "Linx"
-VERSION = 1.0.1.0
+VERSION = 1.1.0.0
 contains(QT_ARCH, i386) {
     fName2 = "-qt-x86-v"
 } else {
