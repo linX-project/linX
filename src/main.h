@@ -508,6 +508,10 @@ public:
     std::vector<CTxOut> vout;
     unsigned int nLockTime;
 
+    // Denial-of-service detection:
+    mutable int nDoS;
+    bool DoS(int nDoSIn, bool fIn) const { nDoS += nDoSIn; return fIn; }
+
     CTransaction()
     {
         SetNull();
@@ -517,7 +521,6 @@ public:
     (
         READWRITE(this->nVersion);
         nVersion = this->nVersion;
-        READWRITE(nTime);
         READWRITE(vin);
         READWRITE(vout);
         READWRITE(nLockTime);
@@ -530,7 +533,7 @@ public:
         vin.clear();
         vout.clear();
         nLockTime = 0;
-
+        nDoS = 0;  // Denial-of-service prevention
     }
 
     bool IsNull() const
@@ -1325,6 +1328,9 @@ public:
     unsigned int nBits;
     unsigned int nNonce;
 
+    // Denial-of-service detection:
+    mutable int nDoS;
+    bool DoS(int nDoSIn, bool fIn) const { nDoS += nDoSIn; return fIn; }
     CBlockHeader()
     {
         SetNull();
@@ -1349,6 +1355,7 @@ public:
         nTime = 0;
         nBits = 0;
         nNonce = 0;
+        nDoS = 0;
     }
 
     bool IsNull() const
