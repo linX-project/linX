@@ -58,7 +58,7 @@ bool devFeeEnable = false;
 int devFeeStartHeight = 315001;
 int devFeeStartHeight_testnet = 10;
 long LEGACY_CUTOFF_TIME = 1544184000; // ((TESTING))
-long LEGACY_CUTOFF_TIME_TESTNET = 1544184000; / ((TESTING))
+long LEGACY_CUTOFF_TIME_TESTNET = 1544184000; // ((TESTING))
 
 
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
