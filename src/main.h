@@ -76,12 +76,12 @@ static const int fHaveUPnP = true;
 static const int fHaveUPnP = false;
 #endif
 
-static const int nTimeDriftCondition= 1543698980; // Saturday, 1 December 2018 21:16:20 GMT+00:00
+static const int nTimeDriftCondition= 1543924800; // Tuesday, 4 December 2018 12:00:00 GMT+00:00
 inline int64_t PastDrift(int64_t nTime){
     if (nTime >= nTimeDriftCondition){
         return nTime - 10 * 60;
     } else {
-        return nTime - 2 * 60 * 60;
+        return nTime - 3 * 60 * 60;
     }
 }
 
@@ -89,7 +89,7 @@ inline int64_t FutureDrift(int64_t nTime){
     if (nTime >= nTimeDriftCondition){
         return nTime + 10 * 60;
     } else {
-        return nTime + 2 * 60 * 60;
+        return nTime + 3 * 60 * 60;
     }
 
 }

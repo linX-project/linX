@@ -57,8 +57,8 @@ int64 devCoin;
 bool devFeeEnable = false;
 int devFeeStartHeight = 315001;
 int devFeeStartHeight_testnet = 10;
-long LEGACY_CUTOFF_TIME = 1514851200; //Tuesday, 2 January 2018 00:00:00 GMT+00:00
-long LEGACY_CUTOFF_TIME_TESTNET = 1511381700;
+long LEGACY_CUTOFF_TIME = 1544184000; // ((TESTING))
+long LEGACY_CUTOFF_TIME_TESTNET = 1544184000; / ((TESTING))
 
 
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
@@ -3312,15 +3312,17 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
         CAddress addrFrom;
         uint64 nNonce = 1;
         vRecv >> pfrom->nVersion >> pfrom->nServices >> nTime >> addrMe;
-        if(pfrom->nVersion <= (PROTOCOL_VERSION - 1)){
-            printf("recieved pfrom message from old node with version %i \n", pfrom->nVersion);
-            printf("LEGACY_CUTOFF_TIME = %i;\n", LEGACY_CUTOFF_TIME);
-            printf("LEGACY_CUTOFF_TIME_TESTNET = %i;\n", LEGACY_CUTOFF_TIME_TESTNET);
-            printf("pindexBest->GetBlockTime() = %i;\n", pindexBest->GetBlockTime());
-            printf("pindexBest->nHeight = %i;\n", pindexBest->nHeight);
 
-            if(pindexBest->GetBlockTime() > (fTestNet ? LEGACY_CUTOFF_TIME_TESTNET : LEGACY_CUTOFF_TIME)){
-                // disconnect from peers older than legacy cutoff allows
+        // disconnect from peers older than legacy cutoff allows
+        if(pindexBest->GetBlockTime() > (fTestNet ? LEGACY_CUTOFF_TIME_TESTNET : LEGACY_CUTOFF_TIME)){
+            if(pfrom->nVersion < (PROTOCOL_VERSION)){
+                                printf("recieved pfrom message from old node with version %i \n", pfrom->nVersion);
+                if (fDebug) {
+                    printf("LEGACY_CUTOFF_TIME = %i;\n", LEGACY_CUTOFF_TIME);
+                    printf("LEGACY_CUTOFF_TIME_TESTNET = %i;\n", LEGACY_CUTOFF_TIME_TESTNET);
+                    printf("pindexBest->GetBlockTime() = %i;\n", pindexBest->GetBlockTime());
+                    printf("pindexBest->nHeight = %i;\n", pindexBest->nHeight);
+                }
                 printf("partner %s using obsolete version %i; disconnecting\n", pfrom->addr.ToString().c_str(), pfrom->nVersion);
                 pfrom->fDisconnect = true;
                 return false;
