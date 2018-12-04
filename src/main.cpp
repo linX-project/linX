@@ -1103,23 +1103,23 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
             nSubsidy = 1000000 * COIN; // 1% Premine
         } else if (nHeight <= (fTestNet ? devFeeStartHeight_testnet : devFeeStartHeight)){
             nSubsidy = 50 * COIN;
-        } else if (nHeight <= (fTestNet ? 15 : 500000)){
+        } else if (nHeight <= (fTestNet ? 45000 : 500000)){
             devFeeEnable = true;
             nSubsidy = 52.5 * COIN;
             devCoin = 2.5 * COIN;
-        } else if (nHeight <= (fTestNet ? 25 : 2000000)){
+        } else if (nHeight <= (fTestNet ? 50000 : 2000000)){
             devFeeEnable = true;
             nSubsidy = 26.25 * COIN;
             devCoin = 1.25 * COIN;
-        } else if (nHeight <= (fTestNet ? 35 : 3500000)){
+        } else if (nHeight <= (fTestNet ? 50350 : 3500000)){
             devFeeEnable = true;
             nSubsidy = 10.5 * COIN;
             devCoin = 0.5 * COIN;
-        } else if (nHeight <= (fTestNet ? 45 : 7007152)){
+        } else if (nHeight <= (fTestNet ? 50450 : 7007152)){
             devFeeEnable = true;
             nSubsidy = 5.25 * COIN;
             devCoin = 0.25 * COIN;
-        } else if (nHeight == (fTestNet ? 55 : 7007153)){
+        } else if (nHeight == (fTestNet ? 50550 : 7007153)){
             devFeeEnable = true;
             nSubsidy = 2 * COIN;
             devCoin = 0 * COIN;
