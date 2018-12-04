@@ -67,8 +67,8 @@ TARGET = $$fName1$$fName2$$VERSION
         BDB_INCLUDE_PATH=C:/tools/berkeley-db/db4/x64/include
         BDB_LIB_PATH=C:/tools/berkeley-db/db4/x64/lib
 
-        OPENSSL_INCLUDE_PATH=C:/tools/openssl/x64/1.0.2-stable/include
-        OPENSSL_LIB_PATH=C:/tools/openssl/x64/1.0.2-stable/lib
+        OPENSSL_INCLUDE_PATH=C:/deps/openssl-1.0.2q/include
+        OPENSSL_LIB_PATH=C:/deps/openssl-1.0.2q
 
         MINIUPNPC_INCLUDE_PATH=C:/tools/miniupnpc
         MINIUPNPC_LIB_PATH=C:/tools/miniupnpc/miniupnpc

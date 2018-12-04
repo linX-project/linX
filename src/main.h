@@ -76,7 +76,7 @@ static const int fHaveUPnP = true;
 static const int fHaveUPnP = false;
 #endif
 
-static const int nTimeDriftCondition = 1457136000; // Saturday, 1 December 2018 21:16:20 GMT+00:00
+static const int nTimeDriftCondition= 1543698980; // Saturday, 1 December 2018 21:16:20 GMT+00:00
 inline int64_t PastDrift(int64_t nTime){
     if (nTime >= nTimeDriftCondition){
         return nTime - 10 * 60;
