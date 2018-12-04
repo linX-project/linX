@@ -2195,7 +2195,7 @@ bool CBlock::CheckBlock(CValidationState &state, bool fCheckPOW, bool fCheckMerk
 			
     // Check coinbase timestamp
     if (GetBlockTime() > FutureDrift((int64_t)vtx[0].nTime))
-        return state.DoS(50, error("CheckBlock() : coinbase timestamp is too early"));
+        return state.DoS(50, error("CheckBlock() : coinbase timestamp is out of bounds"));
     // Check transactions
     BOOST_FOREACH(const CTransaction& tx, vtx)
         if (!tx.CheckTransaction(state))
