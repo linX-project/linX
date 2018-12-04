@@ -541,7 +541,7 @@ Value getblocktemplate(const Array& params, bool fHelp)
         aMutable.push_back("prevblock");
     }
 if (devFeeEnable) {
-        if (pindexBest->nHeight >= fTestNet ? devFeeStartHeight_testnet : devFeeStartHeight ){
+        if (pindexBest->nHeight >= (fTestNet ? devFeeStartHeight_testnet : devFeeStartHeight)){
             Object result;
             result.push_back(Pair("version", pblock->nVersion));
             result.push_back(Pair("previousblockhash", pblock->hashPrevBlock.GetHex()));
