@@ -57,8 +57,8 @@ int64 devCoin;
 bool devFeeEnable = false;
 int devFeeStartHeight = 315001;
 int devFeeStartHeight_testnet = 10;
-long LEGACY_CUTOFF_TIME = 1544184000; // ((TESTING))
-long LEGACY_CUTOFF_TIME_TESTNET = 1544184000; // ((TESTING))
+long LEGACY_CUTOFF_TIME = 1545091200; //Tuesday, 18 December 2018 00:00:00 GMT+00:00
+long LEGACY_CUTOFF_TIME_TESTNET = 1545091200; //Tuesday, 18 December 2018 00:00:00 GMT+00:00
 
 
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
