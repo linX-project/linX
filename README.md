@@ -1,11 +1,11 @@
-Linx v1.0.1.0
+Linx v1.1.0.0
 ================================
 
 https://www.mylinx.io
 
 Copyright (c) 2009-2014 Bitcoin Developers
 
-Copyright (c) 2017-2018 The Linx Partnership
+Copyright (c) 2017-2019 The Linx Partnership
 
 What is Linx?
 ----------------
@@ -33,6 +33,11 @@ scrypt as a proof-of-work algorithm.
 | 3500001           | 5            | 20/02/24   | 81,587,450    |
 | 7007153           | 2 (Final)    | 20/10/30   | 100,000,000   |
 
+
+Release notes for v1.1.0.0
+------------------
+
+There was a protocol upgrade in this version which includes important security fixes. All previous wallet versions must be updated to at least v1.1.0.0 as they will no longer be able to connect to the network. This rule came into effect on December 18th 2018 and you can read more about it [here](https://mylinx.io/news/mandatory-wallet-update/).
 
 Build Instructions
 ------------------
