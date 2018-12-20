@@ -39,6 +39,13 @@ Release notes for v1.1.0.0
 
 There was a protocol upgrade in this version which includes important security fixes. All previous wallet versions must be updated to at least v1.1.0.0 as they will no longer be able to connect to the network. This rule came into effect on December 18th 2018 and you can read more about it [here](https://mylinx.io/news/mandatory-wallet-update/).
 
+
+Compiled binaries
+------------------
+
+Download the latest compiled binaries for Windows and OSX [here](https://github.com/linX-project/linX/releases).
+
+
 Build Instructions
 ------------------
 
